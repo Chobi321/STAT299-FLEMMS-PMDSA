@@ -1,31 +1,51 @@
-Feature_A,Feature_B,Interaction_Strength
-DSKILL_INFO2_1,INTERNET_2,0.02482898
-AGE,ATTEND_SCHOOL_4,0.022882039
-AGE,ATTEND_SCHOOL_1,0.022646232
-DSKILL_INFO2_1,DSKILL_CONT3_2,0.016566664
-PATHWAY_STUDYABROAD_2,PATHWAY_WORKABROAD_2,0.012625431
-LLEVEL10OVER_0,DSKILL_INFO2_1,0.012511567
-AGE,FATHER,0.01163489
-AGE,PATHWAY_COLLEGE_2,0.011477523
-ATTEND_GRADE_LEVEL_1,AGE,0.011346163
-DSKILL_CONT2_2,DSKILL_INFO2_1,0.009595184
-ATTEND_GRADE_LEVEL_1,ATTEND_SCHOOL_1,0.009455002
-AGE,PATHWAY_STUDYABROAD_2,0.0091824075
-AGE,PATHWAY_WORKABROAD_2,0.008937727
-MM_MAGAZINE_2,MM_POSTERS_2,0.00893473
-PATHWAY_COLLEGE_2,ATTEND_SCHOOL_1,0.008550297
-DSKILL_INFO2_1,DSKILL_PROB3_2,0.008464541
-MM_OLNPAPER_2,INTERNET_2,0.00816515
-MM_MEETINGS_2,DSKILL_INFO2_1,0.008006043
-DSKILL_CONT1_2,WORK_2,0.007809435
-AGE,DSKILL_INFO2_1,0.00767132
-DSKILL_INFO1_1,FATHER,0.007558624
-DSKILL_CONT1_2,DSKILL_CONT3_2,0.007198483
-INTERNET_1,DSKILL_INFO2_1,0.0070873164
-AGE,WORK_2,0.0070645036
-PATHWAY_COLLEGE_2,INTERNET_1,0.0068913028
-DSKILL_CONT3_2,INTERNET_2,0.006877525
-MM_PNPAPER_2,DSKILL_INFO2_1,0.0068034166
-DSKILL_INFO1_1,WORK_2,0.0067592408
-DSKILL_CONT5_2,DSKILL_INFO2_1,0.00662722
-MM_MEETINGS_2,AGE,0.0066147856
+Feature_A,Feature_B,Interaction_Strength,Feature_A_Desc,Feature_B_Desc
+ATTEND_SCHOOL_1,AGE,0.034844413,"Currently Attending School: YES, PUBLIC",Age (in Years)
+AGE,ATTEND_SCHOOL_4,0.02462545,Age (in Years),Currently Attending School: NO
+DSKILL_INFO2_1,INTERNET_1,0.022576066,Digital Skill: Information and data literacy: YES,Have you Used Internet in the past three (3) months?: YES  (Oo)
+DSKILL_INFO2_1,INTERNET_2,0.018322056,Digital Skill: Information and data literacy: YES,Have you Used Internet in the past three (3) months?: NO (Hindi)
+NOWORK_REASON_ 1,AGE,0.017222073,Reason for not being employed: Still studying/planning to continue studies,Age (in Years)
+DSKILL_INFO2_1,DSKILL_CONT3_2,0.013864321,Digital Skill: Information and data literacy: YES,Digital Skill: Digital content creation: NO
+WORK_1,AGE,0.0134863965,Job/Business: YES,Age (in Years)
+DSKILL_INFO2_1,AGE,0.013484623,Digital Skill: Information and data literacy: YES,Age (in Years)
+AGE,INTERNET_1,0.011015398,Age (in Years),Have you Used Internet in the past three (3) months?: YES  (Oo)
+DSKILL_CONT5_2,INTERNET_1,0.010992705,Digital Skill: Digital content creation: NO,Have you Used Internet in the past three (3) months?: YES  (Oo)
+PATHWAY_STUDYABROAD_2,PATHWAY_WORKABROAD_2,0.010747468,Pathway Plan_Study Abroad: NO,Pathway Plan_Work Abroad: NO
+MM_POSTERS_2,MM_MAGAZINE_2,0.010528762,"Mass Media: Posters, Signs, Brochure, Flyers: Seldom (Bihira)","Mass Media:  Magazines, Comics, Books: Seldom (Bihira)"
+PATHWAY_COLLEGE_2,AGE,0.010453536,Pathway Plan_Go to college/studies: NO,Age (in Years)
+DSKILL_CONT2_2,DSKILL_INFO2_1,0.0102905845,Digital Skill: Digital content creation: NO,Digital Skill: Information and data literacy: YES
+PATHWAY_WORKABROAD_2,AGE,0.009996335,Pathway Plan_Work Abroad: NO,Age (in Years)
+WORK_1,ATTEND_SCHOOL_1,0.0095207915,Job/Business: YES,"Currently Attending School: YES, PUBLIC"
+INTERNET_2,MM_OLNPAPER_2,0.009007741,Have you Used Internet in the past three (3) months?: NO (Hindi),Mass Media: Digital/Online Newspaper: Seldom (Bihira)
+WORK_2,AGE,0.008823905,Job/Business: NO,Age (in Years)
+DSKILL_CONT3_2,INTERNET_1,0.008734159,Digital Skill: Digital content creation: NO,Have you Used Internet in the past three (3) months?: YES  (Oo)
+DSKILL_INFO2_1,MM_MEETINGS_2,0.008515553,Digital Skill: Information and data literacy: YES,Mass Media: Attending Meetings: Seldom (Bihira)
+INTERNET_2,DSKILL_INFO1_1,0.008439707,Have you Used Internet in the past three (3) months?: NO (Hindi),Digital Skill: Information and data literacy: YES
+DSKILL_CONT2_2,DSKILL_CONT5_2,0.007813626,Digital Skill: Digital content creation: NO,Digital Skill: Digital content creation: NO
+AGE,MM_MEETINGS_2,0.007562646,Age (in Years),Mass Media: Attending Meetings: Seldom (Bihira)
+AGE,DSKILL_INFO1_1,0.0075398553,Age (in Years),Digital Skill: Information and data literacy: YES
+DSKILL_INFO2_1,MM_PNPAPER_2,0.007384358,Digital Skill: Information and data literacy: YES,Mass Media:  Printed Newspaper: Seldom (Bihira)
+DSKILL_CONT5_2,DSKILL_INFO1_1,0.007304387,Digital Skill: Digital content creation: NO,Digital Skill: Information and data literacy: YES
+NOWORK_REASON_ 1,MM_MEETINGS_2,0.0072934567,Reason for not being employed: Still studying/planning to continue studies,Mass Media: Attending Meetings: Seldom (Bihira)
+PATHWAY_STUDYABROAD_2,AGE,0.0072414996,Pathway Plan_Study Abroad: NO,Age (in Years)
+AGE,MSPORT_ 6,0.0071393745,Age (in Years),Primary Sport: Basketball
+DSKILL_CONT1_2,DSKILL_CONT3_2,0.007088367,Digital Skill: Digital content creation: NO,Digital Skill: Digital content creation: NO
+PATHWAY_COLLEGE_2,PATHWAY_WORKABROAD_2,0.007034373,Pathway Plan_Go to college/studies: NO,Pathway Plan_Work Abroad: NO
+DSKILL_CONT2_2,AGE,0.007008144,Digital Skill: Digital content creation: NO,Age (in Years)
+AGE,DSKILL_COM1_1,0.0069945995,Age (in Years),Digital Skill: Communication and collaboration: YES
+WORK_2,ATTEND_SCHOOL_1,0.006825461,Job/Business: NO,"Currently Attending School: YES, PUBLIC"
+AGE,MM_MAGAZINE_2,0.0067890603,Age (in Years),"Mass Media:  Magazines, Comics, Books: Seldom (Bihira)"
+PATHWAY_COLLEGE_2,DSKILL_INFO2_1,0.006762676,Pathway Plan_Go to college/studies: NO,Digital Skill: Information and data literacy: YES
+PATHWAY_COLLEGE_2,ATTEND_SCHOOL_1,0.0067612967,Pathway Plan_Go to college/studies: NO,"Currently Attending School: YES, PUBLIC"
+DSKILL_INFO1_1,DSKILL_PROB3_2,0.006633863,Digital Skill: Information and data literacy: YES,Digital Skill: Problem solving: NO
+DSKILL_CONT1_2,DSKILL_INFO2_1,0.0066248984,Digital Skill: Digital content creation: NO,Digital Skill: Information and data literacy: YES
+AGE,DSKILL_PROB3_2,0.006503644,Age (in Years),Digital Skill: Problem solving: NO
+PATHWAY_WORKABROAD_2,DSKILL_INFO1_1,0.00634544,Pathway Plan_Work Abroad: NO,Digital Skill: Information and data literacy: YES
+MM_PNPAPER_2,AGE,0.0062806285,Mass Media:  Printed Newspaper: Seldom (Bihira),Age (in Years)
+DSKILL_CONT5_2,DSKILL_INFO2_1,0.006278646,Digital Skill: Digital content creation: NO,Digital Skill: Information and data literacy: YES
+DSKILL_CONT5_2,AGE,0.006266722,Digital Skill: Digital content creation: NO,Age (in Years)
+DSKILL_INFO2_1,DSKILL_PROB3_2,0.0062281773,Digital Skill: Information and data literacy: YES,Digital Skill: Problem solving: NO
+MM_OLNPAPER_2,AGE,0.0061809253,Mass Media: Digital/Online Newspaper: Seldom (Bihira),Age (in Years)
+MM_OLNPAPER_2,DSKILL_INFO1_1,0.006004479,Mass Media: Digital/Online Newspaper: Seldom (Bihira),Digital Skill: Information and data literacy: YES
+MM_POSTERS_2,AGE,0.0059213038,"Mass Media: Posters, Signs, Brochure, Flyers: Seldom (Bihira)",Age (in Years)
+DSKILL_INFO2_1,MM_OLNPAPER_2,0.0058625876,Digital Skill: Information and data literacy: YES,Mass Media: Digital/Online Newspaper: Seldom (Bihira)
+INTERNET_2,AGE,0.0057694707,Have you Used Internet in the past three (3) months?: NO (Hindi),Age (in Years)
