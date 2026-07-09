@@ -1,0 +1,202 @@
+FEATURE NAME,Label/Description,DType,Location
+REG,,int64,Present in all
+REG2,,int64,Present in all
+PRV,,int64,Present in all
+HHID,,int64,Present in all
+URBANITY,,int64,Present in all
+PSU,,int64,"Vol1 - Household, Vol2 - Household"
+INTVW,,int64,"Vol1 - Household, Vol2 - Household"
+RFACT,,float64,"Vol1 - Household, Vol2 - Household"
+PSU_MEM,,int64,"Vol1 - Member, Vol2 - Member"
+LNO,,int64,"Vol1 - Member, Vol2 - Member"
+SEX,,int64,"Vol1 - Member, Vol2 - Member"
+AGE,,int64,"Vol1 - Member, Vol2 - Member"
+REL,,int64,"Vol1 - Member, Vol2 - Member"
+MOTHER,,int64,"Vol1 - Member, Vol2 - Member"
+MOTHER_LNO,,str,"Vol1 - Member, Vol2 - Member"
+FATHER,,int64,"Vol1 - Member, Vol2 - Member"
+FATHER_LNO,,str,"Vol1 - Member, Vol2 - Member"
+ETHNICITY,,int64,"Vol1 - Member, Vol2 - Member"
+MSTAT,,int64,"Vol1 - Member, Vol2 - Member"
+OF,,int64,"Vol1 - Member, Vol2 - Member"
+OF_PRESENT,,str,"Vol1 - Member, Vol2 - Member"
+ATTEND_SCHOOL,,str,"Vol1 - Member, Vol2 - Member"
+ATTEND_GRADE_LEVEL,,str,"Vol1 - Member, Vol2 - Member"
+ATTEND_GRADE,,str,"Vol1 - Member, Vol2 - Member"
+MODETRVL1,,str,"Vol1 - Member, Vol2 - Member"
+MODETRVL2,,str,"Vol1 - Member, Vol2 - Member"
+MODETRVL3,,str,"Vol1 - Member, Vol2 - Member"
+NATT_REASON,,str,"Vol1 - Member, Vol2 - Member"
+BASIC_LIT,,str,"Vol1 - Member, Vol2 - Member"
+BASIC_NUM,,str,"Vol1 - Member, Vol2 - Member"
+HGC_LEVEL,,str,"Vol1 - Member, Vol2 - Member"
+HGC_GRADE,,str,"Vol1 - Member, Vol2 - Member"
+DAYCARE,,str,"Vol1 - Member, Vol2 - Member"
+KINDER,,str,"Vol1 - Member, Vol2 - Member"
+SHS,,str,"Vol1 - Member, Vol2 - Member"
+SHS_TRACK,,str,"Vol1 - Member, Vol2 - Member"
+ALS,,str,"Vol1 - Member, Vol2 - Member"
+WORK,,str,"Vol1 - Member, Vol2 - Member"
+WORK_TYPE_MAJOR,,str,"Vol1 - Member, Vol2 - Member"
+WORK_CLASS,,str,"Vol1 - Member, Vol2 - Member"
+NOWORK_REASON,,str,"Vol1 - Member, Vol2 - Member"
+DIFF_SEEING,,str,"Vol1 - Member, Vol2 - Member"
+DIFF_HEARING,,str,"Vol1 - Member, Vol2 - Member"
+DIFF_WALKING,,str,"Vol1 - Member, Vol2 - Member"
+DIFF_REMEMBERING,,str,"Vol1 - Member, Vol2 - Member"
+DIFF_SELFCARE,,str,"Vol1 - Member, Vol2 - Member"
+DIFF_COMMUNICATING,,str,"Vol1 - Member, Vol2 - Member"
+MEM_RFACT,,float64,"Vol1 - Member, Vol2 - Member"
+PSU_F1,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+BENEFICIARY_4PS,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+CHILDREN_04,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+ADULTS,,str,"Vol1 - RTF1, Vol2 - RTF1"
+GUARDIAN,,str,"Vol1 - RTF1, Vol2 - RTF1"
+CHILD_FACILITY,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+BUILDING,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+ROOF,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+WALL,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+FLOOR_FINISH,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+FLOOR_MAIN,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+TENURE,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+ELECTRICITY,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_REF,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_AIRCON,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_WASHING,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_OVEN,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_RADIO,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_ANATV,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_DIGITV,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_AUDIO,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_LANDLINE,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_BASICPHONE,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_SMARTPHONE,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_TABLET,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_PC,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_CAR,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_VAN,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_JEEP,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_TRUCK,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_MOTOR,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_EBIKE,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_TRICYCLE,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_BIKE,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_PEDICAB,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_MBOAT,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_NBOAT,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_TRACTOR,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_ANIMAL,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_CABLE,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_CABNET,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_NOCABNET,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_MOBSUB,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_VSTREAM,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+HH_MSTREAM,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+DRINK_WATER,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+OTHERS_WATER,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+TOILET,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+TOILET_LOC,,str,"Vol1 - RTF1, Vol2 - RTF1"
+TOILET_SHARE,,str,"Vol1 - RTF1, Vol2 - RTF1"
+TOILET_PUBLIC,,str,"Vol1 - RTF1, Vol2 - RTF1"
+ODL_FAM,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+ICT_EQUIP,,int64,"Vol1 - RTF1, Vol2 - RTF1"
+ODL_SOFTWARE,,str,"Vol1 - RTF1, Vol2 - RTF1"
+ODL_TECHNOLOGY,,str,"Vol1 - RTF1, Vol2 - RTF1"
+HH_RFACT,,float64,"Vol1 - RTF1, Vol2 - RTF1"
+PSU_F2,,int64,Vol1 - RTF2
+LNO_F2,,int64,Vol1 - RTF2
+RESULT_CODE_F2,,int64,Vol1 - RTF2
+RESP_AGREE_F2,,int64,Vol1 - RTF2
+READ_IND_F2,,str,Vol1 - RTF2
+AGE_F2,,int64,Vol1 - RTF2
+SEX_F2,,int64,Vol1 - RTF2
+REL_F2,,int64,Vol1 - RTF2
+HGC_GRADE_F2,,str,Vol1 - RTF2
+READING59,,str,Vol1 - RTF2
+WRITING59,,str,Vol1 - RTF2
+COMPUTE59,,str,Vol1 - RTF2
+LLEVEL59,,str,Vol1 - RTF2
+READING,,str,Vol1 - RTF2
+WRITING,,str,Vol1 - RTF2
+COMPUTE,,str,Vol1 - RTF2
+COMPRE,,str,Vol1 - RTF2
+LLEVEL10OVER,,str,Vol1 - RTF2
+LLEVEL5OVER,,str,Vol1 - RTF2
+FLLEVEL,,str,Vol1 - RTF2
+BLITERATE,,str,Vol1 - RTF2
+FLITERATE,,str,Vol1 - RTF2
+RESP_RFACT_F2,,float64,Vol1 - RTF2
+PSU_F3,,int64,Vol2 - RTF3
+LNO_F3,,int64,Vol2 - RTF3
+RESULT_CODE_F3,,int64,Vol2 - RTF3
+RESP_AGREE_F3,,int64,Vol2 - RTF3
+READ_IND_F3,,str,Vol2 - RTF3
+MM_PNPAPER,,str,Vol2 - RTF3
+MM_OLNPAPER,,str,Vol2 - RTF3
+MM_MAGAZINE,,str,Vol2 - RTF3
+MM_POSTERS,,str,Vol2 - RTF3
+MM_TV,,str,Vol2 - RTF3
+MM_RADIO,,str,Vol2 - RTF3
+MM_MOVIES,,str,Vol2 - RTF3
+MM_VSTREAM,,str,Vol2 - RTF3
+MM_MSTREAM,,str,Vol2 - RTF3
+MM_WORK,,str,Vol2 - RTF3
+MM_SOCMED,,str,Vol2 - RTF3
+MM_ECOMMERCE,,str,Vol2 - RTF3
+MM_GSERV,,str,Vol2 - RTF3
+MM_MEETINGS,,str,Vol2 - RTF3
+MM_REPORTS,,str,Vol2 - RTF3
+MM_CALCULATE,,str,Vol2 - RTF3
+MM_CONTENT,,str,Vol2 - RTF3
+INTERNET,,str,Vol2 - RTF3
+DSKILL_INFO1,,str,Vol2 - RTF3
+DSKILL_INFO2,,str,Vol2 - RTF3
+DSKILL_INFO3,,str,Vol2 - RTF3
+DSKILL_INFO4,,str,Vol2 - RTF3
+DSKILL_COM1,,str,Vol2 - RTF3
+DSKILL_COM2,,str,Vol2 - RTF3
+DSKILL_COM3,,str,Vol2 - RTF3
+DSKILL_COM4,,str,Vol2 - RTF3
+DSKILL_CONT1,,str,Vol2 - RTF3
+DSKILL_CONT2,,str,Vol2 - RTF3
+DSKILL_CONT3,,str,Vol2 - RTF3
+DSKILL_CONT4,,str,Vol2 - RTF3
+DSKILL_CONT5,,str,Vol2 - RTF3
+DSKILL_CONT6,,str,Vol2 - RTF3
+DSKILL_SAFE1,,str,Vol2 - RTF3
+DSKILL_SAFE2,,str,Vol2 - RTF3
+DSKILL_PROB1,,str,Vol2 - RTF3
+DSKILL_PROB2,,str,Vol2 - RTF3
+DSKILL_PROB3,,str,Vol2 - RTF3
+DSKILL_PROB4,,str,Vol2 - RTF3
+DSKILL_PROB5,,str,Vol2 - RTF3
+DSKILL_PROB6,,str,Vol2 - RTF3
+TVOCGRAD,,str,Vol2 - RTF3
+TVOCCOURSE,,str,Vol2 - RTF3
+TVOCYEAR,,str,Vol2 - RTF3
+TVOCBENE,,str,Vol2 - RTF3
+TVOCAT,,str,Vol2 - RTF3
+TVOCCERT,,str,Vol2 - RTF3
+TVOCYAT,,str,Vol2 - RTF3
+TVOCNOAT,,str,Vol2 - RTF3
+TVOCTRAIN,,str,Vol2 - RTF3
+TVOCASST,,str,Vol2 - RTF3
+PATHWAY_COLLEGE,,str,Vol2 - RTF3
+PATHWAY_SKILLS,,str,Vol2 - RTF3
+PATHWAY_BUSINESS,,str,Vol2 - RTF3
+PATHWAY_EMPLOYMENT,,str,Vol2 - RTF3
+PATHWAY_STUDYABROAD,,str,Vol2 - RTF3
+PATHWAY_WORKABROAD,,str,Vol2 - RTF3
+PATHWAY_OTHERS,,str,Vol2 - RTF3
+SPORTS,,str,Vol2 - RTF3
+MSPORT,,str,Vol2 - RTF3
+MSPORT_FREQ,,str,Vol2 - RTF3
+MSPORT_WHY,,str,Vol2 - RTF3
+MSPORT_WHERE,,str,Vol2 - RTF3
+HELPOTHERS,,str,Vol2 - RTF3
+APPLYSKILLS,,str,Vol2 - RTF3
+AGE_F3,,int64,Vol2 - RTF3
+SEX_F3,,int64,Vol2 - RTF3
+REL_F3,,int64,Vol2 - RTF3
+HGC_GRADE_F3,,str,Vol2 - RTF3
+RESP_RFACT_F3,,float64,Vol2 - RTF3
