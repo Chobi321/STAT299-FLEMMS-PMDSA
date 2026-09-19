@@ -1,43 +1,44 @@
-Feature,Importance,Descriptive_Name
-DSKILL_INFO2_1,0.24071465,Digital Skill: Information and data literacy: YES
-INTERNET_1,0.16883515,Have you Used Internet in the past three (3) months?: YES  (Oo)
-INTERNET_2,0.07299028,Have you Used Internet in the past three (3) months?: NO (Hindi)
-DSKILL_CONT3_2,0.05764906,Digital Skill: Digital content creation: NO
-NOWORK_REASON_ 1,0.052717052,Reason for not being employed: Still studying/planning to continue studies
-DSKILL_INFO1_1,0.05219175,Digital Skill: Information and data literacy: YES
-DSKILL_CONT5_2,0.040586352,Digital Skill: Digital content creation: NO
-DSKILL_CONT2_2,0.017714683,Digital Skill: Digital content creation: NO
-DSKILL_CONT1_2,0.016642168,Digital Skill: Digital content creation: NO
-MM_OLNPAPER_2,0.016233211,Mass Media: Digital/Online Newspaper: Seldom (Bihira)
-DIFF_COMMUNICATING_1,0.014689957,"Difficulty in Communicating: No, no difficulty"
-MM_PNPAPER_2,0.014056154,Mass Media:  Printed Newspaper: Seldom (Bihira)
-ATTEND_SCHOOL_4,0.012345262,Currently Attending School: NO
-DSKILL_PROB3_2,0.012231834,Digital Skill: Problem solving: NO
-MM_MEETINGS_2,0.01187363,Mass Media: Attending Meetings: Seldom (Bihira)
-WORK_2,0.0115836505,Job/Business: NO
-AGE,0.01127657,Age (in Years)
-MSPORT_ 6,0.010419355,Primary Sport: Basketball
-PATHWAY_COLLEGE_2,0.010019896,Pathway Plan_Go to college/studies: NO
-PATHWAY_WORKABROAD_2,0.0094573945,Pathway Plan_Work Abroad: NO
-PATHWAY_STUDYABROAD_2,0.008839912,Pathway Plan_Study Abroad: NO
-ATTEND_SCHOOL_1,0.0084669525,"Currently Attending School: YES, PUBLIC"
-MM_POSTERS_2,0.008273851,"Mass Media: Posters, Signs, Brochure, Flyers: Seldom (Bihira)"
-DIFF_WALKING_1,0.007847867,"Difficulty in Walking: No, no difficulty"
-DIFF_REMEMBERING_1,0.007746076,"Difficulty in Remembering: No, no difficulty"
-PATHWAY_OTHERS_2,0.007657234,Pathway Plan_Others: NO
-MM_CONTENT_0,0.0071011693,Mass Media: Create Content: Not Applicable (Hindi angkop)
-TVOCGRAD_1,0.007100246,Are you a graduate of TechVoc: based
-TVOCAT_1,0.0068238364,Did you take Technical Vocational Competency Assessment Test: YES
-MM_MEETINGS_0,0.0067886505,Mass Media: Attending Meetings: Not Applicable (Hindi angkop)
-WORK_1,0.0066659637,Job/Business: YES
-MM_REPORTS_0,0.0065259594,Mass Media: Writing Report: Not Applicable (Hindi angkop)
-MM_MAGAZINE_2,0.006522755,"Mass Media:  Magazines, Comics, Books: Seldom (Bihira)"
-DSKILL_COM1_1,0.0064774654,Digital Skill: Communication and collaboration: YES
-MM_ECOMMERCE_0,0.006142237,Mass Media: E-commerce Platform: Not Applicable (Hindi angkop)
-SPORTS_1,0.0055305646,Have you engaged in sport last 12 months: YES  (Oo)
-TVOCCERT_3,0.005515512,Technical Vocational Certificate: Passed National Certificate Level II (NC II)
-TVOCBENE_11,0.005464319,Benefits/Assistance from Technical Vocational Course: No
-DIFF_SELFCARE_1,0.0054165367,"Difficulty in Self-Care: No, no difficulty"
-SPORTS_2,0.005280326,Have you engaged in sport last 12 months: NO (Hindi)
-MM_GSERV_0,0.0050691664,Mass Media: Government Services: Not Applicable (Hindi angkop)
-TVOCBENE_ 1,0.004515392,"Benefits/Assistance from Technical Vocational Course: Yes, Training for Work Scholarship Program (TWSP)"
+Feature,Descriptive_Name,Importance
+DSKILL_INFO2_1,Digital Skill: Information and data literacy: YES,0.2591968
+INTERNET_1,Have you Used Internet in the past three (3) months?: YES  (Oo),0.1455486
+INTERNET_2,Have you Used Internet in the past three (3) months?: NO (Hindi),0.085230604
+DSKILL_CONT3_2,Digital Skill: Digital content creation: NO,0.059553497
+NOWORK_REASON_ 1,Reason for not being employed: Still studying/planning to continue studies,0.051661827
+DSKILL_INFO1_1,Digital Skill: Information and data literacy: YES,0.047426768
+DSKILL_CONT5_2,Digital Skill: Digital content creation: NO,0.04186828
+DSKILL_CONT2_2,Digital Skill: Digital content creation: NO,0.019922793
+MM_OLNPAPER_2,Mass Media: Digital/Online Newspaper: Seldom (Bihira),0.016483756
+DIFF_COMMUNICATING_1,"Difficulty in Communicating: No, no difficulty",0.01576545
+DSKILL_CONT1_2,Digital Skill: Digital content creation: NO,0.014976856
+ATTEND_SCHOOL_4,Currently Attending School: NO,0.013793005
+MM_PNPAPER_2,Mass Media:  Printed Newspaper: Seldom (Bihira),0.013688033
+DSKILL_PROB3_2,Digital Skill: Problem solving: NO,0.012580805
+MM_MEETINGS_2,Mass Media: Attending Meetings: Seldom (Bihira),0.011181774
+WORK_2,Job/Business: NO,0.011139818
+AGE,Age (in Years),0.0108651025
+PATHWAY_COLLEGE_2,Pathway Plan_Go to college/studies: NO,0.010368714
+MSPORT_ 6,Primary Sport: Basketball,0.009605947
+PATHWAY_STUDYABROAD_2,Pathway Plan_Study Abroad: NO,0.008834617
+ATTEND_SCHOOL_1,"Currently Attending School: YES, PUBLIC",0.008343615
+DIFF_REMEMBERING_1,"Difficulty in Remembering: No, no difficulty",0.0082746
+MM_POSTERS_2,"Mass Media: Posters, Signs, Brochure, Flyers: Seldom (Bihira)",0.008023532
+PATHWAY_OTHERS_2,Pathway Plan_Others: NO,0.0077177733
+WORK_1,Job/Business: YES,0.007563851
+DIFF_WALKING_1,"Difficulty in Walking: No, no difficulty",0.0074772923
+MM_CONTENT_0,Mass Media: Create Content: Not Applicable (Hindi angkop),0.0071336483
+MM_GSERV_0,Mass Media: Government Services: Not Applicable (Hindi angkop),0.0066171987
+MSPORT_WHERE_1,Primary Sport_Where You Play It: based sports center sports center (Palaruan sa barangay/komunidad),0.006585616
+DSKILL_COM1_1,Digital Skill: Communication and collaboration: YES,0.006537356
+TVOCAT_1,Did you take Technical Vocational Competency Assessment Test: YES,0.0064429333
+TVOCGRAD_1,Are you a graduate of TechVoc: based,0.0064318287
+MM_MAGAZINE_2,"Mass Media:  Magazines, Comics, Books: Seldom (Bihira)",0.0063454923
+MM_MEETINGS_0,Mass Media: Attending Meetings: Not Applicable (Hindi angkop),0.006162251
+MM_REPORTS_0,Mass Media: Writing Report: Not Applicable (Hindi angkop),0.006072503
+SPORTS_2,Have you engaged in sport last 12 months: NO (Hindi),0.0056218966
+MM_ECOMMERCE_0,Mass Media: E-commerce Platform: Not Applicable (Hindi angkop),0.0056123165
+SPORTS_1,Have you engaged in sport last 12 months: YES  (Oo),0.0052878964
+DIFF_SELFCARE_1,"Difficulty in Self-Care: No, no difficulty",0.0052047153
+TVOCBENE_11,Benefits/Assistance from Technical Vocational Course: No,0.005143682
+TVOCCERT_3,Technical Vocational Certificate: Passed National Certificate Level II (NC II),0.0038557376
+TVOCBENE_ 1,"Benefits/Assistance from Technical Vocational Course: Yes, Training for Work Scholarship Program (TWSP)",0.003851237
+OF_PRESENT_2,Overseas Filipino Presence: NO,0.0
