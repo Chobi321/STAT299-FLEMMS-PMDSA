@@ -1,0 +1,1 @@
+ROC-AUC gap = -0.0112. Under the predeclared ±0.02 threshold, the PCA representation retains comparable predictive signal.
