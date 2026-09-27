@@ -1,0 +1,197 @@
+feature_name,count_missing,column_skip_logic,remarks,remarks2
+REG,0,,,
+REG2,0,,,
+PRV,0,,,
+HHID,0,,,
+URBANITY,0,,,
+PSU_MEM,0,,,
+LNO,0,,,
+SEX,0,,,
+AGE,0,,,
+REL,0,,,
+MOTHER,0,,,
+MOTHER_LNO,0,,,
+FATHER,0,,,
+FATHER_LNO,0,,,
+ETHNICITY,0,,,
+MSTAT,0,,,
+OF,0,,,
+OF_PRESENT,489189,OF,,
+ATTEND_SCHOOL,258434,4,,
+ATTEND_GRADE_LEVEL,352687,ATTEND_SCHOOL,if attend_school is missing or =4 (NO); NOT_APPLICABLE,
+ATTEND_GRADE,0,,,
+MODETRVL1,0,,,
+MODETRVL2,0,,,
+MODETRVL3,0,,,
+NATT_REASON,0,,,
+BASIC_LIT,6669,,skip; leakage,
+BASIC_NUM,6669,,skip; leakage,
+HGC_LEVEL,6669,,Default to N/A; 0 is early childhood educ.,Possible no early childhood educ even (e.g. Kinder)
+HGC_GRADE,0,,,
+DAYCARE,14597,,Default to 4 (No),
+KINDER,15211,,Default to 4 (No),
+SHS,356702,,Default to 4 (No),
+SHS_TRACK,464659,,Default to N/A,If applicants answered NO or missing in SHS; most likely not applicable question
+ALS,6669,,Default to 4,this means Not Applicable
+WORK,73819,,Default to 2 - No,
+WORK_TYPE_MAJOR,0,,,
+WORK_CLASS,259378,,Default to N/A,No options say not applicable
+NOWORK_REASON,0,,,
+DIFF_SEEING,6669,,Default to 1,Maybe respondents have no difficulty whatsoever?
+DIFF_HEARING,6669,,Default to 1,Maybe respondents have no difficulty whatsoever?
+DIFF_WALKING,6669,,Default to 1,Maybe respondents have no difficulty whatsoever?
+DIFF_REMEMBERING,6669,,Default to 1,Maybe respondents have no difficulty whatsoever?
+DIFF_SELFCARE,6669,,Default to 1,Maybe respondents have no difficulty whatsoever?
+DIFF_COMMUNICATING,6669,,Default to 1,Maybe respondents have no difficulty whatsoever?
+MEM_RFACT,0,,,
+PSU_F1,0,,,
+BENEFICIARY_4PS,0,,,
+CHILDREN_04,0,,,
+ADULTS,390740,,Default to 2,Default to No - not taking care of children
+GUARDIAN,425852,,Default to N/A,Default to No - not taking care of children
+CHILD_FACILITY,0,,,
+BUILDING,0,,,
+ROOF,0,,,
+WALL,0,,,
+FLOOR_FINISH,0,,,
+FLOOR_MAIN,0,,,
+TENURE,0,,,
+ELECTRICITY,0,,,
+HH_REF,0,,,
+HH_AIRCON,0,,,
+HH_WASHING,0,,,
+HH_OVEN,0,,,
+HH_RADIO,0,,,
+HH_ANATV,0,,,
+HH_DIGITV,0,,,
+HH_AUDIO,0,,,
+HH_LANDLINE,0,,,
+HH_BASICPHONE,0,,,
+HH_SMARTPHONE,0,,,
+HH_TABLET,0,,,
+HH_PC,0,,,
+HH_CAR,0,,,
+HH_VAN,0,,,
+HH_JEEP,0,,,
+HH_TRUCK,0,,,
+HH_MOTOR,0,,,
+HH_EBIKE,0,,,
+HH_TRICYCLE,0,,,
+HH_BIKE,0,,,
+HH_PEDICAB,0,,,
+HH_MBOAT,0,,,
+HH_NBOAT,0,,,
+HH_TRACTOR,0,,,
+HH_ANIMAL,0,,,
+HH_CABLE,0,,,
+HH_CABNET,0,,,
+HH_NOCABNET,0,,,
+HH_MOBSUB,0,,,
+HH_VSTREAM,0,,,
+HH_MSTREAM,0,,,
+DRINK_WATER,0,,,
+OTHERS_WATER,0,,,
+TOILET,0,,,
+TOILET_LOC,12656,,Default to N/A,
+TOILET_SHARE,12656,,Default to N/A,
+TOILET_PUBLIC,426124,,Default to N/A,
+ODL_FAM,0,,,
+ICT_EQUIP,0,,,
+ODL_SOFTWARE,303282,,Default to 2 - NO?,Q23. Used Softwares for ODL in past 12 months
+ODL_TECHNOLOGY,303282,,Default to 2 - NO?,"Q24. Used Technology for i. collaborate, ii. read documents, iii. watch movies, iv. join online calls, etc. in past 12 months"
+HH_RFACT,0,,,
+PSU_F2,0,,,
+RESULT_CODE_F2,0,,,
+RESP_AGREE_F2,0,,,
+READ_IND_F2,28127,,Leakage? Dont include?,
+AGE_F2,0,,,
+SEX_F2,0,,,
+REL_F2,0,,,
+HGC_GRADE_F2,0,,,
+READING59,496770,,Leakage; Should be N/A,Reading Indicator 5 to 9 Years Old; Baka adults to missing ang READ score level for 5-9 years old
+WRITING59,496770,,Leakage; Should be N/A,
+COMPUTE59,496770,,Leakage; Should be N/A,
+LLEVEL59,496770,,Leakage; Should be N/A,
+READING,28127,,Leakage; Should be N/A,
+WRITING,28127,,Leakage; Should be N/A,Could be not applicable to children on their WRITING assessment meant for adults?
+COMPUTE,28127,,Leakage; Should be N/A,
+COMPRE,28127,,Leakage; Should be N/A,
+LLEVEL10OVER,28127,,Leakage; Should be N/A,
+LLEVEL5OVER,28127,,Leakage; Should be N/A,
+FLLEVEL,28127,,Leakage; Should be N/A,
+BLITERATE,28127,,Leakage; Should be N/A,
+FLITERATE,28127,,Drop Missing FLITERATE?,
+RESP_RFACT_F2,0,,,
+PSU_F3,0,,,
+RESULT_CODE_F3,0,,,
+RESP_AGREE_F3,0,,,
+READ_IND_F3,27784,,Leakage; Default ,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_PNPAPER,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_OLNPAPER,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_MAGAZINE,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_POSTERS,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_TV,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_RADIO,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_MOVIES,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_VSTREAM,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_MSTREAM,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_WORK,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_SOCMED,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_ECOMMERCE,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_GSERV,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_MEETINGS,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_REPORTS,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_CALCULATE,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+MM_CONTENT,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+INTERNET,27784,,,Same number of missing values. Maybe default to Not Applicable? Maybe these respondents cannot read at all and thus asking if they read Magazines etc may not apply to them.
+DSKILL_INFO1,147648,,,Do we default to Not Applicable? I.e. these people do not have the opportunity to exercise digital skills
+DSKILL_INFO2,147648,,,
+DSKILL_INFO3,147648,,,
+DSKILL_INFO4,147648,,,
+DSKILL_COM1,147648,,,
+DSKILL_COM2,147648,,,
+DSKILL_COM3,147648,,,
+DSKILL_COM4,147648,,,
+DSKILL_CONT1,147648,,,
+DSKILL_CONT2,147648,,,
+DSKILL_CONT3,147648,,,
+DSKILL_CONT4,147648,,,
+DSKILL_CONT5,147648,,,
+DSKILL_CONT6,147648,,,
+DSKILL_SAFE1,147648,,,
+DSKILL_SAFE2,147648,,,
+DSKILL_PROB1,147648,,,
+DSKILL_PROB2,147648,,,
+DSKILL_PROB3,147648,,,
+DSKILL_PROB4,147648,,,
+DSKILL_PROB5,147648,,,
+DSKILL_PROB6,147648,,,
+TVOCGRAD,362978,,Default to 5 - Not a tech voc grad,
+TVOCCOURSE,0,,,
+TVOCYEAR,0,,,
+TVOCBENE,0,,,
+TVOCAT,490225,,Default to N/A,Did u take tech voc competency test
+TVOCCERT,491479,,Default to N/A,
+TVOCYAT,0,,,
+TVOCNOAT,0,,,
+TVOCTRAIN,362978,,Default to 5 - Not a tech voc grad,
+TVOCASST,0,,,
+PATHWAY_COLLEGE,92239,,Default to N/A,
+PATHWAY_SKILLS,92239,,Default to N/A,
+PATHWAY_BUSINESS,92239,,Default to N/A,
+PATHWAY_EMPLOYMENT,92239,,Default to N/A,
+PATHWAY_STUDYABROAD,92239,,Default to N/A,
+PATHWAY_WORKABROAD,92239,,Default to N/A,
+PATHWAY_OTHERS,92239,,Default to N/A,
+SPORTS,27784,,Either no or N/A,
+MSPORT,0,,,
+MSPORT_FREQ,406868,,Default to N/A,
+MSPORT_WHY,406868,,Default to N/A,
+MSPORT_WHERE,406868,,Default to N/A,
+HELPOTHERS,269607,,Default to N/A,?
+APPLYSKILLS,440694,,Default to N/A,?
+AGE_F3,0,,,
+SEX_F3,0,,,
+REL_F3,0,,,
+HGC_GRADE_F3,0,,,
+RESP_RFACT_F3,0,,,

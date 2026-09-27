@@ -1,45 +1,44 @@
 Feature_Name,Descriptive_Name
-MM_GSERV_0,Mass Media: Government Services: Not Applicable (Hindi angkop)
-DSKILL_CONT2_2,Digital Skill: Digital content creation: NO
-PATHWAY_STUDYABROAD_2,Pathway Plan_Study Abroad: NO
-DSKILL_CONT5_2,Digital Skill: Digital content creation: NO
-DIFF_COMMUNICATING_1,"Difficulty in Communicating: No, no difficulty"
-TVOCBENE_ 1,"Benefits/Assistance from Technical Vocational Course: Yes, Training for Work Scholarship Program (TWSP)"
-PATHWAY_COLLEGE_2,Pathway Plan_Go to college/studies: NO
-SPORTS_2,Have you engaged in sport last 12 months: NO (Hindi)
-WORK_2,Job/Business: NO
-DSKILL_CONT1_2,Digital Skill: Digital content creation: NO
-MM_ECOMMERCE_0,Mass Media: E-commerce Platform: Not Applicable (Hindi angkop)
-DIFF_REMEMBERING_1,"Difficulty in Remembering: No, no difficulty"
-TVOCBENE_11,Benefits/Assistance from Technical Vocational Course: No
 NOWORK_REASON_ 1,Reason for not being employed: Still studying/planning to continue studies
-WORK_1,Job/Business: YES
-PATHWAY_WORKABROAD_2,Pathway Plan_Work Abroad: NO
-DSKILL_INFO2_1,Digital Skill: Information and data literacy: YES
-MM_REPORTS_0,Mass Media: Writing Report: Not Applicable (Hindi angkop)
-INTERNET_2,Have you Used Internet in the past three (3) months?: NO (Hindi)
+PATHWAY_COLLEGE_2,Pathway Plan_Go to college/studies: NO
+DIFF_SELFCARE_1,"Difficulty in Self-Care: No, no difficulty"
+MSPORT_WHERE_1,Primary Sport_Where You Play It: based sports center sports center (Palaruan sa barangay/komunidad)
 MM_OLNPAPER_2,Mass Media: Digital/Online Newspaper: Seldom (Bihira)
 DIFF_WALKING_1,"Difficulty in Walking: No, no difficulty"
-TVOCAT_1,Did you take Technical Vocational Competency Assessment Test: YES
-MM_CONTENT_0,Mass Media: Create Content: Not Applicable (Hindi angkop)
-TVOCCERT_3,Technical Vocational Certificate: Passed National Certificate Level II (NC II)
-DSKILL_CONT3_2,Digital Skill: Digital content creation: NO
-MM_PNPAPER_2,Mass Media:  Printed Newspaper: Seldom (Bihira)
-MSPORT_WHERE_1,Primary Sport_Where You Play It: based sports center sports center (Palaruan sa barangay/komunidad)
-MM_MEETINGS_0,Mass Media: Attending Meetings: Not Applicable (Hindi angkop)
-MM_POSTERS_2,"Mass Media: Posters, Signs, Brochure, Flyers: Seldom (Bihira)"
-ATTEND_SCHOOL_1,"Currently Attending School: YES, PUBLIC"
 SPORTS_1,Have you engaged in sport last 12 months: YES  (Oo)
-OF_PRESENT_2,Overseas Filipino Presence: NO
-AGE,Age (in Years)
-DSKILL_COM1_1,Digital Skill: Communication and collaboration: YES
-DSKILL_INFO1_1,Digital Skill: Information and data literacy: YES
-MM_MAGAZINE_2,"Mass Media:  Magazines, Comics, Books: Seldom (Bihira)"
-MM_MEETINGS_2,Mass Media: Attending Meetings: Seldom (Bihira)
-PATHWAY_OTHERS_2,Pathway Plan_Others: NO
-ATTEND_SCHOOL_4,Currently Attending School: NO
-MSPORT_ 6,Primary Sport: Basketball
-TVOCGRAD_1,Are you a graduate of TechVoc: based
+MM_CONTENT_0,Mass Media: Create Content: Not Applicable (Hindi angkop)
+SPORTS_2,Have you engaged in sport last 12 months: NO (Hindi)
+TVOCCERT_3,Technical Vocational Certificate: Passed National Certificate Level II (NC II)
+DIFF_COMMUNICATING_1,"Difficulty in Communicating: No, no difficulty"
 DSKILL_PROB3_2,Digital Skill: Problem solving: NO
-DIFF_SELFCARE_1,"Difficulty in Self-Care: No, no difficulty"
+DSKILL_COM1_1,Digital Skill: Communication and collaboration: YES
+ATTEND_SCHOOL_1,"Currently Attending School: YES, PUBLIC"
+OF_PRESENT_2,Overseas Filipino Presence: NO
+MM_REPORTS_0,Mass Media: Writing Report: Not Applicable (Hindi angkop)
+WORK_2,Job/Business: NO
+MM_MEETINGS_2,Mass Media: Attending Meetings: Seldom (Bihira)
+MM_MEETINGS_0,Mass Media: Attending Meetings: Not Applicable (Hindi angkop)
+AGE,Age (in Years)
+DIFF_REMEMBERING_1,"Difficulty in Remembering: No, no difficulty"
+INTERNET_2,Have you Used Internet in the past three (3) months?: NO (Hindi)
+TVOCAT_1,Did you take Technical Vocational Competency Assessment Test: YES
+DSKILL_INFO2_1,Digital Skill: Information and data literacy: YES
+TVOCBENE_ 1,"Benefits/Assistance from Technical Vocational Course: Yes, Training for Work Scholarship Program (TWSP)"
+PATHWAY_OTHERS_2,Pathway Plan_Others: NO
+DSKILL_CONT2_2,Digital Skill: Digital content creation: NO
+WORK_1,Job/Business: YES
+MM_ECOMMERCE_0,Mass Media: E-commerce Platform: Not Applicable (Hindi angkop)
+TVOCBENE_11,Benefits/Assistance from Technical Vocational Course: No
+MM_PNPAPER_2,Mass Media:  Printed Newspaper: Seldom (Bihira)
+MM_MAGAZINE_2,"Mass Media:  Magazines, Comics, Books: Seldom (Bihira)"
+TVOCGRAD_1,Are you a graduate of TechVoc: based
 INTERNET_1,Have you Used Internet in the past three (3) months?: YES  (Oo)
+DSKILL_INFO1_1,Digital Skill: Information and data literacy: YES
+MM_POSTERS_2,"Mass Media: Posters, Signs, Brochure, Flyers: Seldom (Bihira)"
+DSKILL_CONT1_2,Digital Skill: Digital content creation: NO
+DSKILL_CONT5_2,Digital Skill: Digital content creation: NO
+MM_GSERV_0,Mass Media: Government Services: Not Applicable (Hindi angkop)
+MSPORT_ 6,Primary Sport: Basketball
+DSKILL_CONT3_2,Digital Skill: Digital content creation: NO
+PATHWAY_STUDYABROAD_2,Pathway Plan_Study Abroad: NO
+ATTEND_SCHOOL_4,Currently Attending School: NO

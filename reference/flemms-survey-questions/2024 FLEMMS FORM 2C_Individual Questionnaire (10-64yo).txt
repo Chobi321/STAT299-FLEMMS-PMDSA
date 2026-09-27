@@ -1,0 +1,215 @@
+                                                                                                                                                FLEMMS Form 2C
+                                                                                                                                                PSA Approval No.: PSA-2436-04
+                                                                                                                                                Expires on: 30 September 2025
+
+                                                  REPUBLIC OF THE PHILIPPINES
+
+                           Philippine Statistics Authority
+
+2024 FUNCTIONAL LITERACY, EDUCATION AND MASS MEDIA SURVEY
+
+                                             OCTOBER 2024
+                                     INDIVIDUAL QUESTIONNAIRE
+
+                                                       (for individual aged 10 to 64 years)
+
+CONFIDENTIALITY:                                                     Dear Sir/Madam:
+
+Article 55 of RA 10625, states that "The                             The Philippine Statistics Authority (PSA) is conducting the 2024 Functional Literacy, Education, and Mass Media
+information collected shall not be used for                          Survey (FLEMMS) to gather information on literacy, education, and exposure to mass media. The collected data will
+purposes of taxation, investigation, or regulation."                 be used by government planners, policymakers, and administrators in formulating social and economic development
+                                                                     plans, policies, and programs.
+Section 26 of RA 10625 stipulates that individual
+data furnished by a respondent to statistical                        The conduct of the 2024 FLEMMS is in accordance with Republic Act (RA) No. 10625 (Philippine Statistical Act of
+inquiries, surveys, and censuses of the PSA shall                    2013), which authorizes the PSA to prepare and conduct periodic censuses on various sectors of the economy.
+be considered privileged information and shall be
+inadmissible as evidence in any proceeding.                          Pursuant to Section 25 of RA 10625, the National Statistician identified the above statistical inquiry or survey to be
+                                                                     conducted with the obligation to provide information. Considering this, all respondents whether natural or legal
+Section 27 of RA 10625 states that a person,                         persons shall be liable to reply to the statistical inquiry or survey. The respondents are also required to give truthful
+including parties within the PSA Board and the                       and complete answers to the said statistical inquiries or surveys of the PSA and other statistical offices of the
+PSA, who breach the confidentiality of                               Philippine Statistical System. We are requesting you provide complete and truthful answers to all questions that will
+information, whether by carelessness, improper                       be asked by our survey/census interviewer.
+behavior, behavior with malicious intent, and use
+of confidential information for profit shall be liable               Rest assured that the data you will furnish in the above-mentioned survey/census shall be treated with strict
+to a fine of five thousand pesos (PhP5,000.00) to                    confidentiality and shall be considered PRIVILEGED COMMUNICATION, hence, inadmissible in evidence in any
+not more than ten thousand pesos (PhP10,000.00)                      proceeding as provided for in Section 26 of RA 10625. The PSA also complies with the Data Privacy Act of 2012 and
+and or imprisonment of three months but not to                       assures that all collected personal information is processed in accordance with the law and other issuances.
+exceed one year, subject to the degree of breach
+of information.                                                      This survey was reviewed and cleared under the Statistical Survey Review and Clearance System (SSRCS) with
+                                                                     clearance number PSA-2436-04 and expiration date 30 September 2025.
+
+                                                                     We appreciate your utmost cooperation and support to the success of this undertaking. Thank you very much.
+
+                                                                     Truly yours,
+
+                                                                     CLAIRE DENNIS S. MAPA, PhD
+                                                                     Undersecretary
+                                                                     National Statistician and Civil Registrar General
+
+1. GEOGRAPHIC IDENTIFICATION AND OTHER INFORMATION
+
+GEOGRAPHIC IDENTIFICATION CODES                                                   RECORD OF INDIVIDUAL VISIT
+
+REGION                                                                            Visit            1            2                                             3
+PROVINCE/HUC
+CITY/MUN                                                                          Date:         //              //                  //
+BARANGAY
+EA . . . . . . . . . . . . . . . . . . . . . . . . .                              Time:
+                                                                                    Began
+                                                                                    Ended
+
+                                                                                  Result:
+
+BSN . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .               CODE FOR FINAL VISIT
+
+HUSN . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                    Result . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+HSN . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                 Number of Visits . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+NUMBER OF HOUSEHOLDS IN THE HOUSING UNIT
+
+                                                                                  RESULT CODES
+
+                                                                                  1 - Completed Interview 5 - Partly Completed
+
+Name of Household Head:                                                           2 - Not at Home           6 - Respondent Incapacitated
+Name and Line No. of Respondent:
+Address:                                                                          3 - Postponed             7 - Overseas
+
+                                                                                  4 - Refused               9 - Others
+
+                                                                                                                                    (SPECIFY)
+
+                                                                     LINE NO.     Q1. READING INDICATOR . . . . . . . . . . . . Enter Code
+
+                                                                                  1 - Can read sentence     9 - Others
+                                                                                  2 - Can't read
+                                                                                  3 - Can read in the past                          (SPECIFY)
+
+                                                                                     IF CODES 2, 3 AND 9, END OF FORM 2C
+
+CERTIFICATION
+  I hereby certify that the data gathered in this questionnaire were obtained/reviewed by me personally and in accordance
+
+with instructions stated in the Interviewer's Manual.
+
+Signature Over Printed Name of Interviewer                           INTERVIEWER         Signature Over Printed Name of Supervisor  SUPERVISOR
+                                                                           NO.                                                           NO.
+
+Date Accomplished                                                                                Date Reviewed
+1. BASIC LITERACY                                                                                     DO NOT
+ANSWER THE FOLLOWING BASED ON THE INSTRUCTIONS OR QUESTIONS PROVIDED.                                   FILL
+(SAGUTIN ANG MGA SUMUSUNOD AYON SA MGA NAKASAAD NA PANUTO O TANONG.)
+
+Q2. Write your full name. (Isulat ang iyong buong pangalan .)
+
+Q3. Write your current home address. (Isulat ang iyong kasalukuyang tirahan .)
+
+(House Number/Street/Purok)     (Barangay)              (Town/City)                      (Province)
+
+Q4. Write your complete date of birth. (Month, Day, Year)
+       (Isulat ang iyong kumpletong petsa ng kapanganakan . (Buwan, Petsa, Taon))
+
+(Month / Buwan )                             (Day / Petsa )              (Year / Taon )
+
+Q5. Put a check  in the box beside your highest level of education completed and write the
+       grade, level or course you completed on the line after it.
+
+(Lagyan ng tsek  ang kahon at isulat sa katabing patlang ang pinakamataas na grado,
+antas o kursong natapos.)
+
+No Grade Completed                                      Post
+                                                        Secondary
+Elementary                   (ex. Grade 1,              (Technical/           (Year Level / Course)
+                             Grade 2, etc.)             Vocational)
+
+Junior High School                                      Bachelor
+/High School (if old
+Curriculum)                     (ex. Grade 10,                           (College Year Level/Degree/
+                             if old curr. 4th Year)                           Course, if Graduate)
+
+Senior High School           (ex. Grade 11,             Post             (Master's/Doctorate Degree)
+(K-12 Curriculum)              Grade 12)                Graduate
+
+Q6. If a kilo of rice costs PhP55.00, how much will two (2) kilos cost?
+       Write your answer on the space provided.
+
+(Kung ang halaga ng isang kilong bigas ay PhP55.00, magkano ang dalawang kilo?)
+
+(Isulat ang sagot sa patlang.)                                           PhP
+
+Q7. If a kilo of sugar costs PhP88.00, how much will half a kilo cost?
+       Write your answer on the space provided.
+
+(Kung ang halaga ng isang kilong asukal ay PhP88.00, magkano ang kalahating kilo?)
+
+(Isulat ang sagot sa patlang.)                                           PhP
+
+                                                     2
+2. FUNCTIONAL LITERACY                                                                                DO NOT
+ANSWER THE FOLLOWING BASED ON THE INSTRUCTIONS OR QUESTIONS PROVIDED.                                   FILL
+(SAGUTIN ANG MGA SUMUSUNOD AYON SA MGA NAKASAAD NA PANUTO O TANONG.)
+
+Q8. Read the following paragraph and write your answer on the space provided.
+           The depletion of our forests is one of the most serious
+           environmental problems of the Philippines. It causes frequent floods
+           and loss of fertile soil. Crops and property are destroyed and many
+           lives are lost because of frequent floods.
+
+      Based on the paragraph you read, what are the effects of forest depletion?
+
+      (Basahin ang sumusunod na talata at isulat ang sagot sa patlang.)
+           (Ang pagkaubos ng punong-kahoy sa gubat ay isa sa
+           pinakamabigat na suliraning pangkapaligiran ng Pilipinas. Ito ay
+           nagdudulot ng malimit na pagbaha at pagkaanod ng matabang
+           lupa. Dahil naman sa malimit na pagbaha, ang mga pananim at ari-
+           arian ay nawawasak at maraming buhay ang nasasawi.)
+
+      (Ayon sa binasa mong talata, ano ang resulta ng pagkaubos ng punong-kahoy sa gubat?)
+
+       ANSWER/SAGOT:
+
+Q9. Based on the heat index table below of Region 3, how many times did Casiguran, Aurora
+       experience the danger level in the heat index from April 21 to April 27? Write your answer on
+       the space provided.
+
+       (Base sa talaan ng heat index ng Region 3, ilang beses naranasan ng Casiguran, Aurora ang
+       higit na mapanganib na lebel sa heat index mula Abril 21 hanggang Abril 27? Isulat ang
+       iyong sagot sa patlang.)
+
+ANSWER/SAGOT:
+
+                      HIGHEST HEAT INDEX RECORDED IN REGION 3
+                                           As of 28 April 2024
+
+Effect-based classification (Klasipikasyon batay sa epekto)
+
+Caution               Fatigue is possible with prolonged exposure and activity. Continuing
+(Mapanganib)          activity could lead to cramps.
+(27-32°C)             (Maaaring maranasan ang pagkapagod dahil sa patuloy na pagkabilad
+                      sa init. Ang pagpapatuloy ng gawain ay posibleng humantong sa
+
+                      pulikat o cramps.)
+
+Extreme Caution       Heat cramps and heat exhaustion are possible. Continuing activity
+(Mas Mapanganib)      could lead to heat stroke.
+(33-41°C)             (Maaaring magkapulikat at labis na pagkapagod dahil sa init. Kung
+                      magpapatuloy sa gawain ay posibleng humantong sa heat stroke.)
+
+Danger                Heat cramps and heat exhaustion are likely; heat stroke is probable
+(Higit na             with continued exposure.
+mapanganib)           (Malamang na maranasan ang pulikat at labis na pagkapagod dahil sa
+(41-51°C)             init; Mataas ang tsansang ma-heat stroke kung patuloy na mabilad sa
+                      init.)
+Extreme Danger        Heat Stroke is imminent.
+(Pinaka-mapanganib)   (Malapit nang maranasan ang heat stroke.)
+(52°C and up)
+
+Station               Apr 21 Apr 22 Apr 23 Apr 24 Apr 25 Apr 26 Apr 27
+  Iba, Zambales
+  Muñoz, Nueva Ecija    50 36 34 51 29 50 46
+  Casiguran, Aurora     52 48 48 31 43 40 36
+                        41 31 46 34 48 44 53
+
+                                          3
+
