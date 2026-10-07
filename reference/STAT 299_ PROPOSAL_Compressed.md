@@ -107,11 +107,11 @@ By employing Feature Interaction measures, such as Friedman’s H-statistic, the
 
 The FLEMMS dataset is characterized by high dimensionality, containing hundreds of variables ranging from individual demographics to specific household amenities. A significant challenge in utilizing such datasets is multicollinearity, where indicators (e.g., "ownership of a radio" and "ownership of a television") are highly correlated, potentially inflating the variance of model coefficients.
 
-While there is limited literature using PCA specifically on the FLEMMS dataset, researchers in developing economies have historically used PCA to construct Synthetic Socioeconomic Indices. For instance, researchers often follow the Filmer and Pritchett (2001) methodology, which established PCA as the standard for creating "Wealth Indices" from asset-based survey data (like those found in FLEMMS). In this study, PCA is employed not merely for compression, but to extract latent dimensions of functional literacy; consolidating redundant indicators into principal components that represent broader concepts like "Information Agency" or "Material Vulnerability." This ensures that the subsequent XGBoost model is trained on a "denoised" feature set, improving computational efficiency and model stability.
+While there is limited literature using PCA specifically on the FLEMMS dataset, researchers in developing economies have historically used PCA to construct Synthetic Socioeconomic Indices. For instance, researchers often follow the Filmer and Pritchett (2001) methodology, which established PCA as the standard for creating "Wealth Indices" from asset-based survey data (like those found in FLEMMS). In this study, we use PCA as an unsupervised diagnostic of redundancy and latent structure in the survey space. Correlated indicators consolidate into components that describe broader respondent profiles, such as access to information or material vulnerability. PCA ranks features by the variance they explain, which says nothing about their relevance to functional literacy. We therefore select the modeling features with a supervised procedure (Section 3.3) and report how much the two selections overlap.
 
 ### **3\. Methodology (Research Design)**
 
-This study employs a **quantitative, predictive, and spatial analytical design**. It utilizes secondary data from the 2024 Functional Literacy, Education, and Mass Media Survey (FLEMMS) to develop a Machine Learning (ML) based Early Warning System. The research is divided into two primary phases: (1) Dimensionality Reduction and Feature Selection, and (2) Predictive Modeling and Interpretability Analysis.
+This study employs a **quantitative, predictive, and spatial analytical design**. It utilizes secondary data from the 2024 Functional Literacy, Education, and Mass Media Survey (FLEMMS) to develop a Machine Learning (ML) based Early Warning System. The research is divided into two primary phases: (1) Diagnostic Dimensionality Analysis and Supervised Feature Selection, and (2) Predictive Modeling and Interpretability Analysis.
 
 #### **3.1 Data Source and Sample Selection**
 
@@ -136,20 +136,21 @@ Data from all volumes were merged into a unified dataset. Geographic identifiers
 
   Where ![][image18] is the log-loss and ![][image19] is the regularization term (complexity of the trees). 
 
-#### **3.3 Phase 1: Feature Selection via PCA**
+#### **3.3 Phase 1: Diagnostic PCA and Supervised Feature Selection**
 
-To manage high-dimensionality (initially 752 features post-encoding), Principal Component Analysis (PCA) was applied to the feature matrix ![][image20]in order to find a set of orthogonal unit vectors ![][image21] (principal components) that maximize variance.The ![][image22]\-th principal component can be defined by the weight vector as: 
+To characterize the structure of the high-dimensional feature space (initially 752 features post-encoding), Principal Component Analysis (PCA) was applied to the feature matrix ![][image20]in order to find a set of orthogonal unit vectors ![][image21] (principal components) that maximize variance.The ![][image22]\-th principal component can be defined by the weight vector as: 
 
 ![][image23]
 
 1. **Threshold:** A 95% variance threshold was set such that the Explained Variance Ratio (EVR) satisfies:  
    ![][image24]  
-    Where ![][image25] are the eigenvalues of the covariance matrix ![][image26]. For policy interpretability, we extract the top 5 features with the highest **loadings** (coefficients in ![][image27]) from the first 10 components. This process initially identified 539 principal components.  
-2. **Reduction for Interpretability:** To ensure policy relevance, the top 10 principal components were analyzed. The five features with the highest loadings per component were extracted, resulting in a refined subset of 44 key features (e.g., *Digital Skill: Content Creation*, *Mass Media Exposure*, and *Employment Status*).
+    Where ![][image25] are the eigenvalues of the covariance matrix ![][image26]. This process identified 539 principal components.  
+2. **Diagnostic Use of Loadings:** We inspected the top 10 principal components and extracted the five features with the highest **loadings** (coefficients in ![][image27]) per component, which gave 44 unique features (e.g., *Digital Skill: Content Creation*, *Mass Media Exposure*, and *Employment Status*). This list shows where the survey varies most. It does not filter model inputs, because high variance in the feature space does not mean a feature predicts the target.
+3. **Supervised Feature Selection:** We train a preliminary XGBoost classifier on all 752 encoded features against functional literacy status (`FLITERATE`), with the same survey weights (`RESP_RFACT_F2`) and class weights (`scale_pos_weight`) as the final model. We rank features by gain importance and keep the top 44 as the final predictor set. Only 8 of these 44 features (18%) also appear in the PCA list, so we keep variance exploration (PCA) and risk prediction (XGBoost) separate. The selected features keep their original names, so the SHAP and ALE outputs in Phase 2 remain readable to policymakers.
 
 #### **3.4 Phase 2: Predictive Modeling (Early Warning System) via Extreme Gradient Boosting (XGBoost)**
 
-The refined feature set, incorporating features selected via PCA, serves as the input for an XGBoost (Extreme Gradient Boosting) classifier. XGBoost was selected due to its superior handling of tabular data, its ability to capture complex non-linear interactions through gradient-weighted decision trees, and its robust regularization parameters which prevent overfitting in high-dimensional survey data.
+The 44 features selected by gain importance in Phase 1 serve as the input for an XGBoost (Extreme Gradient Boosting) classifier. XGBoost was selected due to its superior handling of tabular data, its ability to capture complex non-linear interactions through gradient-weighted decision trees, and its robust regularization parameters which prevent overfitting in high-dimensional survey data.
 
 Unlike traditional bagging methods (e.g., Random Forest), XGBoost follows a sequential boosting strategy where each subsequent tree is trained to predict the residuals (errors) of the previous ensemble, effectively minimizing a global loss function.
 
@@ -219,7 +220,7 @@ Beyond predictive accuracy, the model emphasizes explainability for policy inter
 
 #### **3.6 Spatial Aggregation and Simulation (Proposed)**
 
-The integration of spatial analytics with machine learning is implemented as a post-predictive diagnostic layer. It involves aggregating individual-level risk predictions at the provincial level. While the XGBoost model utilizes principal components to generate globalized risk probabilities, Local Indicators of Spatial Association (LISA) are subsequently applied to the model's outputs. First**,** LISA will be used to assess whether provinces with low (or high) literacy outcomes are geographically concentrated rather than randomly distributed. This will allow classification of provinces into four categories: High-High clusters (areas of high literacy surrounded by similar areas), Low-Low clusters (areas of low literacy surrounded by similarly disadvantaged areas), and spatial outliers (High-Low and Low-High). To identify "High-High" or "Low-Low" literacy clusters, the Local Moran’s ![][image47] for province ![][image48] is:  
+The integration of spatial analytics with machine learning is implemented as a post-predictive diagnostic layer. It involves aggregating individual-level risk predictions at the provincial level. While the XGBoost model uses the 44 selected original features to generate globalized risk probabilities, Local Indicators of Spatial Association (LISA) are subsequently applied to the model's outputs. First**,** LISA will be used to assess whether provinces with low (or high) literacy outcomes are geographically concentrated rather than randomly distributed. This will allow classification of provinces into four categories: High-High clusters (areas of high literacy surrounded by similar areas), Low-Low clusters (areas of low literacy surrounded by similarly disadvantaged areas), and spatial outliers (High-Low and Low-High). To identify "High-High" or "Low-Low" literacy clusters, the Local Moran’s ![][image47] for province ![][image48] is:  
 ![][image49]
 
 Where ![][image50] is the spatial weight matrix (usually contiguity/shared borders) between provinces ![][image48] and ![][image51].
