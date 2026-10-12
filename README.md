@@ -14,16 +14,16 @@ The project has two distinct halves:
 ## 1. The Machine Learning & Data Pipeline
 The analysis is primarily driven by Jupyter notebooks. The pipeline recently transitioned to **Option C** (Supervised Feature Selection) based on panel defense feedback ("variance ≠ relevance").
 
-* **`PCA_FLEMMS_streamlined.ipynb`**: The main end-to-end pipeline. 
+* **`notebooks/PCA_FLEMMS_streamlined.ipynb`**: The main end-to-end pipeline. 
   * **Phase 1**: Ingests, cleans, and encodes the raw survey data (752 features). Uses PCA as an exploratory diagnostic (95% variance) to check redundancy.
   * **Phase 1B**: Fits an XGBoost model on the 752 features to rank and select the top 44 features by predictive gain. 
   * **Phase 2**: Trains the predictive EWS XGBoost model using the 44 supervised features and outputs SHAP/ALE metrics.
-* **`PCA_component_XGBoost_comparison.ipynb`**: A benchmark comparing XGBoost on PCA components versus original supervised features (proving they have equivalent predictive power, ROC-AUC gap is only -0.0112).
+* **`01_pca_diagnostic/PCA_component_XGBoost_comparison.ipynb`**: A benchmark comparing XGBoost on PCA components versus original supervised features (proving they have equivalent predictive power, ROC-AUC gap is only -0.0112).
 * **`data/`**: Expected to contain the raw FLEMMS 2024 PUF CSVs. *(Gitignored)*
 * **Generated Artifacts**:
-  * `phase1b_selected_features.csv` (Features used in the model)
-  * `xgboost_shap_ale_impact.csv` (Policy impact directions)
-  * `xgboost_shap_interactions.csv` (Pairwise feature effects)
+  * `01b_supervised_selection/phase1b_selected_features.csv` (Features used in the model)
+  * `02_xgboost_xai/xgboost_shap_ale_impact.csv` (Policy impact directions)
+  * `02_xgboost_xai/xgboost_shap_interactions.csv` (Pairwise feature effects)
 
 ---
 

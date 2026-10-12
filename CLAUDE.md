@@ -54,10 +54,22 @@ Both phases are written to be RAM-conscious on the full ~496,770-row × 752-enco
 
 Planned/unresolved spatial layer (LISA, GWR — described in `04_methodology_model.md`) is not yet implemented in the notebook.
 
+## Directory layout (by phase)
+
+Notebooks run with their own folder as working directory, so raw data is read from `../data/` and every output lands in its phase folder.
+
+- `00_eda/`: `EDA_FLEMMS.ipynb`, `data_exploration.ipynb`, `eda_figures/`, `eda_province_rates.csv`, `EDA_FINDINGS.md`, master dictionary CSV.
+- `01_pca_diagnostic/`: `phase1_selected_features.csv`, `PCA_component_XGBoost_comparison.ipynb` and its outputs.
+- `01b_supervised_selection/`: `phase1b_selected_features.csv`, `phase1b_pca_vs_supervised_overlap.csv`.
+- `02_xgboost_xai/`: `xgboost_basic_importance.csv`, `xgboost_shap_ale_impact.csv`, `xgboost_shap_interactions.csv`.
+- `03_spatial_lisa_gwr/`: empty, reserved for the LISA/GWR layer.
+- `notebooks/`: `PCA_FLEMMS_streamlined.ipynb` (spans Phases 1, 1B and 2; kept whole so it can be run end to end).
+- `reference/`: manuscript, defense comments, data-quality notes, questionnaires. `data/` is gitignored.
+
 ## Git workflow
 
 - Never add AI attribution to commit messages or pull request descriptions (no "Co-Authored-By: Claude", no "Generated with Claude Code" footer, no mention of Claude or Anthropic anywhere in the message).
 
 ## Data dependencies
 
-Raw PSA FLEMMS 2024 CSVs and metadata dictionaries are expected under `data/PHL-PSA-FLEMMS-2024-V1-PUF/` and `data/PHL-PSA-FLEMMS-2024-V2-PUF/` (paths hardcoded at the top of each phase's first cell). `data/` is gitignored and not present in this checkout — it must be supplied locally to actually execute the notebook. The four CSV outputs in the repo root (`phase1_selected_features.csv`, `xgboost_*.csv`) are the checked-in *results* of a prior run, not regenerated automatically.
+Raw PSA FLEMMS 2024 CSVs and metadata dictionaries are expected under `data/PHL-PSA-FLEMMS-2024-V1-PUF/` and `data/PHL-PSA-FLEMMS-2024-V2-PUF/` (paths hardcoded at the top of each notebook's first cell, as `../data/...`). `data/` is gitignored and not present in this checkout — it must be supplied locally to actually execute the notebook. The CSV outputs in the phase folders are the checked-in *results* of a prior run, not regenerated automatically.
