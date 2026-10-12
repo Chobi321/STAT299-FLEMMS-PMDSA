@@ -61,7 +61,7 @@ Notebooks run with their own folder as working directory, so raw data is read fr
 - `00_eda/`: `EDA_FLEMMS.ipynb`, `data_exploration.ipynb`, `eda_figures/`, `eda_province_rates.csv`, `EDA_FINDINGS.md`, master dictionary CSV.
 - `01_pca_diagnostic/`: `phase1_selected_features.csv`, `PCA_component_XGBoost_comparison.ipynb` and its outputs.
 - `01b_supervised_selection/`: `phase1b_selected_features.csv`, `phase1b_pca_vs_supervised_overlap.csv`.
-- `02_xgboost_xai/`: `xgboost_basic_importance.csv`, `xgboost_shap_ale_impact.csv`, `xgboost_shap_interactions.csv`.
+- `02_xgboost_xai/`: `ALE_leakage_audit.ipynb` and its outputs, `ALE_LEAKAGE_FINDINGS.md`, plus the older `xgboost_*.csv` exports (superseded by the audited model).
 - `03_spatial_lisa_gwr/`: empty, reserved for the LISA/GWR layer.
 - `notebooks/`: `PCA_FLEMMS_streamlined.ipynb` (spans Phases 1, 1B and 2; kept whole so it can be run end to end).
 - `reference/`: manuscript, defense comments, data-quality notes, questionnaires. `data/` is gitignored.
