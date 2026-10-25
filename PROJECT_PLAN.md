@@ -1,6 +1,6 @@
 # Project Plan and Status
 
-Plan for working through the analysis phases in the post-defense proposal (`reference/proposal-manuscript/04_methodology_model_revised.md`, `01_introduction_revised.md`). Status as of 2026-10-12.
+Plan for working through the analysis phases in the post-defense proposal (`reference/proposal-manuscript/04_methodology_model_revised.md`, `01_introduction_revised.md`). Status as of 2026-10-25.
 
 Status key: DONE, PARTIAL (runs, but a proposal commitment is missing), TODO, BLOCKED.
 
@@ -8,27 +8,28 @@ Detailed findings live next to the work:
 
 - `00_eda/EDA_FINDINGS.md` for the EDA and PCA diagnostics.
 - `02_xgboost_xai/ALE_LEAKAGE_FINDINGS.md` for the leakage audit and ALE.
+- `04_spatial_lisa_simulation/LISA_FINDINGS.md` for the out-of-fold model, province aggregation and scenario simulation.
 
 ## 1. Objectives and where they are served
 
 | Proposal objective | Served by | Status |
 |---|---|---|
-| 1. Descriptive spatial precursor (LISA on provinces and HUCs) | Phase 4 | TODO (input table exists) |
+| 1. Descriptive spatial precursor (LISA on provinces and HUCs) | Phase 4 | BLOCKED (code runs; boundaries and PRV crosswalk missing) |
 | 2. Predictive early warning system (weighted XGBoost) | Phases 1B and 2 | PARTIAL (model and test metrics exist, tuning and CV do not) |
-| 3. Driver quantification and scenario simulation | Phases 3 and 4 | PARTIAL (ALE done, H-statistic and simulation not) |
+| 3. Driver quantification and scenario simulation | Phases 3 and 4 | PARTIAL (ALE and simulation done, H-statistic not; simulation targets use a fallback until LISA runs) |
 
 ## 2. Phase map
 
 | Proposal phase | Folder | Notebook | Status |
 |---|---|---|---|
 | EDA (supports Chapter 3) | `00_eda/` | `EDA_FLEMMS.ipynb`, `data_exploration.ipynb` | DONE |
-| Phase 1: diagnostic PCA | `01_pca_diagnostic/` | `notebooks/PCA_FLEMMS_streamlined.ipynb`, `PCA_component_XGBoost_comparison.ipynb` | DONE (reconcile counts) |
+| Phase 1: diagnostic PCA | `01_pca_diagnostic/` | `notebooks/PCA_FLEMMS_streamlined.ipynb`, `PCA_component_XGBoost_comparison.ipynb` | DONE |
 | Phase 1B: supervised selection | `01b_supervised_selection/` | `notebooks/PCA_FLEMMS_streamlined.ipynb`, `02_xgboost_xai/ALE_leakage_audit.ipynb` | PARTIAL |
 | Phase 2: predictive model | `02_xgboost_xai/` | `ALE_leakage_audit.ipynb` | PARTIAL |
 | Phase 3: XAI stack | `02_xgboost_xai/` | `ALE_leakage_audit.ipynb` | PARTIAL |
-| Phase 4: LISA and simulation | `03_spatial_lisa_gwr/` | none yet | TODO |
+| Phase 4: LISA and simulation | `04_spatial_lisa_simulation/` | `LISA_scenario_simulation.ipynb` | PARTIAL (LISA blocked on boundaries) |
 
-The folder `03_spatial_lisa_gwr/` predates the removal of GWR. Rename it (suggested `04_spatial_lisa_simulation/`) when Phase 4 starts.
+The spatial folder was renamed from `03_spatial_lisa_gwr/` to `04_spatial_lisa_simulation/` on 2026-10-25, since GWR is out.
 
 ## 3. Phase by phase
 
@@ -42,14 +43,14 @@ Full results: `00_eda/EDA_FINDINGS.md`.
 - The strongest raw association is highest grade completed (Cramer's V 0.27), then the digital-skill items (about 0.20).
 - Provincial weighted rates run from 5.5% to 66.4% across 118 areas, smallest sample 589.
 
-### Phase 1: diagnostic PCA (DONE, one reconciliation open)
+### Phase 1: diagnostic PCA (DONE)
 
 - PC1 explains 5.8% of variance and the first 10 components 19.1%. The best single component reaches AUC 0.614.
 - Variance order and target relevance have a rank correlation of 0.65, so PCA ranking is a weak selector.
-- PCA needs 504 to 539 components for 95% of variance, so it compresses little here.
+- PCA needs 504 components for 95% of variance on 750 encoded columns, so it compresses little here. This EDA count is the one the manuscript quotes (decided 2026-10-25).
 
 Open:
-1. **Reconcile component counts.** The proposal and `CLAUDE.md` say 539 (752 columns). The EDA run gives 504 (750 columns). The ALE notebook encodes 740 columns (it also drops `ETHNICITY`, `HGC_GRADE` and `TVOCCOURSE`, and works on the 468,643 rows with a valid target, so fewer levels appear), and the comparison notebook retains 533 components on its training split. Settle one pipeline definition and quote one number.
+1. **Component count: resolved.** The manuscript quotes the EDA run (504 components, 750 columns). The main notebook's older run (539, 752) and the comparison notebook's training-split figure (533) are not quoted.
 2. `PATHWAY_OTHERS` is constant but appears in the PCA list as `PATHWAY_OTHERS_2`. The ALE notebook drops constants before encoding. Port that rule to the main notebook.
 3. Run the data-quality checks in `reference/Notebook_Verification_TODO.md`. The ALE notebook now asserts merge-key uniqueness and no row fan-out (item 1 passes). Items 2 to 5 (blank vs NaN, native N/A codes, the 6,669 subgroup, skip-logic cross-tabs) are still not run.
 
@@ -62,7 +63,7 @@ Done, with the audit in `02_xgboost_xai/ALE_LEAKAGE_FINDINGS.md`:
 - The PCA-component benchmark gap (-0.011 AUC) was measured on the older split. It is consistent with the grouped-split result (about 0.70 for 44 features).
 
 Open:
-1. Recompute the PCA overlap using `02_xgboost_xai/selected_features_train_only.csv`.
+1. PCA overlap recomputed against `02_xgboost_xai/selected_features_train_only.csv` (2026-10-25): 9 of the 44 training-only features (20%) are in the 43-feature PCA list. The manuscript quotes this figure, not the older 8 of 44.
 2. Decide whether the manuscript reports the 44 features by gain (dummy level) or by original variable. Several dummies of the same variable occupy slots (`HGC_LEVEL_1`, `_2`, `_3`, `_6`).
 3. Write the training-only selection back into `01b_supervised_selection/` so Phase 1B has one source of truth. Today `phase1b_selected_features.csv` still holds the all-rows list.
 
@@ -88,8 +89,8 @@ Primary model (45 features: 44 by training gain without `READ_IND_F3`, plus `AGE
 Discrimination is moderate. A model that gets 0.70 AUC on this feature set will rank people only somewhat better than chance, which matters for how the manuscript words "early warning".
 
 Open:
-1. Add hyperparameter tuning and grouped cross-validation. The 300-tree, depth-6 settings have not been tuned.
-2. Report a calibration check, because `scale_pos_weight` inflates predicted probabilities.
+1. Add hyperparameter tuning. The 300-tree, depth-6 settings have not been tuned. Grouped 5-fold cross-validation of the untuned model is done in the Phase 4 notebook: weighted out-of-fold ROC-AUC 0.701, PR-AUC 0.507.
+2. Calibration: done in the Phase 4 notebook. After the prior correction (subtract log `scale_pos_weight` from the margin) the weighted mean prediction is 0.290 against 0.292 observed, and every decile is within 0.8 points of its observed rate.
 3. Make `notebooks/PCA_FLEMMS_streamlined.ipynb` Phase 2 standalone or retire it in favour of the ALE notebook (`reference/Notebook_Verification_TODO.md` item 6). The ALE notebook is already standalone.
 4. The three `xgboost_*.csv` files predate the audit. Treat them as superseded until regenerated from the audited model.
 
@@ -108,12 +109,12 @@ Open:
 3. Re-run SHAP (importance, direction, interactions) on the audited model so SHAP and ALE describe the same model.
 4. Report the digital-skill block as a group (grouped SHAP), since the items are highly correlated.
 
-### Phase 4: spatial layer and simulation (TODO)
+### Phase 4: spatial layer and simulation (PARTIAL)
 
-Input available: `00_eda/eda_province_rates.csv` (118 areas with weighted rate, unweighted rate, n, population share per `PRV`).
+Notebook: `04_spatial_lisa_simulation/LISA_scenario_simulation.ipynb`, first executed 2026-10-24. Results: `04_spatial_lisa_simulation/LISA_FINDINGS.md`. Steps 2 and 4 ran; step 3 waits on step 1. LISA significance rule: permutation p < 0.05 (decided 2026-10-25), with BH-FDR as a sensitivity column.
 
 Steps:
-1. Get province and HUC boundaries and a `PRV` code-to-name crosswalk (`[DATA MISSING]`). Resolve code 999 first (n = 589, rate 51.3%).
+1. **BLOCKED.** Get province and HUC boundaries and a `PRV` code-to-name crosswalk (`[DATA MISSING]`). Resolve code 999 first (n = 589, rate 51.3%).
 2. Aggregate predicted probabilities to province level with `RESP_RFACT_F2`, next to the observed weighted rate.
 3. Build spatial weights (queen contiguity plus a nearest-neighbour rule for islands), then global Moran's I and LISA with permutation inference.
 4. Scenario simulation: change selected inputs (for example internet use or digital skill) in high-risk provinces, re-score with the audited model, and report the change in predicted risk with uncertainty.
@@ -146,4 +147,5 @@ Wait on: H-statistic text, tuned performance figures, spatial results.
 2. Keep or drop Form 3 variables with unverified skip logic if the questionnaire cannot be found.
 3. Whether moderate discrimination (AUC about 0.70) changes how strongly the manuscript describes the model as an early warning system.
 4. Source for province boundaries and the `PRV` name crosswalk.
-5. Folder rename for the spatial phase now that GWR is out.
+
+Decided 2026-10-25: PCA count from the EDA run (504), LISA rule p < 0.05, spatial folder renamed to `04_spatial_lisa_simulation/`.

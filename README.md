@@ -15,8 +15,8 @@ The project has two distinct halves:
 The analysis is primarily driven by Jupyter notebooks. The pipeline recently transitioned to **Option C** (Supervised Feature Selection) based on panel defense feedback ("variance ≠ relevance").
 
 * **`notebooks/PCA_FLEMMS_streamlined.ipynb`**: The main end-to-end pipeline. 
-  * **Phase 1**: Ingests, cleans, and encodes the raw survey data (752 features). Uses PCA as an exploratory diagnostic (95% variance) to check redundancy.
-  * **Phase 1B**: Fits an XGBoost model on the 752 features to rank and select the top 44 features by predictive gain. 
+  * **Phase 1**: Ingests, cleans, and encodes the raw survey data (750 encoded features). Uses PCA as an exploratory diagnostic (95% variance) to check redundancy.
+  * **Phase 1B**: Fits an XGBoost model on the 750 encoded features to rank and select the top 44 features by predictive gain. 
   * **Phase 2**: Trains the predictive EWS XGBoost model using the 44 supervised features and outputs SHAP/ALE metrics.
 * **`01_pca_diagnostic/PCA_component_XGBoost_comparison.ipynb`**: A benchmark comparing XGBoost on PCA components versus original supervised features (proving they have equivalent predictive power, ROC-AUC gap is only -0.0112).
 * **`data/`**: Expected to contain the raw FLEMMS 2024 PUF CSVs. *(Gitignored)*
