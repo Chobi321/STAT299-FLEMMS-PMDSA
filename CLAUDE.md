@@ -32,13 +32,13 @@ Two phases, each a self-contained block of cells (Phase 2 reloads and re-derives
 **Phase 1 — Dimensionality reduction (diagnostic only, as of the Option C revision below):**
 1. `load_and_merge_flemms()` merges four raw PSA CSVs (`MEMBER`, `RTF1` household, `RTF2` literacy/target, `RTF3` ICT) on `HHID`/`LNO`, dropping PSA's duplicated geographic columns before merging. Filters to the 10–64 working-age universe.
 2. `preprocess_for_pca_memory_safe()` drops identifiers/survey weights/target-leakage columns (see the `identifiers` list — anything derived from Form 2 literacy results is leakage and must stay excluded, including `BASIC_NUM`), forces remaining columns to categorical, drops high-cardinality columns (>50 uniques) to save RAM, imputes (median for numeric, constant `'Not_Applicable'` for categorical), one-hot encodes, and standard-scales.
-3. `run_pca_optimized()` fits PCA to a 95% variance threshold (752 → 539 components).
+3. `run_pca_optimized()` fits PCA to a 95% variance threshold (750 encoded columns → 504 components, the count from the EDA run in `00_eda/EDA_FINDINGS.md`, which the manuscript quotes; an older run of this notebook gave 752 → 539).
 4. `extract_top_features()` takes the top 10 components and the top 5 highest-loading features each, producing 44 unique features (`phase_1_features`) — reported only as a diagnostic list, not fed to the model (see Phase 1B).
 5. `build_dynamic_dictionary_from_excel()` / `clean_psa_labels()` turn PSA's raw value-set Excel dictionaries (`flemms_2024_v*_metadata(dictionary).xlsx`) into human-readable feature labels; manual overrides exist for continuous variables (`FATHER`, `MOTHER`, `AGE`) and for digital-skill dummy columns that PSA labels identically (see `digital_skill_translations` in Phase 2 — if you rename/add modeling features, this mapping needs to stay in sync).
 6. Output: `phase1_selected_features.csv` (Feature_Name, Descriptive_Name) — PCA's variance-based picks, kept for the overlap comparison, no longer the model's input list.
 
 **Phase 1B — Supervised feature selection (Option C: PCA is a diagnostic, not a selector):**
-Addresses the defense panel's "variance ≠ relevance" critique directly instead of just asserting it as a limitation. Reuses Phase 1's `X_scaled`/`feature_names` (all 752 encoded features), trains an `XGBClassifier` against the real target (same `scale_pos_weight`/`sample_weight=RESP_RFACT_F2` treatment as Phase 2) to rank features by gain, and takes the top 44 by that ranking instead of by PCA loading. Reports the overlap between the PCA-selected and supervised-selected lists (`phase1b_pca_vs_supervised_overlap.csv`) and writes the supervised list — with the same descriptive-name treatment as Phase 1 — to `phase1b_selected_features.csv`, which Phase 2 now reads instead of `phase1_selected_features.csv`.
+Addresses the defense panel's "variance ≠ relevance" critique directly instead of just asserting it as a limitation. Reuses Phase 1's `X_scaled`/`feature_names` (all 750 encoded features), trains an `XGBClassifier` against the real target (same `scale_pos_weight`/`sample_weight=RESP_RFACT_F2` treatment as Phase 2) to rank features by gain, and takes the top 44 by that ranking instead of by PCA loading. Reports the overlap between the PCA-selected and supervised-selected lists (`phase1b_pca_vs_supervised_overlap.csv`) and writes the supervised list — with the same descriptive-name treatment as Phase 1 — to `phase1b_selected_features.csv`, which Phase 2 now reads instead of `phase1_selected_features.csv`.
 
 **Phase 2 — Predictive modeling (XGBoost + XAI):**
 1. Re-merges raw data, re-encodes, then filters columns down to exactly the 44 (or so) features from `phase1b_selected_features.csv`, plus target `FLITERATE` and weight `RESP_RFACT_F2`.
@@ -50,9 +50,9 @@ Addresses the defense panel's "variance ≠ relevance" critique directly instead
    - `xgboost_shap_ale_impact.csv` — mean |SHAP| impact magnitude + correlation-derived effect direction ("Increases Risk"/"Decreases Risk").
    - `xgboost_shap_interactions.csv` — top pairwise SHAP interaction strengths (computed on a subsample of the test set — 1000–2000 rows — because full interaction values are O(n·features²) and RAM-prohibitive at the full ~93k-row test set).
 
-Both phases are written to be RAM-conscious on the full ~496,770-row × 752-encoded-feature dataset: expect `gc.collect()` calls, subsampling for interaction values, and dropping high-cardinality columns. Preserve that pattern when extending the notebook rather than materializing full dense arrays.
+Both phases are written to be RAM-conscious on the full ~496,770-row × 750-encoded-feature dataset: expect `gc.collect()` calls, subsampling for interaction values, and dropping high-cardinality columns. Preserve that pattern when extending the notebook rather than materializing full dense arrays.
 
-Planned/unresolved spatial layer (LISA, GWR — described in `04_methodology_model.md`) is not yet implemented in the notebook.
+The spatial layer (LISA plus scenario simulation; GWR was dropped after the defense) lives in `04_spatial_lisa_simulation/LISA_scenario_simulation.ipynb`, not in this notebook.
 
 ## Directory layout (by phase)
 
@@ -62,7 +62,7 @@ Notebooks run with their own folder as working directory, so raw data is read fr
 - `01_pca_diagnostic/`: `phase1_selected_features.csv`, `PCA_component_XGBoost_comparison.ipynb` and its outputs.
 - `01b_supervised_selection/`: `phase1b_selected_features.csv`, `phase1b_pca_vs_supervised_overlap.csv`.
 - `02_xgboost_xai/`: `ALE_leakage_audit.ipynb` and its outputs, `ALE_LEAKAGE_FINDINGS.md`, plus the older `xgboost_*.csv` exports (superseded by the audited model).
-- `03_spatial_lisa_gwr/`: empty, reserved for the LISA/GWR layer.
+- `04_spatial_lisa_simulation/`: `LISA_scenario_simulation.ipynb` (out-of-fold model, province aggregation, LISA, scenario simulation), its CSV outputs, `lisa_figures/`, `prv_crosswalk_template.csv`, `LISA_FINDINGS.md`. LISA clusters use the permutation p < 0.05 rule (BH-FDR is reported only as a sensitivity column). Boundaries go in `data/geo/`.
 - `notebooks/`: `PCA_FLEMMS_streamlined.ipynb` (spans Phases 1, 1B and 2; kept whole so it can be run end to end).
 - `reference/`: manuscript, defense comments, data-quality notes, questionnaires. `data/` is gitignored.
 

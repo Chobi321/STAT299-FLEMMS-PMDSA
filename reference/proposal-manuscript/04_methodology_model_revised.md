@@ -10,18 +10,18 @@
 ---
 
 ### Phase 1: Exploratory Dimensionality Analysis (Diagnostic PCA)
-- **High-Dimensional Feature Space:** Manages 752 one-hot encoded predictor features post-cleaning, excluding administrative identifiers, survey weights, and Form 2 target leakage variables.
-- **Unsupervised Variance Characterization:** PCA is applied to evaluate structural collinearity and redundancy in the survey space. A 95% cumulative Explained Variance Ratio (EVR) threshold retains 539 principal components.
+- **High-Dimensional Feature Space:** Manages 750 one-hot encoded predictor features post-cleaning, excluding administrative identifiers, survey weights, and Form 2 target leakage variables.
+- **Unsupervised Variance Characterization:** PCA is applied to evaluate structural collinearity and redundancy in the survey space. A 95% cumulative Explained Variance Ratio (EVR) threshold retains 504 principal components (PC1 5.8%, first ten 19.1%).
 - **Diagnostic Role (Not Selection):** The top 10 principal components are inspected for loading patterns to document broader respondent profiles (e.g., educational backgrounds, household asset blocks). Crucially, PCA loadings are **not** used to filter the predictive model inputs because unsupervised variance does not imply target relevance.
 
 ### Phase 1B: Supervised Feature Selection (XGBoost Gain)
-- **Target-Aligned Selection:** To prioritize features directly associated with functional illiteracy (`FLITERATE`), an initial `XGBClassifier` is trained across all 752 encoded features using survey design weights (`RESP_RFACT_F2`) and class weights (`scale_pos_weight`).
+- **Target-Aligned Selection:** To prioritize features directly associated with functional illiteracy (`FLITERATE`), an initial `XGBClassifier` is trained on the training households only (740 encoded columns on the rows with a valid target) using survey design weights (`RESP_RFACT_F2`) and class weights (`scale_pos_weight`).
 - **Ranking by Gain Importance:** The top 44 features exhibiting the highest training gain are extracted as the final predictor subset (`phase1b_selected_features.csv`).
-- **Empirical Variance vs. Relevance Check:** Comparing the 44 PCA-highest-loading features against the 44 supervised gain features reveals an empirical overlap of only **8/44 (18%)**, empirically justifying the decision to decouple variance exploration (PCA) from risk prediction (XGBoost).
+- **Empirical Variance vs. Relevance Check:** Comparing the 44 PCA-highest-loading features against the 44 supervised gain features reveals an empirical overlap of only **9/44 (20%)** (training-only selection), empirically justifying the decision to decouple variance exploration (PCA) from risk prediction (XGBoost).
 
 ### Phase 2: Predictive Modeling (Early Warning System via XGBoost)
 - **Supervised Classifier:** Predicts binary functional literacy ($0 = \text{Literate}$, $1 = \text{Illiterate}$) using the 44 selected original survey features. Keeping original features preserves direct policy interpretability.
-- **Evaluation Design:** 80/20 stratified train-test split (`random_state=42`).
+- **Evaluation Design:** 80/20 train-test split grouped by household (`HHID`, `random_state=42`), plus 5-fold household-grouped cross-validation for out-of-fold predictions. Probabilities are prior-corrected for `scale_pos_weight` before aggregation.
 - **Survey & Imbalance Weighting:** Incorporates `scale_pos_weight` to counteract the class imbalance (~30% illiterate base) alongside sample weights (`RESP_RFACT_F2`) to reflect true national population representation.
 - **Optimization:** Optimizes regularized log-loss objective via second-order Taylor expansion (gradients and Hessians), regularized by tree complexity penalty $\Omega(f) = \gamma T + \frac{1}{2}\lambda \sum w_j^2$. Primary evaluation metrics focus on weighted ROC-AUC and PR-AUC.
 
@@ -36,5 +36,5 @@
 
 ### Phase 4: Spatial Diagnostic Layer & Policy Scenario Simulation
 - **Provincial Aggregation:** Individual predicted illiteracy probabilities are aggregated to provincial and HUC levels using survey population expansion weights.
-- **Spatial Autocorrelation (LISA):** Computes Local Moran's $I$ to identify statistically significant clusters: High-High (spatial poverty/illiteracy traps), Low-Low (literacy clusters), and spatial outliers (High-Low, Low-High).
+- **Spatial Autocorrelation (LISA):** Computes Local Moran's $I$ to identify statistically significant clusters: High-High (spatial poverty/illiteracy traps), Low-Low (literacy clusters), and spatial outliers (High-Low, Low-High). Queen contiguity (islands linked to their nearest neighbour, KNN k = 6 as sensitivity), 9,999 permutations, significance at permutation p < 0.05 (BH-FDR as sensitivity only). LISA runs on the observed rate, the predicted rate and the residual.
 - **Policy Intervention Simulation:** *GWR is removed.* Scenario simulations are instead executed directly through the trained XGBoost model by perturbing specific input variables across target populations (e.g., simulating a 10% increase in digital literacy or internet access in high-risk provinces) and measuring the resulting reduction in predicted illiteracy risk.

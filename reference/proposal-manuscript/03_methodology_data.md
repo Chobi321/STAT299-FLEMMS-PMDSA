@@ -7,3 +7,4 @@
 - **Data Cleansing & Weighting:**
   - Missing data imputed as 'Not Applicable' based on survey skip-logic paths.
   - Survey sampling weights (`RESP_RFACT_F2`) must be embedded into the model loss functions to represent the true scale of the national population.
+- **Analysis Universe:** 468,643 respondents aged 10 to 64 with a Form 2 record (163,655 households), out of 496,770. Weights represent 85.0M people; Kish effective sample size 242,573 (design effect about 1.93). Weighted illiteracy 29.2%. 118 provinces and HUCs, smallest n = 589.
