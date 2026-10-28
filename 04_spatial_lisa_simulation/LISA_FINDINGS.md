@@ -2,7 +2,7 @@
 
 Run date: 2026-10-28. Notebook executed end to end against the local `data/` directory, no cell errors. All rates use `RESP_RFACT_F2`. Target `y` = 1 if functionally illiterate.
 
-**Status: complete.** All sections ran, including spatial weights, global Moran's I, local clusters and maps. Boundaries: option B, city/municipality polygons (`data/geo/phl_adm3.gpkg`, exported from the `phl_admin3` layer of `data/phl_admin_boundaries.gdb`, OCHA COD-AB) dissolved to PRV units through `data/geo/prv_crosswalk.csv`. The crosswalk takes each PRV name from the PSA value set `PRV_VS1` in `flemms_2024_v1_metadata(dictionary).xlsx` and matches it to a boundary code by name. All 118 codes matched. The model and province sections reproduce the 2026-10-24 run exactly; the simulation changed because it now targets the LISA High-High units instead of the fallback rule.
+**Status: complete.** All sections ran, including spatial weights, global Moran's I, local clusters and maps. Boundaries: option B, city/municipality polygons (`data/geo/phl_adm3.gpkg`, exported from the `phl_admin3` layer of `data/phl_admin_boundaries.gdb`, OCHA COD-AB) dissolved to PRV units through `prv_crosswalk.csv` (this folder). The crosswalk takes each PRV name from the PSA value set `PRV_VS1` in `flemms_2024_v1_metadata(dictionary).xlsx` and matches it to a boundary code by name. All 118 codes matched. The model and province sections reproduce the 2026-10-24 run exactly; the simulation changed because it now targets the LISA High-High units instead of the fallback rule.
 
 ## 1. Out-of-fold model
 
@@ -153,5 +153,6 @@ Table: `lisa_clusters.csv` (local I, p, quadrant, both cluster rules, per unit a
 | `global_morans_i.csv` | Global Moran's I, three variables by two weight schemes |
 | `lisa_clusters.csv` | Local I, p-values and cluster labels per unit and variable |
 | `spatial_weights_summary.csv` | Queen and KNN-6 weight diagnostics |
-| `prv_crosswalk_template.csv` | Blank template; the filled crosswalk is `data/geo/prv_crosswalk.csv` (gitignored) |
+| `prv_crosswalk.csv` | PRV code to name, unit type and boundary code (input to the spatial cells) |
+| `prv_crosswalk_template.csv` | Original blank template, kept for reference |
 | `lisa_figures/` | Calibration, simulation, choropleth, Moran scatter and LISA cluster maps |

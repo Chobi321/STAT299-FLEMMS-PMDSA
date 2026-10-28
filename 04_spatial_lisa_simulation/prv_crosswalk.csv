@@ -1,0 +1,119 @@
+PRV,NAME,UNIT_TYPE,PSGC_PROV,PSGC_MUN,n,w_rate,BOUNDARY_NAME
+1,Abra,province,PH14001,,3636,0.2764,Abra
+2,Agusan del Norte,province,PH16002,,4590,0.4429,Agusan del Norte
+3,Agusan del Sur,province,PH16003,,4355,0.2805,Agusan del Sur
+4,Aklan,province,PH06004,,3914,0.2608,Aklan
+5,Albay,province,PH05005,,4352,0.2393,Albay
+6,Antique,province,PH06006,,4052,0.2624,Antique
+7,Basilan,province,PH19007,,4622,0.4786,Basilan
+8,Bataan,province,PH03008,,4063,0.2223,Bataan
+9,Batanes,province,PH02009,,1636,0.2632,Batanes
+10,Batangas,province,PH04010,,4309,0.1875,Batangas
+11,Benguet,province,PH14011,,3639,0.1214,Benguet
+12,Bohol,province,PH07012,,4112,0.2076,Bohol
+13,Bukidnon,province,PH10013,,4255,0.2996,Bukidnon
+14,Bulacan,province,PH03014,,4472,0.2793,Bulacan
+15,Cagayan,province,PH02015,,4321,0.3424,Cagayan
+16,Camarines Norte,province,PH05016,,4358,0.3627,Camarines Norte
+17,Camarines Sur,province,PH05017,,4414,0.3574,Camarines Sur
+18,Camiguin,province,PH10018,,2069,0.2713,Camiguin
+19,Capiz,province,PH06019,,3936,0.2911,Capiz
+20,Catanduanes,province,PH05020,,4478,0.3157,Catanduanes
+21,Cavite,province,PH04021,,3884,0.2255,Cavite
+22,Cebu,province,PH07022,,4541,0.3688,Cebu
+23,Davao del Norte,province,PH11023,,4235,0.3097,Davao del Norte
+24,Davao del Sur,province,PH11024,,4001,0.3541,Davao del Sur
+25,Davao Oriental,province,PH11025,,4283,0.3236,Davao Oriental
+26,Eastern Samar,province,PH08026,,4135,0.3971,Eastern Samar
+27,Ifugao,province,PH14027,,3827,0.2529,Ifugao
+28,Ilocos Norte,province,PH01028,,4097,0.3616,Ilocos Norte
+29,Ilocos Sur,province,PH01029,,4163,0.3574,Ilocos Sur
+30,Iloilo,province,PH06030,,4053,0.3162,Iloilo
+31,Isabela,province,PH02031,,4080,0.2764,Isabela
+32,Kalinga,province,PH14032,,4072,0.3101,Kalinga
+33,La Union,province,PH01033,,4330,0.285,La Union
+34,Laguna,province,PH04034,,3839,0.2783,Laguna
+35,Lanao del Norte,province,PH10035,,4683,0.435,Lanao del Norte
+36,Lanao del Sur,province,PH19036,,5886,0.4123,Lanao del Sur
+37,Leyte,province,PH08037,,3874,0.3209,Leyte
+40,Marinduque,province,PH17040,,4152,0.2686,Marinduque
+41,Masbate,province,PH05041,,3818,0.3954,Masbate
+42,Misamis Occidental,province,PH10042,,4251,0.2907,Misamis Occidental
+43,Misamis Oriental,province,PH10043,,4308,0.3473,Misamis Oriental
+44,Mountain Province,province,PH14044,,3349,0.272,Mountain Province
+45,Negros Occidental,province,PH06045,,4056,0.4062,Negros Occidental
+46,Negros Oriental,province,PH07046,,4112,0.2934,Negros Oriental
+47,North Cotabato,province,PH12047,,4030,0.3368,Cotabato (North Cotabato)
+48,Northern Samar,province,PH08048,,4659,0.4819,Northern Samar
+49,Nueva Ecija,province,PH03049,,4340,0.2708,Nueva Ecija
+50,Nueva Vizcaya,province,PH02050,,3711,0.3319,Nueva Vizcaya
+51,Occidental Mindoro,province,PH17051,,4332,0.3117,Occidental Mindoro
+52,Oriental Mindoro,province,PH17052,,4165,0.3036,Oriental Mindoro
+53,Palawan,province,PH17053,,3927,0.3552,Palawan
+54,Pampanga,province,PH03054,,4779,0.2504,Pampanga
+55,Pangasinan,province,PH01055,,4512,0.3765,Pangasinan
+56,Quezon,province,PH04056,,4026,0.2828,Quezon
+57,Quirino,province,PH02057,,3753,0.2698,Quirino
+58,Rizal,province,PH04058,,4630,0.1788,Rizal
+59,Romblon,province,PH17059,,4057,0.1807,Romblon
+60,Samar (Western),province,PH08060,,4475,0.4606,Samar (Western Samar)
+61,Siquijor,province,PH07061,,2064,0.2003,Siquijor
+62,Sorsogon,province,PH05062,,4318,0.3238,Sorsogon
+63,South Cotabato,province,PH12063,,4224,0.2257,South Cotabato
+64,Southern Leyte,province,PH08064,,3873,0.3694,Southern Leyte
+65,Sultan Kudarat,province,PH12065,,4143,0.4351,Sultan Kudarat
+66,Sulu,province,PH19066,,4289,0.2282,Sulu
+67,Surigao del Norte,province,PH16067,,4435,0.4286,Surigao del Norte
+68,Surigao del Sur,province,PH16068,,4370,0.4192,Surigao del Sur
+69,Tarlac,province,PH03069,,4304,0.274,Tarlac
+70,Tawi-Tawi,province,PH19070,,4693,0.6639,Tawi-Tawi
+71,Zambales,province,PH03071,,4014,0.3607,Zambales
+72,Zamboanga del Norte,province,PH09072,,4092,0.4137,Zamboanga del Norte
+73,Zamboanga del Sur,province,PH09073,,4098,0.4895,Zamboanga del Sur
+77,Aurora,province,PH03077,,4171,0.3341,Aurora
+78,Biliran,province,PH08078,,4347,0.3331,Biliran
+79,Guimaras,province,PH06079,,1830,0.2701,Guimaras
+80,Saranggani,province,PH12080,,4093,0.4784,Sarangani
+81,Apayao,province,PH14081,,2164,0.1319,Apayao
+82,Davao de Oro,province,PH11082,,4100,0.3412,Davao de Oro (Compostela Valley)
+83,Zamboanga Sibugay,province,PH09083,,4276,0.4002,Zamboanga Sibugay
+85,Dinagat Islands,province,PH16085,,1980,0.4266,Dinagat Islands
+86,Davao Occidental,province,PH11086,,3771,0.5339,Davao Occidental
+87,Maguindanao del Norte,province,PH19087,,7881,0.2421,Maguindanao del Norte
+88,Maguindanao del Sur,province,PH19088,,4545,0.275,Maguindanao del Sur
+301,Angeles City,lgu,,PH0305401,4897,0.2208,Angeles City
+302,Bacolod City,lgu,,PH0604501,4503,0.2231,Bacolod City (Capital)
+303,Baguio City,lgu,,PH1401102,3489,0.1021,Baguio City
+304,Butuan City,lgu,,PH1600202,4959,0.2696,Butuan City (Capital)
+305,Cagayan de Oro City,lgu,,PH1004305,4777,0.1562,Cagayan de Oro City (Capital)
+306,Cebu City,lgu,,PH0702217,4304,0.3406,Cebu City (Capital)
+307,Davao City,lgu,,PH1102402,4321,0.3036,Davao City
+308,General Santos City,lgu,,PH1206303,4428,0.2904,General Santos City (Dadiangas)
+309,Iligan City,lgu,,PH1003504,4006,0.2265,Iligan City
+310,Iloilo City,lgu,,PH0603022,4655,0.2935,Iloilo City (Capital)
+311,Lapulapu City,lgu,,PH0702226,4759,0.3284,Lapu-Lapu City (Opon)
+312,Lucena City,lgu,,PH0405624,2971,0.2704,Lucena City (Capital)
+313,Mandaue City,lgu,,PH0702230,4498,0.273,Mandaue City
+314,Olongapo City,lgu,,PH0307107,3470,0.2665,Olongapo City
+315,Puerto Princesa City,lgu,,PH1705316,3914,0.1678,Puerto Princesa City (Capital)
+316,Tacloban City,lgu,,PH0803747,4574,0.3612,Tacloban City (Capital)
+317,Zamboanga City,lgu,,PH0907332,4815,0.3351,Zamboanga City
+801,Caloocan City,lgu,,PH1307501,4521,0.221,Caloocan City
+802,Las Piñas,lgu,,PH1307601,3586,0.129,City of Las Piñas
+803,Makati City,lgu,,PH1307602,1609,0.1273,City of Makati
+804,Malabon City,lgu,,PH1307502,4197,0.2001,City of Malabon
+805,Mandaluyong,lgu,,PH1307401,3164,0.154,City of Mandaluyong
+806,Manila,lgu,,PH1303901,3538,0.1978,City of Manila
+807,Marikina,lgu,,PH1307402,3597,0.1956,City of Marikina
+808,Muntinlupa,lgu,,PH1307603,4062,0.2564,City of Muntinlupa
+809,Navotas,lgu,,PH1307503,5190,0.1666,City of Navotas
+810,Parañaque,lgu,,PH1307604,3892,0.1869,City of Parañaque
+811,Pasay,lgu,,PH1307605,3450,0.2744,Pasay City
+812,Pasig,lgu,,PH1307403,2936,0.1088,City of Pasig
+813,Quezon City,lgu,,PH1307404,3694,0.2653,Quezon City
+814,San Juan,lgu,,PH1307405,1180,0.0547,City of San Juan
+815,Taguig City,lgu,,PH1307607,3304,0.1393,Taguig City
+816,Valenzuela City,lgu,,PH1307504,4557,0.2387,City of Valenzuela
+817,Pateros,lgu,,PH1307606,1205,0.1192,Pateros
+901,Isabela City,lgu,,PH0909701,1949,0.2192,City of Isabela
+999,BARMM63,,,,589,0.513,

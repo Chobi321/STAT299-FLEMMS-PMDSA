@@ -62,7 +62,7 @@ Notebooks run with their own folder as working directory, so raw data is read fr
 - `01_pca_diagnostic/`: `phase1_selected_features.csv`, `PCA_component_XGBoost_comparison.ipynb` and its outputs.
 - `01b_supervised_selection/`: `phase1b_selected_features.csv`, `phase1b_pca_vs_supervised_overlap.csv`.
 - `02_xgboost_xai/`: `ALE_leakage_audit.ipynb` and its outputs, `ALE_LEAKAGE_FINDINGS.md`, plus the older `xgboost_*.csv` exports (superseded by the audited model).
-- `04_spatial_lisa_simulation/`: `LISA_scenario_simulation.ipynb` (out-of-fold model, province aggregation, LISA, scenario simulation), its CSV outputs, `lisa_figures/`, `prv_crosswalk_template.csv`, `LISA_FINDINGS.md`. LISA clusters use the permutation p < 0.05 rule (BH-FDR is reported only as a sensitivity column). Boundaries go in `data/geo/`.
+- `04_spatial_lisa_simulation/`: `LISA_scenario_simulation.ipynb` (out-of-fold model, province aggregation, LISA, scenario simulation), its CSV outputs, `lisa_figures/`, `prv_crosswalk.csv` (PRV to boundary code, built from the PSA `PRV_VS1` value set), `prv_crosswalk_template.csv`, `LISA_FINDINGS.md`. LISA clusters use the permutation p < 0.05 rule (BH-FDR is reported only as a sensitivity column). Boundaries go in `data/geo/phl_adm3.gpkg` (exported from `data/phl_admin_boundaries.gdb`, layer `phl_admin3`, field names uppercased).
 - `notebooks/`: `PCA_FLEMMS_streamlined.ipynb` (spans Phases 1, 1B and 2; kept whole so it can be run end to end).
 - `reference/`: manuscript, defense comments, data-quality notes, questionnaires. `data/` is gitignored.
 
