@@ -1,8 +1,8 @@
 # Phase 4 Findings: Spatial Layer and Scenario Simulation (`LISA_scenario_simulation.ipynb`)
 
-Run date: 2026-10-24. Notebook executed end to end against the local `data/` directory, no cell errors. All rates use `RESP_RFACT_F2`. Target `y` = 1 if functionally illiterate.
+Run date: 2026-10-28. Notebook executed end to end against the local `data/` directory, no cell errors. All rates use `RESP_RFACT_F2`. Target `y` = 1 if functionally illiterate.
 
-**Status: partial.** The model, province aggregation and simulation sections ran. The LISA sections (spatial weights, global Moran's I, local clusters, maps) were skipped because no boundary file is in `data/geo/`. Sections 4 and 5 below are placeholders until that run.
+**Status: complete.** All sections ran, including spatial weights, global Moran's I, local clusters and maps. Boundaries: option B, city/municipality polygons (`data/geo/phl_adm3.gpkg`, exported from the `phl_admin3` layer of `data/phl_admin_boundaries.gdb`, OCHA COD-AB) dissolved to PRV units through `data/geo/prv_crosswalk.csv`. The crosswalk takes each PRV name from the PSA value set `PRV_VS1` in `flemms_2024_v1_metadata(dictionary).xlsx` and matches it to a boundary code by name. All 118 codes matched. The model and province sections reproduce the 2026-10-24 run exactly; the simulation changed because it now targets the LISA High-High units instead of the fallback rule.
 
 ## 1. Out-of-fold model
 
@@ -32,36 +32,39 @@ Each person needs an honest prediction to aggregate to province level, so the pr
 
 Largest residuals:
 
-| PRV | n | Observed | Predicted | Residual |
-|---|---|---|---|---|
-| 70 | 4,693 | 66.4% | 49.0% | +17.4 |
-| 67 | 4,435 | 42.9% | 30.4% | +12.5 |
-| 2 | 4,590 | 44.3% | 32.2% | +12.0 |
-| 73 | 4,098 | 48.9% | 37.0% | +12.0 |
-| 60 | 4,475 | 46.1% | 34.1% | +11.9 |
-| 81 | 2,164 | 13.2% | 30.9% | -17.8 |
-| 11 | 3,639 | 12.1% | 27.1% | -15.0 |
-| 814 | 1,180 | 5.5% | 20.2% | -14.8 |
-| 66 | 4,289 | 22.8% | 36.2% | -13.4 |
-| 901 | 1,949 | 21.9% | 35.1% | -13.2 |
+| PRV | Name | n | Observed | Predicted | Residual |
+|---|---|---|---|---|---|
+| 70 | Tawi-Tawi | 4,693 | 66.4% | 49.0% | +17.4 |
+| 67 | Surigao del Norte | 4,435 | 42.9% | 30.4% | +12.5 |
+| 2 | Agusan del Norte | 4,590 | 44.3% | 32.2% | +12.0 |
+| 73 | Zamboanga del Sur | 4,098 | 48.9% | 37.0% | +12.0 |
+| 60 | Samar (Western) | 4,475 | 46.1% | 34.1% | +11.9 |
+| 81 | Apayao | 2,164 | 13.2% | 30.9% | -17.8 |
+| 11 | Benguet | 3,639 | 12.1% | 27.1% | -15.0 |
+| 814 | San Juan | 1,180 | 5.5% | 20.2% | -14.8 |
+| 66 | Sulu | 4,289 | 22.8% | 36.2% | -13.4 |
+| 901 | Isabela City | 1,949 | 21.9% | 35.1% | -13.2 |
 
-Positive residuals mark provinces worse than their population profile predicts; negative residuals mark provinces doing better. Province names are `[DATA MISSING]` until the PRV crosswalk is filled.
+Positive residuals mark provinces worse than their population profile predicts; negative residuals mark provinces doing better.
 
 ## 3. Scenario simulation
 
 Design (notebook section 9): in each target province, people in the internet question's universe who are not already at the target level are switched at random until the weighted share at the target state rises by 10 percentage points. Every person is re-scored by their own out-of-fold model. The effect is the change in the weighted mean predicted rate over all residents. 50 Monte Carlo draws of who takes up the change give the interval below; a cluster bootstrap interval per province is in `simulation_province_effects.csv`. Digital-skill items are switched as a block because they are highly correlated.
 
-Target provinces (fallback rule, because LISA did not run): the top fifth of observed rates, 24 PRV codes, 102,256 rows, 20.1% of the weighted population. Code 999 is excluded.
+Target provinces (LISA High-High on the observed rate, p < 0.05, section 5): 11 PRV codes (24, 26, 37, 48, 60, 67, 72, 73, 80, 83, 86), 45,909 rows, 7.8% of the weighted population. Code 999 is excluded.
 
 | Scenario | Variables switched | Effect in target provinces (pp) | MC interval (pp) | National effect (pp) |
 |---|---|---|---|---|
-| Internet use | `INTERNET` | -0.28 | -0.29 to -0.28 | -0.06 |
-| Digital skills | 7 `DSKILL_*` items | -0.91 | -0.92 to -0.89 | -0.18 |
-| Internet plus skills | 8 variables | -1.08 | -1.09 to -1.05 | -0.22 |
+| Internet use | `INTERNET` | -0.33 | -0.34 to -0.32 | -0.03 |
+| Digital skills | 7 `DSKILL_*` items | -0.93 | -0.94 to -0.91 | -0.07 |
+| Internet plus skills | 8 variables | -1.11 | -1.14 to -1.09 | -0.09 |
+
+The 2026-10-24 run used the fallback rule (top fifth of observed rates, 24 PRV codes, 20.1% of the weighted population) and gave -0.28, -0.91 and -1.08 pp in the target provinces and -0.06, -0.18 and -0.22 pp nationally. The per-province effects barely move; the national effects fall because the LISA target set covers fewer people.
 
 Reading the table:
 
 - Effects are small. A 10-point rise in uptake lowers the predicted rate in the target provinces by at most about 1 point, about 11 points per person switched in the combined scenario.
+- The target set rests on High-High units that do not survive BH-FDR (section 5). Treat it as a working definition of high-risk areas, not a confirmed cluster.
 - Digital skills move predictions about three times as much as internet use alone, and the two together add up to slightly less than their sum.
 - The intervals are narrow because they cover only who is drawn for uptake, not refitting uncertainty. They show the result is stable, not that it is causal.
 - This is consistent with the ALE results: schooling dominates, and each digital item lowers the odds by about 8 to 10%.
@@ -69,28 +72,73 @@ Reading the table:
 
 Figure: `lisa_figures/simulation_effects.png`.
 
-## 4. Global Moran's I `[DATA MISSING: needs boundaries]`
+## 4. Global Moran's I
 
-To be filled from `global_morans_i.csv`: Moran's I for observed rate, predicted rate and residual, under queen contiguity (islands attached to their nearest neighbour) and KNN k = 6, 9,999 permutations.
+Spatial units: 117 (code 999 has no polygon). Queen contiguity leaves 13 island units without neighbours (PRV 9, 12, 18, 20, 40, 41, 59, 61, 66, 70, 78, 79, 85); each is attached to its nearest neighbour, giving 9 connected components and 3.6 neighbours on average. KNN k = 6 gives one component. Permutations: 9,999.
 
-## 5. LISA clusters `[DATA MISSING: needs boundaries]`
+| Variable | Queen I | p | KNN-6 I | p |
+|---|---|---|---|---|
+| Observed rate | 0.340 | 0.0001 | 0.375 | 0.0001 |
+| Predicted rate | 0.649 | 0.0001 | 0.608 | 0.0001 |
+| Residual | 0.114 | 0.063 | 0.125 | 0.006 |
 
-To be filled from `lisa_clusters.csv`. Significance rule: permutation p < 0.05 (`cluster_p05`). The BH-FDR column (`cluster_fdr`) is reported as a sensitivity check only.
+- Observed functional illiteracy is spatially clustered under both weight schemes.
+- Predicted rates cluster almost twice as strongly as observed rates. The spatial pattern is largely compositional: neighbouring provinces share the population profile the model features capture.
+- Residual clustering is weak: not significant under queen weights, significant under KNN-6. Place-level factors outside the model add at most a modest spatial signal.
 
-Questions the run should answer:
+Table: `global_morans_i.csv`; weights: `spatial_weights_summary.csv`; figure: `lisa_figures/moran_scatter_obs.png`.
 
-1. Are high observed rates clustered (High-High units), and where?
-2. Do the predicted rates cluster in the same places? If yes, composition explains the clustering.
-3. Do residuals cluster? A residual High-High cluster means a place-level factor outside the model features. PRV 70, 67, 2, 73 and 60 are the candidates to check.
-4. Once the High-High units exist, the simulation re-targets them, and section 3 is re-run.
+## 5. LISA clusters
+
+Significance rule: permutation p < 0.05 (`cluster_p05`), queen weights. The BH-FDR column (`cluster_fdr`) is a sensitivity check.
+
+| Variable | Rule | High-High | Low-Low | Low-High | High-Low | Not significant |
+|---|---|---|---|---|---|---|
+| Observed rate | p < 0.05 | 11 | 17 | 4 | 0 | 85 |
+| Observed rate | BH-FDR | 0 | 8 | 1 | 0 | 108 |
+| Predicted rate | p < 0.05 | 16 | 21 | 0 | 0 | 80 |
+| Predicted rate | BH-FDR | 2 | 19 | 0 | 0 | 96 |
+| Residual | p < 0.05 | 7 | 6 | 5 | 3 | 96 |
+| Residual | BH-FDR | 0 | 0 | 0 | 0 | 117 |
+
+**Robustness.** No observed-rate High-High unit and no residual cluster survives BH-FDR. The Metro Manila Low-Low cluster largely does (8 of 17 observed, 19 of 21 predicted). High-risk clusters should be reported as suggestive at the unadjusted level, with this caveat stated.
+
+Cluster membership, observed rate (p < 0.05):
+
+| Cluster | Units |
+|---|---|
+| High-High (11) | Eastern Samar, Northern Samar, Samar (Western), Leyte; Zamboanga del Norte, Zamboanga del Sur, Zamboanga Sibugay; Davao del Sur, Davao Occidental; Sarangani; Surigao del Norte |
+| Low-Low (17) | Caloocan, Makati, Mandaluyong, Manila, Marikina, Muntinlupa, Parañaque, Pasay, Pasig, Quezon City, San Juan, Taguig, Pateros; Bulacan, Cavite, Rizal; Baguio City |
+| Low-High (4) | Misamis Occidental, South Cotabato, Sulu, Isabela City |
+
+Predicted-rate High-High (16): Agusan del Sur, Basilan, Davao del Sur, Lanao del Norte, Lanao del Sur, North Cotabato, Sultan Kudarat, Sulu, Zamboanga del Norte, Zamboanga del Sur, Sarangani, Zamboanga Sibugay, Davao Occidental, Maguindanao del Norte, Iligan City, Isabela City. Predicted-rate Low-Low (21): all 17 Metro Manila units plus Bulacan, Cavite, Laguna and Rizal. Baguio City is Low-Low on the observed rate only.
+
+Residual clusters (p < 0.05):
+
+| Cluster | Units | Reading |
+|---|---|---|
+| High-High (7) | Eastern Samar, Northern Samar, Samar (Western), Surigao del Norte, Biliran, Zamboanga Sibugay, Dinagat Islands | Worse than the population profile predicts, among similar neighbours |
+| Low-Low (6) | Baguio City, Makati, Mandaluyong, Pasig, Taguig, Pateros | Better than predicted, among similar neighbours |
+| High-Low (3) | Basilan, Tawi-Tawi, Quezon City | Worse than predicted, isolated |
+| Low-High (5) | Leyte, Misamis Occidental, South Cotabato, Sulu, Mandaue City | Better than predicted, isolated |
+
+Answers to the questions set before the run:
+
+1. **Are high observed rates clustered?** Yes, at p < 0.05: Eastern Visayas (Samar island and Leyte), the Zamboanga Peninsula and southern Davao. None survives FDR.
+2. **Do predicted rates cluster in the same places?** Partly. The predicted High-High cluster shifts south and west into BARMM and central Mindanao (Lanao, Maguindanao, Basilan, Sulu, Cotabato), where composition predicts high risk. Zamboanga and southern Davao are in both.
+3. **Do residuals cluster?** Weakly. The Samar island group (Eastern, Northern, Western Samar, with Biliran) is High-High on both observed rate and residual, which makes it the strongest candidate for a place-level factor outside the model features. Of the five largest positive residuals named before the run, Surigao del Norte and Samar (Western) fall in the residual High-High cluster and Tawi-Tawi is High-Low; Zamboanga del Sur and Agusan del Norte are not significant.
+4. **Simulation re-targeted.** Section 3 now uses the 11 observed High-High units.
+
+Table: `lisa_clusters.csv` (local I, p, quadrant, both cluster rules, per unit and variable); figures: `lisa_figures/lisa_cluster_maps.png`, `lisa_figures/choropleth_rates.png`.
 
 ## 6. Limits and open points
 
-1. **Boundaries and crosswalk.** Need `data/geo/flemms_units.gpkg`, or `data/geo/phl_adm3.gpkg` plus `data/geo/prv_crosswalk.csv` (start from `prv_crosswalk_template.csv`). Fill names from the PSA codebook, not by code order.
-2. **Code 999** (n = 589, rate 51.3%) is unresolved. It is kept in the tables and left out of the weights and targets.
-3. **Simulation universe.** The universe for `INTERNET` and `DSKILL_*` is inferred from the data. The Form 3 questionnaire is not in the repo, so it is unverified.
-4. **Untuned model.** Hyperparameters are the ALE notebook's defaults (300 trees, depth 6, learning rate 0.05).
-5. **Interval coverage.** Neither interval includes model refitting uncertainty.
+1. **Cotabato City** has no PRV code in the data (value-set code 98 is unused). Its polygon sits inside Maguindanao del Norte in the boundary file and is dissolved into PRV 87. Where its respondents are coded is unverified.
+2. **Code 999** (n = 589, rate 51.3%) is labelled `BARMM63` in the PSA value set, which matches the 63 barangays of the BARMM Special Geographic Area (boundary code `PH19099`). It stays out of the weights and targets, and the 8 Special Geographic Area polygons are left off the map. Mapping 999 to `PH19099` is possible but would add a unit with n = 589.
+3. **Multiple testing.** The headline High-High clusters rest on unadjusted permutation p-values (section 5).
+4. **Simulation universe.** The universe for `INTERNET` and `DSKILL_*` is inferred from the data. The Form 3 questionnaire is not in the repo, so it is unverified.
+5. **Untuned model.** Hyperparameters are the ALE notebook's defaults (300 trees, depth 6, learning rate 0.05).
+6. **Interval coverage.** Neither interval includes model refitting uncertainty.
 
 ## 7. Files
 
@@ -102,5 +150,8 @@ Questions the run should answer:
 | `province_rates_observed_predicted.csv` | Province table (input to LISA) |
 | `simulation_summary.csv` | Scenario effects, target and national |
 | `simulation_province_effects.csv` | Scenario effects per target province with MC and bootstrap intervals |
-| `prv_crosswalk_template.csv` | PRV codes to be named |
-| `lisa_figures/` | Calibration and simulation figures; LISA maps after the boundary run |
+| `global_morans_i.csv` | Global Moran's I, three variables by two weight schemes |
+| `lisa_clusters.csv` | Local I, p-values and cluster labels per unit and variable |
+| `spatial_weights_summary.csv` | Queen and KNN-6 weight diagnostics |
+| `prv_crosswalk_template.csv` | Blank template; the filled crosswalk is `data/geo/prv_crosswalk.csv` (gitignored) |
+| `lisa_figures/` | Calibration, simulation, choropleth, Moran scatter and LISA cluster maps |

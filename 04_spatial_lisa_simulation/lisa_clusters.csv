@@ -1,0 +1,352 @@
+PRV,NAME,variable,value,local_I,p_sim,quadrant,cluster_p05,cluster_fdr
+1,Abra,obs_rate,0.2763663829737032,0.010967920928593349,0.4444,Low-Low,Not significant,Not significant
+2,Agusan del Norte,obs_rate,0.44288260727824846,0.8422811743463027,0.0962,High-High,Not significant,Not significant
+3,Agusan del Sur,obs_rate,0.28048953712114005,-0.06475666756790056,0.0752,Low-High,Not significant,Not significant
+4,Aklan,obs_rate,0.26083393676904,0.15709848758757944,0.1949,Low-Low,Not significant,Not significant
+5,Albay,obs_rate,0.23931201855753506,-0.21183524071335014,0.2314,Low-High,Not significant,Not significant
+6,Antique,obs_rate,0.26237604286755856,0.011608025089212128,0.4847,Low-Low,Not significant,Not significant
+7,Basilan,obs_rate,0.4786059373277282,-1.2954439824736064,0.1599,High-Low,Not significant,Not significant
+8,Bataan,obs_rate,0.22231893322031301,0.004116452747709397,0.4952,Low-Low,Not significant,Not significant
+9,Batanes,obs_rate,0.26316192503763336,-0.14842369694299712,0.2628,Low-High,Not significant,Not significant
+10,Batangas,obs_rate,0.18747766582719813,0.327953062999015,0.2877,Low-Low,Not significant,Not significant
+11,Benguet,obs_rate,0.12136508212270082,0.18242475212682496,0.3766,Low-Low,Not significant,Not significant
+12,Bohol,obs_rate,0.20755531489262286,-0.30378394882361753,0.3257,Low-High,Not significant,Not significant
+13,Bukidnon,obs_rate,0.2996008514653152,0.0022861042045955213,0.448,High-High,Not significant,Not significant
+14,Bulacan,obs_rate,0.2792750765785959,0.07645598892288794,0.0412,Low-Low,Low-Low,Not significant
+15,Cagayan,obs_rate,0.34239044227716636,-0.1213464554497984,0.29,High-Low,Not significant,Not significant
+16,Camarines Norte,obs_rate,0.36269375401032544,0.18891162490887506,0.3175,High-High,Not significant,Not significant
+17,Camarines Sur,obs_rate,0.3573562352342444,0.01190898978207337,0.4671,High-High,Not significant,Not significant
+18,Camiguin,obs_rate,0.27133331854988435,-0.11861687275979557,0.2539,Low-High,Not significant,Not significant
+19,Capiz,obs_rate,0.29106490661166845,0.0027354100535922576,0.4172,Low-Low,Not significant,Not significant
+20,Catanduanes,obs_rate,0.3156678633490757,-0.1220601286882842,0.2773,High-Low,Not significant,Not significant
+21,Cavite,obs_rate,0.225519690574993,0.5458283437661412,0.0432,Low-Low,Low-Low,Not significant
+22,Cebu,obs_rate,0.3687973185412718,0.15910161177478915,0.3282,High-High,Not significant,Not significant
+23,Davao del Norte,obs_rate,0.3097471556354504,0.02192648196425432,0.3854,High-High,Not significant,Not significant
+24,Davao del Sur,obs_rate,0.3541465181950858,0.5676731882510633,0.0167,High-High,High-High,Not significant
+25,Davao Oriental,obs_rate,0.32362124610973203,0.16522896684983102,0.162,High-High,Not significant,Not significant
+26,Eastern Samar,obs_rate,0.3970662271480324,1.862174591033911,0.0131,High-High,High-High,Not significant
+27,Ifugao,obs_rate,0.25294635724513886,0.172476901217273,0.188,Low-Low,Not significant,Not significant
+28,Ilocos Norte,obs_rate,0.3615685154025719,-0.11083466428668057,0.3796,High-Low,Not significant,Not significant
+29,Ilocos Sur,obs_rate,0.3574131450542743,-0.19309762068675143,0.2501,High-Low,Not significant,Not significant
+30,Iloilo,obs_rate,0.31615476681315263,-0.02505604347801761,0.4379,High-Low,Not significant,Not significant
+31,Isabela,obs_rate,0.27638232637239657,-0.014759334864251615,0.398,Low-High,Not significant,Not significant
+32,Kalinga,obs_rate,0.31014259244703385,-0.057072455322672175,0.2235,High-Low,Not significant,Not significant
+33,La Union,obs_rate,0.28497972998562465,0.006543515470236488,0.4526,Low-Low,Not significant,Not significant
+34,Laguna,obs_rate,0.27834408276239897,0.09934209953631232,0.0617,Low-Low,Not significant,Not significant
+35,Lanao del Norte,obs_rate,0.4350311801541769,1.1842670562736923,0.0702,High-High,Not significant,Not significant
+36,Lanao del Sur,obs_rate,0.41228060289133117,0.17860863044217296,0.3482,High-High,Not significant,Not significant
+37,Leyte,obs_rate,0.32090267452422466,0.29056608504667353,0.0412,High-High,High-High,Not significant
+40,Marinduque,obs_rate,0.26858789348728324,0.05606863866009602,0.3992,Low-Low,Not significant,Not significant
+41,Masbate,obs_rate,0.39540410233846873,0.31536336887398086,0.3229,High-High,Not significant,Not significant
+42,Misamis Occidental,obs_rate,0.290672194915294,-0.03880778610702042,0.0201,Low-High,Low-High,Not significant
+43,Misamis Oriental,obs_rate,0.34727435496454456,-0.07411656561001011,0.3718,High-Low,Not significant,Not significant
+44,Mountain Province,obs_rate,0.2719698030206293,0.05811480478995776,0.2456,Low-Low,Not significant,Not significant
+45,Negros Occidental,obs_rate,0.4061550761573314,-0.3963264538469356,0.3136,High-Low,Not significant,Not significant
+46,Negros Oriental,obs_rate,0.2933673825221715,0.0002651949465802353,0.4255,High-High,Not significant,Not significant
+47,North Cotabato,obs_rate,0.33680344751409796,0.16955508965771712,0.1466,High-High,Not significant,Not significant
+48,Northern Samar,obs_rate,0.48185620506852234,2.5762012147976256,0.0279,High-High,High-High,Not significant
+49,Nueva Ecija,obs_rate,0.2707847405513954,-0.03274547257952987,0.3568,Low-High,Not significant,Not significant
+50,Nueva Vizcaya,obs_rate,0.3319008821276545,-0.08356184426047586,0.2843,High-Low,Not significant,Not significant
+51,Occidental Mindoro,obs_rate,0.3116802555529153,0.01965480167326652,0.4085,High-High,Not significant,Not significant
+52,Oriental Mindoro,obs_rate,0.303629180373977,0.01965480167326652,0.3928,High-High,Not significant,Not significant
+53,Palawan,obs_rate,0.35516553146665764,-0.7821874630930207,0.1043,High-Low,Not significant,Not significant
+54,Pampanga,obs_rate,0.25039468897795253,0.09361615034749524,0.284,Low-Low,Not significant,Not significant
+55,Pangasinan,obs_rate,0.3765263614166654,-0.160675941013177,0.3183,High-Low,Not significant,Not significant
+56,Quezon,obs_rate,0.2828443748386974,0.012451694306538821,0.3625,Low-Low,Not significant,Not significant
+57,Quirino,obs_rate,0.2697538769993752,-0.0493457215019366,0.3453,Low-High,Not significant,Not significant
+58,Rizal,obs_rate,0.17875938723391532,0.8256027312695393,0.0137,Low-Low,Low-Low,Not significant
+59,Romblon,obs_rate,0.18067697747150635,0.364921632827287,0.309,Low-Low,Not significant,Not significant
+60,Samar (Western),obs_rate,0.46057170883616183,1.4436994689688591,0.0299,High-High,High-High,Not significant
+61,Siquijor,obs_rate,0.20031490921243644,-0.002429708210856138,0.4462,Low-High,Not significant,Not significant
+62,Sorsogon,obs_rate,0.3237599138735963,0.07476154642977516,0.3468,High-High,Not significant,Not significant
+63,South Cotabato,obs_rate,0.2256745901725061,-0.6537595504172456,0.0308,Low-High,Low-High,Not significant
+64,Southern Leyte,obs_rate,0.369399318147946,0.2132721263593973,0.359,High-High,Not significant,Not significant
+65,Sultan Kudarat,obs_rate,0.43511816190841485,0.36539611504325686,0.2467,High-High,Not significant,Not significant
+66,Sulu,obs_rate,0.2281523645301162,-1.8170874470744924,0.0007,Low-High,Low-High,Low-High
+67,Surigao del Norte,obs_rate,0.42856108259924575,1.8585160067233466,0.0139,High-High,High-High,Not significant
+68,Surigao del Sur,obs_rate,0.4191659394300962,0.9607578134592679,0.0631,High-High,Not significant,Not significant
+69,Tarlac,obs_rate,0.27399303232430633,-0.04132344976112772,0.326,Low-High,Not significant,Not significant
+70,Tawi-Tawi,obs_rate,0.6639206459648417,-2.422382157134841,0.255,High-Low,Not significant,Not significant
+71,Zambales,obs_rate,0.3607084561910887,-0.10309545579380304,0.3764,High-Low,Not significant,Not significant
+72,Zamboanga del Norte,obs_rate,0.4137009142107054,1.040224573434525,0.0445,High-High,High-High,Not significant
+73,Zamboanga del Sur,obs_rate,0.4894721875119781,1.8128561930060838,0.0327,High-High,High-High,Not significant
+77,Aurora,obs_rate,0.33406806575722764,-0.03275086730865241,0.4235,High-Low,Not significant,Not significant
+78,Biliran,obs_rate,0.3331285044867326,0.6740513672200745,0.0525,High-High,Not significant,Not significant
+79,Guimaras,obs_rate,0.2700990402374221,-0.0007970730087445906,0.4382,Low-High,Not significant,Not significant
+80,Saranggani,obs_rate,0.47840011101812313,1.3927372779289748,0.0453,High-High,High-High,Not significant
+81,Apayao,obs_rate,0.131869000056107,-0.4785338778383023,0.2733,Low-High,Not significant,Not significant
+82,Davao de Oro,obs_rate,0.34118643389494285,0.055666934966569874,0.4046,High-High,Not significant,Not significant
+83,Zamboanga Sibugay,obs_rate,0.40020655987099474,1.2889579300188778,0.0243,High-High,High-High,Not significant
+85,Dinagat Islands,obs_rate,0.42655100356157627,1.8178901534172653,0.0853,High-High,Not significant,Not significant
+86,Davao Occidental,obs_rate,0.5339195413773171,2.982960849191839,0.0365,High-High,High-High,Not significant
+87,Maguindanao del Norte,obs_rate,0.24213410579219727,-0.3675150334853901,0.0728,Low-High,Not significant,Not significant
+88,Maguindanao del Sur,obs_rate,0.2749861292139538,-0.08184918476290126,0.203,Low-High,Not significant,Not significant
+301,Angeles City,obs_rate,0.2208027922188425,0.310594480699366,0.2816,Low-Low,Not significant,Not significant
+302,Bacolod City,obs_rate,0.223128926442663,-0.7956130057978876,0.1268,Low-High,Not significant,Not significant
+303,Baguio City,obs_rate,0.10208153805166444,3.299471252850704,0.0383,Low-Low,Low-Low,Not significant
+304,Butuan City,obs_rate,0.2696263701085719,-0.16194902241128592,0.1495,Low-High,Not significant,Not significant
+305,Cagayan de Oro City,obs_rate,0.15622957795807735,0.027394884316626674,0.4881,Low-Low,Not significant,Not significant
+306,Cebu City,obs_rate,0.34060868268877637,0.13277017196736052,0.3219,High-High,Not significant,Not significant
+307,Davao City,obs_rate,0.30355904964324687,0.033603552611148516,0.249,High-High,Not significant,Not significant
+308,General Santos City,obs_rate,0.29035932743665643,-0.016284887350404946,0.1836,Low-High,Not significant,Not significant
+309,Iligan City,obs_rate,0.22647576753755677,-0.2477866847263429,0.203,Low-High,Not significant,Not significant
+310,Iloilo City,obs_rate,0.2934514904437527,6.885802477710954e-07,0.49,High-High,Not significant,Not significant
+311,Lapulapu City,obs_rate,0.32841391733356134,-0.017508366272745737,0.4863,High-Low,Not significant,Not significant
+312,Lucena City,obs_rate,0.27036976149678604,0.039768276883269255,0.4056,Low-Low,Not significant,Not significant
+313,Mandaue City,obs_rate,0.2730001370461246,-0.12455864634746176,0.175,Low-High,Not significant,Not significant
+314,Olongapo City,obs_rate,0.26648330390979075,0.00426630468876602,0.4986,Low-Low,Not significant,Not significant
+315,Puerto Princesa City,obs_rate,0.16778341733185756,-0.7821874630930207,0.2389,Low-High,Not significant,Not significant
+316,Tacloban City,obs_rate,0.3611763491459362,0.6683625325463819,0.0766,High-High,Not significant,Not significant
+317,Zamboanga City,obs_rate,0.33514907308185177,0.4813721675730032,0.053,High-High,Not significant,Not significant
+801,Caloocan City,obs_rate,0.22101112065276785,0.5439656429527685,0.0137,Low-Low,Low-Low,Not significant
+802,Las Piñas,obs_rate,0.12901776274322774,1.158266361202526,0.0962,Low-Low,Not significant,Not significant
+803,Makati City,obs_rate,0.12732831686930496,2.126220012155337,0.0003,Low-Low,Low-Low,Low-Low
+804,Malabon City,obs_rate,0.20013820050901474,0.6237059408795227,0.0806,Low-Low,Not significant,Not significant
+805,Mandaluyong,obs_rate,0.15399214299169856,1.9911661656674702,0.0003,Low-Low,Low-Low,Low-Low
+806,Manila,obs_rate,0.19780498067658733,1.0795402093232709,0.0004,Low-Low,Low-Low,Low-Low
+807,Marikina,obs_rate,0.19562965405913116,1.0668594052459446,0.0208,Low-Low,Low-Low,Not significant
+808,Muntinlupa,obs_rate,0.25638966664464,0.3740452626195567,0.0078,Low-Low,Low-Low,Not significant
+809,Navotas,obs_rate,0.166598799992412,0.8721694484726905,0.0722,Low-Low,Not significant,Not significant
+810,Parañaque,obs_rate,0.18685317561008996,0.997329526638574,0.0218,Low-Low,Low-Low,Not significant
+811,Pasay,obs_rate,0.27436468359005506,0.24556333349366058,0.0021,Low-Low,Low-Low,Low-Low
+812,Pasig,obs_rate,0.10878257535616098,2.309815965234302,0.0001,Low-Low,Low-Low,Low-Low
+813,Quezon City,obs_rate,0.2653055879716357,0.34790818541565066,0.0001,Low-Low,Low-Low,Low-Low
+814,San Juan,obs_rate,0.05472789881673249,2.095495523372887,0.0471,Low-Low,Low-Low,Not significant
+815,Taguig City,obs_rate,0.1393393672581611,1.76756308631389,0.0004,Low-Low,Low-Low,Low-Low
+816,Valenzuela City,obs_rate,0.23871850938111336,0.2826574373235573,0.1414,Low-Low,Not significant,Not significant
+817,Pateros,obs_rate,0.11919526780584852,2.9376737012841,0.0003,Low-Low,Low-Low,Low-Low
+901,Isabela City,obs_rate,0.21918459591977305,-1.3790952279330702,0.0356,Low-High,Low-High,Not significant
+1,Abra,pred_rate,0.26102616537037154,0.11834048119027239,0.3472,Low-Low,Not significant,Not significant
+2,Agusan del Norte,pred_rate,0.32246960088095056,0.26244698882049156,0.1098,High-High,Not significant,Not significant
+3,Agusan del Sur,pred_rate,0.3411150298098155,0.5045292922596748,0.0439,High-High,High-High,Not significant
+4,Aklan,pred_rate,0.28904899838899223,-0.03256118825374719,0.3423,Low-High,Not significant,Not significant
+5,Albay,pred_rate,0.3040926142287432,0.03773948526473986,0.2907,High-High,Not significant,Not significant
+6,Antique,pred_rate,0.3084198266635463,0.015257678735064485,0.432,High-High,Not significant,Not significant
+7,Basilan,pred_rate,0.4271210761866255,2.8072622011560515,0.049,High-High,High-High,Not significant
+8,Bataan,pred_rate,0.26235741613336594,0.450648309253002,0.1121,Low-Low,Not significant,Not significant
+9,Batanes,pred_rate,0.23554130255396946,0.07787182449799496,0.4529,Low-Low,Not significant,Not significant
+10,Batangas,pred_rate,0.24089806441146727,0.7511828396815953,0.1022,Low-Low,Not significant,Not significant
+11,Benguet,pred_rate,0.27118884057864107,0.19336605139794993,0.1405,Low-Low,Not significant,Not significant
+12,Bohol,pred_rate,0.30286264159536275,-0.03926709571246304,0.3436,High-Low,Not significant,Not significant
+13,Bukidnon,pred_rate,0.3331842004016198,0.26494732061669224,0.1313,High-High,Not significant,Not significant
+14,Bulacan,pred_rate,0.25573492367790374,0.6003750879781915,0.007,Low-Low,Low-Low,Low-Low
+15,Cagayan,pred_rate,0.2937928403051107,0.01884590256879392,0.2559,Low-Low,Not significant,Not significant
+16,Camarines Norte,pred_rate,0.3128582057758799,0.05999854919639508,0.363,High-High,Not significant,Not significant
+17,Camarines Sur,pred_rate,0.310790549897892,0.04928375204142353,0.3515,High-High,Not significant,Not significant
+18,Camiguin,pred_rate,0.30276867059577534,0.07759598460775083,0.2399,High-High,Not significant,Not significant
+19,Capiz,pred_rate,0.30676964598215195,0.01490236107827131,0.4266,High-High,Not significant,Not significant
+20,Catanduanes,pred_rate,0.2980888996166472,0.0020514571187270313,0.4412,High-High,Not significant,Not significant
+21,Cavite,pred_rate,0.23401324870260165,1.3050451634775924,0.0064,Low-Low,Low-Low,Low-Low
+22,Cebu,pred_rate,0.301557076099037,-0.03853561006029852,0.2077,High-Low,Not significant,Not significant
+23,Davao del Norte,pred_rate,0.29759476910030536,0.003390191526423149,0.1398,High-High,Not significant,Not significant
+24,Davao del Sur,pred_rate,0.33489664607590097,0.7575677694776993,0.0084,High-High,High-High,High-High
+25,Davao Oriental,pred_rate,0.3496056439502475,0.9144090955584481,0.0596,High-High,Not significant,Not significant
+26,Eastern Samar,pred_rate,0.3258409038149285,0.6022218609049587,0.0617,High-High,Not significant,Not significant
+27,Ifugao,pred_rate,0.30852161505058356,-0.017284634516675487,0.4425,High-Low,Not significant,Not significant
+28,Ilocos Norte,pred_rate,0.26360451196124846,0.13369020145408023,0.3356,Low-Low,Not significant,Not significant
+29,Ilocos Sur,pred_rate,0.2810751878764258,0.1475538261114002,0.1282,Low-Low,Not significant,Not significant
+30,Iloilo,pred_rate,0.307253185198389,-0.028514244662474663,0.4108,High-Low,Not significant,Not significant
+31,Isabela,pred_rate,0.3094023427093304,0.0007662094180737243,0.4872,High-High,Not significant,Not significant
+32,Kalinga,pred_rate,0.29361879080164177,0.005031196105458426,0.4402,Low-Low,Not significant,Not significant
+33,La Union,pred_rate,0.27150043183230793,0.17804751581716338,0.2641,Low-Low,Not significant,Not significant
+34,Laguna,pred_rate,0.24291696527403517,0.9166158701782315,0.0148,Low-Low,Low-Low,Not significant
+35,Lanao del Norte,pred_rate,0.37761956548340636,1.523917050167064,0.0474,High-High,High-High,Not significant
+36,Lanao del Sur,pred_rate,0.37748999201819605,1.1926639778802515,0.0447,High-High,High-High,Not significant
+37,Leyte,pred_rate,0.32660171199886306,0.05198207513590971,0.4112,High-High,Not significant,Not significant
+40,Marinduque,pred_rate,0.2902304505213281,0.09939041981474753,0.2592,Low-Low,Not significant,Not significant
+41,Masbate,pred_rate,0.35730239316038137,0.6819341625271481,0.2555,High-High,Not significant,Not significant
+42,Misamis Occidental,pred_rate,0.3237268736795463,0.6009598591976235,0.0505,High-High,Not significant,Not significant
+43,Misamis Oriental,pred_rate,0.33602364794411405,0.19163417248983844,0.2536,High-High,Not significant,Not significant
+44,Mountain Province,pred_rate,0.29364587357643634,0.012875683058618703,0.3232,Low-Low,Not significant,Not significant
+45,Negros Occidental,pred_rate,0.3472193427968056,0.14141553449665079,0.3934,High-High,Not significant,Not significant
+46,Negros Oriental,pred_rate,0.3542217447286773,0.40981296143845847,0.2775,High-High,Not significant,Not significant
+47,North Cotabato,pred_rate,0.339215934198419,0.6615033733200976,0.0177,High-High,High-High,Not significant
+48,Northern Samar,pred_rate,0.3693168321564036,0.9488789325733571,0.144,High-High,Not significant,Not significant
+49,Nueva Ecija,pred_rate,0.28495961058522035,0.07385389122779228,0.212,Low-Low,Not significant,Not significant
+50,Nueva Vizcaya,pred_rate,0.2979249895685388,-0.0010220858177050923,0.4189,High-Low,Not significant,Not significant
+51,Occidental Mindoro,pred_rate,0.34095376710622627,0.38206474477207203,0.3084,High-High,Not significant,Not significant
+52,Oriental Mindoro,pred_rate,0.32131337540008414,0.38206474477207203,0.1946,High-High,Not significant,Not significant
+53,Palawan,pred_rate,0.3766127241812175,-0.9103323499721566,0.3266,High-Low,Not significant,Not significant
+54,Pampanga,pred_rate,0.2590609187704483,0.34943453696526156,0.1063,Low-Low,Not significant,Not significant
+55,Pangasinan,pred_rate,0.28250115494193156,0.07619014262186437,0.2471,Low-Low,Not significant,Not significant
+56,Quezon,pred_rate,0.3048969246495835,-0.07835148073403497,0.0523,High-Low,Not significant,Not significant
+57,Quirino,pred_rate,0.29908964398127036,0.0024355066394532933,0.4345,High-High,Not significant,Not significant
+58,Rizal,pred_rate,0.23523306499033503,1.346712475252163,0.0001,Low-Low,Low-Low,Low-Low
+59,Romblon,pred_rate,0.30930719553561814,-0.035970705057584595,0.4132,High-Low,Not significant,Not significant
+60,Samar (Western),pred_rate,0.34112207026910035,0.3636849648942882,0.1598,High-High,Not significant,Not significant
+61,Siquijor,pred_rate,0.2868824407757826,-0.21497799574056914,0.1178,Low-High,Not significant,Not significant
+62,Sorsogon,pred_rate,0.328500919871558,0.3797538617585709,0.1662,High-High,Not significant,Not significant
+63,South Cotabato,pred_rate,0.3079224174297677,0.1424565258963987,0.083,High-High,Not significant,Not significant
+64,Southern Leyte,pred_rate,0.30742027848982634,0.10835521536909475,0.2766,High-High,Not significant,Not significant
+65,Sultan Kudarat,pred_rate,0.3399541034397935,0.8094730779351779,0.01,High-High,High-High,Not significant
+66,Sulu,pred_rate,0.3619722567923245,3.791789187302686,0.0005,High-High,High-High,High-High
+67,Surigao del Norte,pred_rate,0.3037623533571159,0.0847026779752011,0.1168,High-High,Not significant,Not significant
+68,Surigao del Sur,pred_rate,0.35103671812861303,0.6251826321652245,0.1066,High-High,Not significant,Not significant
+69,Tarlac,pred_rate,0.2938363666130606,0.026017691002008833,0.2077,Low-Low,Not significant,Not significant
+70,Tawi-Tawi,pred_rate,0.48972406236722593,4.528255005528625,0.0854,High-High,Not significant,Not significant
+71,Zambales,pred_rate,0.2789947960568837,0.18777357343658427,0.1017,Low-Low,Not significant,Not significant
+72,Zamboanga del Norte,pred_rate,0.34950440008498945,0.9468625386018371,0.0327,High-High,High-High,Not significant
+73,Zamboanga del Sur,pred_rate,0.3699316974487994,1.4548906380598279,0.023,High-High,High-High,Not significant
+77,Aurora,pred_rate,0.2954609622362726,0.0034469544563229468,0.4041,Low-Low,Not significant,Not significant
+78,Biliran,pred_rate,0.3207184141554014,0.3740486116320476,0.1814,High-High,Not significant,Not significant
+79,Guimaras,pred_rate,0.28915975971811053,0.1302629708315199,0.2164,Low-Low,Not significant,Not significant
+80,Saranggani,pred_rate,0.39888104687729653,1.5167997890337679,0.0418,High-High,High-High,Not significant
+81,Apayao,pred_rate,0.30946038121290853,-0.08538358793997572,0.2313,High-Low,Not significant,Not significant
+82,Davao de Oro,pred_rate,0.34377670110093844,0.5441646625552349,0.1379,High-High,Not significant,Not significant
+83,Zamboanga Sibugay,pred_rate,0.35845342874847486,1.216115922526587,0.043,High-High,High-High,Not significant
+85,Dinagat Islands,pred_rate,0.32580843730406517,0.06745951542133757,0.4395,High-High,Not significant,Not significant
+86,Davao Occidental,pred_rate,0.446461087402865,3.7770728890498853,0.026,High-High,High-High,Not significant
+87,Maguindanao del Norte,pred_rate,0.3398852347780222,0.9425359633815783,0.0144,High-High,High-High,Not significant
+88,Maguindanao del Sur,pred_rate,0.375667500364802,1.2093611793659889,0.0782,High-High,Not significant,Not significant
+301,Angeles City,pred_rate,0.2567508102705569,0.5627144193128909,0.2595,Low-Low,Not significant,Not significant
+302,Bacolod City,pred_rate,0.2558747948468202,-0.7517728496241844,0.1555,Low-High,Not significant,Not significant
+303,Baguio City,pred_rate,0.20289553408599859,0.894639521690434,0.3283,Low-Low,Not significant,Not significant
+304,Butuan City,pred_rate,0.29755350253868945,0.003649745290593479,0.1633,High-High,Not significant,Not significant
+305,Cagayan de Oro City,pred_rate,0.2647843955516322,-0.30805639744987634,0.1879,Low-High,Not significant,Not significant
+306,Cebu City,pred_rate,0.2605991339322624,0.09196689183906782,0.4341,Low-Low,Not significant,Not significant
+307,Davao City,pred_rate,0.2833228523959791,-0.14678468457823873,0.1352,Low-High,Not significant,Not significant
+308,General Santos City,pred_rate,0.26234089692999957,-0.7128231738482567,0.064,Low-High,Not significant,Not significant
+309,Iligan City,pred_rate,0.30084004334088266,0.05275217642958537,0.0465,High-High,High-High,Not significant
+310,Iloilo City,pred_rate,0.25304945671657,-0.015170344642453567,0.4809,Low-High,Not significant,Not significant
+311,Lapulapu City,pred_rate,0.27797720062555364,-0.03468966764683592,0.4317,Low-High,Not significant,Not significant
+312,Lucena City,pred_rate,0.2583919106529609,-0.004252573460883272,0.4886,Low-High,Not significant,Not significant
+313,Mandaue City,pred_rate,0.2791708455105468,0.10646568662837079,0.3374,Low-Low,Not significant,Not significant
+314,Olongapo City,pred_rate,0.24720883176878386,0.48386316557514725,0.2309,Low-Low,Not significant,Not significant
+315,Puerto Princesa City,pred_rate,0.2657103048744025,-0.9103323499721566,0.0593,Low-High,Not significant,Not significant
+316,Tacloban City,pred_rate,0.2578648218672417,-0.5242808663801816,0.1485,Low-High,Not significant,Not significant
+317,Zamboanga City,pred_rate,0.3363325387990994,0.8056878085481596,0.0616,High-High,Not significant,Not significant
+801,Caloocan City,pred_rate,0.2276245653594826,1.5308815560285245,0.0001,Low-Low,Low-Low,Low-Low
+802,Las Piñas,pred_rate,0.2389103446540866,1.3254967182154318,0.01,Low-Low,Low-Low,Not significant
+803,Makati City,pred_rate,0.1992254465283223,2.574897534950621,0.0001,Low-Low,Low-Low,Low-Low
+804,Malabon City,pred_rate,0.24179794433859245,1.195965481994732,0.0051,Low-Low,Low-Low,Low-Low
+805,Mandaluyong,pred_rate,0.22264595263285142,2.2769385626179397,0.0001,Low-Low,Low-Low,Low-Low
+806,Manila,pred_rate,0.22666506021266442,1.867383627665491,0.0001,Low-Low,Low-Low,Low-Low
+807,Marikina,pred_rate,0.21859223583410217,2.080739254187049,0.0019,Low-Low,Low-Low,Low-Low
+808,Muntinlupa,pred_rate,0.23933497810994636,1.3780542086133647,0.0007,Low-Low,Low-Low,Low-Low
+809,Navotas,pred_rate,0.2439584152389156,1.1494495635710473,0.0053,Low-Low,Low-Low,Low-Low
+810,Parañaque,pred_rate,0.23101796998666227,1.520524938373744,0.0029,Low-Low,Low-Low,Low-Low
+811,Pasay,pred_rate,0.24597530510738969,1.4910160625994302,0.0002,Low-Low,Low-Low,Low-Low
+812,Pasig,pred_rate,0.20862365384227669,2.4364189035781867,0.0001,Low-Low,Low-Low,Low-Low
+813,Quezon City,pred_rate,0.22970547324038537,1.878295749479444,0.0001,Low-Low,Low-Low,Low-Low
+814,San Juan,pred_rate,0.20246615716160113,2.444588413620273,0.0021,Low-Low,Low-Low,Low-Low
+815,Taguig City,pred_rate,0.21231869590616376,2.1509109687425414,0.0001,Low-Low,Low-Low,Low-Low
+816,Valenzuela City,pred_rate,0.22451891525775108,1.548536407468336,0.0057,Low-Low,Low-Low,Low-Low
+817,Pateros,pred_rate,0.23393718566858415,2.0846858143729485,0.0001,Low-Low,Low-Low,Low-Low
+901,Isabela City,pred_rate,0.35146475754515066,2.5592010332353574,0.0182,High-High,High-High,Not significant
+1,Abra,residual,0.015340217603331652,0.010192558648753649,0.4703,High-High,Not significant,Not significant
+2,Agusan del Norte,residual,0.1204130063972979,0.7200485782130278,0.176,High-High,Not significant,Not significant
+3,Agusan del Sur,residual,-0.06062549268867545,-0.23197858171361596,0.2183,Low-High,Not significant,Not significant
+4,Aklan,residual,-0.028215061619952242,0.3023138905672196,0.0652,Low-Low,Not significant,Not significant
+5,Albay,residual,-0.06478059567120811,-0.307733896366955,0.2775,Low-High,Not significant,Not significant
+6,Antique,residual,-0.046043783795987725,0.06671526590575307,0.4181,Low-Low,Not significant,Not significant
+7,Basilan,residual,0.051484861141102733,-1.519561548684463,0.0027,High-Low,High-Low,Not significant
+8,Bataan,residual,-0.040038482913052925,-0.26556648854271714,0.1827,Low-High,Not significant,Not significant
+9,Batanes,residual,0.027620622483663898,0.3551791832610481,0.2263,High-High,Not significant,Not significant
+10,Batangas,residual,-0.05342039858426914,-0.06036206372249948,0.4525,Low-High,Not significant,Not significant
+11,Benguet,residual,-0.14982375845594026,-0.30354369534275,0.3661,Low-High,Not significant,Not significant
+12,Bohol,residual,-0.09530732670273989,-1.054361761990517,0.2029,Low-High,Not significant,Not significant
+13,Bukidnon,residual,-0.0335833489363046,0.10465785023350467,0.2388,Low-Low,Not significant,Not significant
+14,Bulacan,residual,0.02354015290069217,-0.08919184099122322,0.2552,High-Low,Not significant,Not significant
+15,Cagayan,residual,0.04859760197205565,-0.1066868299702348,0.3776,High-Low,Not significant,Not significant
+16,Camarines Norte,residual,0.049835548234445526,0.18775308052536302,0.3615,High-High,Not significant,Not significant
+17,Camarines Sur,residual,0.046565685336352414,-0.08787508217302044,0.4215,High-Low,Not significant,Not significant
+18,Camiguin,residual,-0.031435352045890985,-0.08904996166478285,0.4416,Low-High,Not significant,Not significant
+19,Capiz,residual,-0.0157047393704835,0.04314076217186121,0.3242,Low-Low,Not significant,Not significant
+20,Catanduanes,residual,0.01757896373242851,-0.27918849096413384,0.1927,High-Low,Not significant,Not significant
+21,Cavite,residual,-0.008493558127608658,0.021646574975543717,0.2417,Low-Low,Not significant,Not significant
+22,Cebu,residual,0.06724024244223481,0.6895250822364887,0.1128,High-High,Not significant,Not significant
+23,Davao del Norte,residual,0.012152386535145054,-0.05177893053962187,0.3285,High-Low,Not significant,Not significant
+24,Davao del Sur,residual,0.01924987211918483,0.18403005607000936,0.0949,High-High,Not significant,Not significant
+25,Davao Oriental,residual,-0.025984397840515483,-0.026795812659423983,0.4464,Low-High,Not significant,Not significant
+26,Eastern Samar,residual,0.07122532333310394,1.919021705428183,0.0045,High-High,High-High,Not significant
+27,Ifugao,residual,-0.0555752578054447,0.4192353952921872,0.1279,Low-Low,Not significant,Not significant
+28,Ilocos Norte,residual,0.09796400344132344,-0.11193243991520777,0.4479,High-Low,Not significant,Not significant
+29,Ilocos Sur,residual,0.07633795717784847,-0.08165123089109236,0.4443,High-Low,Not significant,Not significant
+30,Iloilo,residual,0.00890158161476362,-0.008188404824097871,0.4694,High-Low,Not significant,Not significant
+31,Isabela,residual,-0.033020016336933855,-0.05260255910760958,0.3725,Low-High,Not significant,Not significant
+32,Kalinga,residual,0.016523801645392078,-0.12931968644610717,0.1699,High-Low,Not significant,Not significant
+33,La Union,residual,0.013479298153316721,0.041110324109408,0.3901,High-High,Not significant,Not significant
+34,Laguna,residual,0.0354271174883638,-0.17210981283942403,0.2509,High-Low,Not significant,Not significant
+35,Lanao del Norte,residual,0.05741161467077055,0.4019337925585114,0.2105,High-High,Not significant,Not significant
+36,Lanao del Sur,residual,0.03479061087313512,-0.21442152656378577,0.2005,High-Low,Not significant,Not significant
+37,Leyte,residual,-0.005699037474638402,-0.03239457535735756,0.0048,Low-High,Low-High,Not significant
+40,Marinduque,residual,-0.021642557034044885,-0.0597770593856988,0.4429,Low-High,Not significant,Not significant
+41,Masbate,residual,0.03810170917808736,-0.00523994793073087,0.4827,High-Low,Not significant,Not significant
+42,Misamis Occidental,residual,-0.03305467876425228,-0.587969964874797,0.0207,Low-High,Low-High,Not significant
+43,Misamis Oriental,residual,0.011250707020430517,-0.08879869872808004,0.1671,High-Low,Not significant,Not significant
+44,Mountain Province,residual,-0.02167607055580706,0.06513866958303474,0.2586,Low-Low,Not significant,Not significant
+45,Negros Occidental,residual,0.058935733360525766,-0.5700658229296558,0.1924,High-Low,Not significant,Not significant
+46,Negros Oriental,residual,-0.06085436220650581,0.11605072597719701,0.4153,Low-Low,Not significant,Not significant
+47,North Cotabato,residual,-0.0024124866843210357,-0.0017668893752704113,0.4263,High-Low,Not significant,Not significant
+48,Northern Samar,residual,0.11253937291211874,2.4600225280228973,0.0165,High-High,High-High,Not significant
+49,Nueva Ecija,residual,-0.014174870033824949,-0.0660115424035612,0.1393,Low-High,Not significant,Not significant
+50,Nueva Vizcaya,residual,0.033975892559115706,-0.1387426618902297,0.2558,High-Low,Not significant,Not significant
+51,Occidental Mindoro,residual,-0.029273511553310982,0.07199800843706564,0.4412,Low-Low,Not significant,Not significant
+52,Oriental Mindoro,residual,-0.01768419502610713,0.07199800843706564,0.3471,Low-Low,Not significant,Not significant
+53,Palawan,residual,-0.02144719271455986,0.34355200326324886,0.1154,Low-Low,Not significant,Not significant
+54,Pampanga,residual,-0.008666229792495761,-0.003214871644484961,0.4611,Low-High,Not significant,Not significant
+55,Pangasinan,residual,0.09402520647473384,-0.10310688816283488,0.4298,High-Low,Not significant,Not significant
+56,Quezon,residual,-0.022052549810886113,-0.06129072050509963,0.2582,Low-High,Not significant,Not significant
+57,Quirino,residual,-0.02933576698189516,-0.09253016691018387,0.3353,Low-High,Not significant,Not significant
+58,Rizal,residual,-0.056473677756419705,0.13390273900938354,0.295,Low-Low,Not significant,Not significant
+59,Romblon,residual,-0.1286302180641118,0.6345351935708716,0.3446,Low-Low,Not significant,Not significant
+60,Samar (Western),residual,0.11944963856706148,1.6476771080897354,0.0143,High-High,High-High,Not significant
+61,Siquijor,residual,-0.08656753156334618,0.9900432019620835,0.2005,Low-Low,Not significant,Not significant
+62,Sorsogon,residual,-0.004741005997961678,0.0011387798734285278,0.4236,Low-Low,Not significant,Not significant
+63,South Cotabato,residual,-0.08224782725726162,-0.9868782646971722,0.0366,Low-High,Low-High,Not significant
+64,Southern Leyte,residual,0.06197903965811968,-0.021625385983614142,0.4921,High-Low,Not significant,Not significant
+65,Sultan Kudarat,residual,0.09516405846862136,-0.5590316960099612,0.1739,High-Low,Not significant,Not significant
+66,Sulu,residual,-0.13381989226220828,-3.2142921297607643,0.0053,Low-High,Low-High,Not significant
+67,Surigao del Norte,residual,0.12479872924212987,2.7482626372617287,0.0034,High-High,High-High,Not significant
+68,Surigao del Sur,residual,0.06812922130148319,0.6709292263909675,0.0944,High-High,Not significant,Not significant
+69,Tarlac,residual,-0.01984333428875429,-0.14086766352847604,0.1076,Low-High,Not significant,Not significant
+70,Tawi-Tawi,residual,0.17419658359761575,-4.899946606382904,0.0275,High-Low,High-Low,Not significant
+71,Zambales,residual,0.081713660134205,0.2384540109628434,0.3317,High-High,Not significant,Not significant
+72,Zamboanga del Norte,residual,0.06419651412571592,0.5202087876641692,0.1427,High-High,Not significant,Not significant
+73,Zamboanga del Sur,residual,0.11954049006317868,0.9627172204590072,0.1321,High-High,Not significant,Not significant
+77,Aurora,residual,0.03860710352095503,-0.02436188734006315,0.4597,High-Low,Not significant,Not significant
+78,Biliran,residual,0.01241009033133117,0.43385455543610063,0.0435,High-High,High-High,Not significant
+79,Guimaras,residual,-0.019060719480688437,-0.1407171253778827,0.2439,Low-High,Not significant,Not significant
+80,Saranggani,residual,0.0795190641408266,0.5971946998289491,0.1283,High-High,Not significant,Not significant
+81,Apayao,residual,-0.17759138115680154,-1.791901098692589,0.0753,Low-High,Not significant,Not significant
+82,Davao de Oro,residual,-0.002590267205995589,-0.006854067552859578,0.3011,High-Low,Not significant,Not significant
+83,Zamboanga Sibugay,residual,0.04175313112251988,0.6323381297031738,0.044,High-High,High-High,Not significant
+85,Dinagat Islands,residual,0.1007425662575111,2.8661425164757257,0.0181,High-High,High-High,Not significant
+86,Davao Occidental,residual,0.08745845397445212,1.0392879457705433,0.1273,High-High,Not significant,Not significant
+87,Maguindanao del Norte,residual,-0.09775112898582491,-0.21558345162288928,0.3868,Low-High,Not significant,Not significant
+88,Maguindanao del Sur,residual,-0.10068137115084819,-0.050910099738044355,0.4882,Low-High,Not significant,Not significant
+301,Angeles City,residual,-0.03594801805171441,0.030383281955169796,0.4658,Low-Low,Not significant,Not significant
+302,Bacolod City,residual,-0.03274586840415719,-0.38218989585162216,0.1774,Low-High,Not significant,Not significant
+303,Baguio City,residual,-0.10081399603433415,2.9832910055259605,0.0175,Low-Low,Low-Low,Not significant
+304,Butuan City,residual,-0.027927132430117574,-0.1714975149082952,0.2472,Low-High,Not significant,Not significant
+305,Cagayan de Oro City,residual,-0.10855481759355484,0.6210588146516306,0.2277,Low-Low,Not significant,Not significant
+306,Cebu City,residual,0.08000954875651395,0.6186384109837616,0.2348,High-High,Not significant,Not significant
+307,Davao City,residual,0.020236197247267773,0.01554272896113047,0.4618,High-High,Not significant,Not significant
+308,General Santos City,residual,0.028018430506656866,0.01902921152810271,0.471,High-High,Not significant,Not significant
+309,Iligan City,residual,-0.07436427580332589,0.05327460531368933,0.4434,Low-Low,Not significant,Not significant
+310,Iloilo City,residual,0.04040203372718271,-0.008721550635064156,0.4933,High-Low,Not significant,Not significant
+311,Lapulapu City,residual,0.0504367167080077,-0.11425745414237676,0.4203,High-Low,Not significant,Not significant
+312,Lucena City,residual,0.011977850843825133,-0.06047782171396788,0.3577,High-Low,Not significant,Not significant
+313,Mandaue City,residual,-0.006170708464422192,-0.03320672366556154,0.0499,Low-High,Low-High,Not significant
+314,Olongapo City,residual,0.019274472141006888,0.12407780218964165,0.3084,High-High,Not significant,Not significant
+315,Puerto Princesa City,residual,-0.09792688754254494,0.34355200326324886,0.4109,Low-Low,Not significant,Not significant
+316,Tacloban City,residual,0.10331152727869453,1.3896966112944122,0.0963,High-High,Not significant,Not significant
+317,Zamboanga City,residual,-0.0011834657172476448,0.03597946848895718,0.119,High-High,Not significant,Not significant
+801,Caloocan City,residual,-0.006613444706714766,0.007582118508664153,0.2796,Low-Low,Not significant,Not significant
+802,Las Piñas,residual,-0.10989258191085885,0.17277962576142866,0.4116,Low-Low,Not significant,Not significant
+803,Makati City,residual,-0.07189712965901734,0.7936137128109984,0.0212,Low-Low,Low-Low,Not significant
+804,Malabon City,residual,-0.04165974382957771,0.058823622638753306,0.4136,Low-Low,Not significant,Not significant
+805,Mandaluyong,residual,-0.06865380964115286,0.7979743654275534,0.026,Low-Low,Low-Low,Not significant
+806,Manila,residual,-0.028860079536077082,0.208763871799823,0.059,Low-Low,Not significant,Not significant
+807,Marikina,residual,-0.022962581774971014,0.1437817566996925,0.1744,Low-Low,Not significant,Not significant
+808,Muntinlupa,residual,0.017054688534693663,-0.1611802662954918,0.1173,High-Low,Not significant,Not significant
+809,Navotas,residual,-0.07735961524650359,0.14335618066336847,0.3895,Low-Low,Not significant,Not significant
+810,Parañaque,residual,-0.04416479437657231,0.25602047381986415,0.1875,Low-Low,Not significant,Not significant
+811,Pasay,residual,0.028389378482665373,-0.34698907358838454,0.0712,High-Low,Not significant,Not significant
+812,Pasig,residual,-0.0998410784861157,0.9934745114349944,0.0219,Low-Low,Low-Low,Not significant
+813,Quezon City,residual,0.035600114731250354,-0.40401056133917224,0.0206,High-Low,High-Low,Not significant
+814,San Juan,residual,-0.14773825834486864,0.5014274790845097,0.3263,Low-Low,Not significant,Not significant
+815,Taguig City,residual,-0.07297932864800266,0.6511764666434966,0.0364,Low-Low,Low-Low,Not significant
+816,Valenzuela City,residual,0.014199594123362275,0.026728401319672038,0.419,High-High,Not significant,Not significant
+817,Pateros,residual,-0.11474191786273563,1.8139624668491325,0.0229,Low-Low,Low-Low,Not significant
+901,Isabela City,residual,-0.13228016162537762,-1.5104854442303006,0.2001,Low-High,Not significant,Not significant
