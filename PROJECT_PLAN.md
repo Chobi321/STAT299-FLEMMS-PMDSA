@@ -1,6 +1,6 @@
 # Project Plan and Status
 
-Plan for working through the analysis phases in the post-defense proposal (`reference/proposal-manuscript/04_methodology_model_revised.md`, `01_introduction_revised.md`). Status as of 2026-10-25.
+Plan for working through the analysis phases in the post-defense proposal (`reference/proposal-manuscript/04_methodology_model_revised.md`, `01_introduction_revised.md`). Status as of 2026-10-29.
 
 Status key: DONE, PARTIAL (runs, but a proposal commitment is missing), TODO, BLOCKED.
 
@@ -14,9 +14,9 @@ Detailed findings live next to the work:
 
 | Proposal objective | Served by | Status |
 |---|---|---|
-| 1. Descriptive spatial precursor (LISA on provinces and HUCs) | Phase 4 | BLOCKED (code runs; boundaries and PRV crosswalk missing) |
-| 2. Predictive early warning system (weighted XGBoost) | Phases 1B and 2 | PARTIAL (model and test metrics exist, tuning and CV do not) |
-| 3. Driver quantification and scenario simulation | Phases 3 and 4 | PARTIAL (ALE and simulation done, H-statistic not; simulation targets use a fallback until LISA runs) |
+| 1. Descriptive spatial precursor (LISA on provinces and HUCs) | Phase 4 | DONE (LISA ran 2026-10-28; High-High clusters do not survive BH-FDR) |
+| 2. Predictive early warning system (weighted XGBoost) | Phases 1B and 2 | PARTIAL (grouped CV and calibration done; tuning not) |
+| 3. Driver quantification and scenario simulation | Phases 3 and 4 | PARTIAL (ALE, audited SHAP, H-statistic and simulation done; 2D ALE needs redrawing for supported pairs) |
 
 ## 2. Phase map
 
@@ -27,7 +27,7 @@ Detailed findings live next to the work:
 | Phase 1B: supervised selection | `01b_supervised_selection/` | `notebooks/PCA_FLEMMS_streamlined.ipynb`, `02_xgboost_xai/ALE_leakage_audit.ipynb` | PARTIAL |
 | Phase 2: predictive model | `02_xgboost_xai/` | `ALE_leakage_audit.ipynb` | PARTIAL |
 | Phase 3: XAI stack | `02_xgboost_xai/` | `ALE_leakage_audit.ipynb` | PARTIAL |
-| Phase 4: LISA and simulation | `04_spatial_lisa_simulation/` | `LISA_scenario_simulation.ipynb` | PARTIAL (LISA blocked on boundaries) |
+| Phase 4: LISA and simulation | `04_spatial_lisa_simulation/` | `LISA_scenario_simulation.ipynb` | DONE |
 
 The spatial folder was renamed from `03_spatial_lisa_gwr/` to `04_spatial_lisa_simulation/` on 2026-10-25, since GWR is out.
 
@@ -103,18 +103,21 @@ Done (`ALE_LEAKAGE_FINDINGS.md`, section 4):
 - Age effect is low from 20 to 40 and rises after 40, reaching about +0.2 log-odds at 60.
 - Under the audited model, schooling dominates. The older SHAP exports showed digital skill dominating. This difference should be addressed explicitly in the discussion.
 
+Done 2026-10-29 (`ALE_LEAKAGE_FINDINGS.md`, section 6):
+
+- SHAP re-run on the audited model, with grouped SHAP. Schooling leads (0.228 mean |SHAP|), then the digital-skill block (0.177). The old digital-skill dominance was a pre-audit artifact.
+- Friedman's H for 8 pairs. The three largest (studying x age, TechVoc x two schooling levels) rest on combinations absent from the data and reflect extrapolation. Supported interactions are modest (H² 0.04 to 0.12). Digital skill x internet: H² 0.001.
+- `TVOCTRAIN_5` = "No" never co-occurs with elementary or lower secondary completion, which suggests an education-restricted question universe.
+
 Open:
-1. **Friedman's H is not computed.** Compute it for the top candidate pairs on a subsample. The old SHAP interaction file points to age with school attendance and digital skill with internet use.
-2. Two-dimensional ALE heatmaps for the pairs with the largest H, as the proposal promises.
-3. Re-run SHAP (importance, direction, interactions) on the audited model so SHAP and ALE describe the same model.
-4. Report the digital-skill block as a group (grouped SHAP), since the items are highly correlated.
+1. Re-run `ALE_leakage_audit.ipynb` so section 11 draws the 2D ALE heatmaps for the top pairs among supported combinations. The code is in place (2026-10-29); the run was killed for low memory. The committed heatmaps still show the three unsupported pairs.
 
-### Phase 4: spatial layer and simulation (PARTIAL)
+### Phase 4: spatial layer and simulation (DONE)
 
-Notebook: `04_spatial_lisa_simulation/LISA_scenario_simulation.ipynb`, first executed 2026-10-24. Results: `04_spatial_lisa_simulation/LISA_FINDINGS.md`. Steps 2 and 4 ran; step 3 waits on step 1. LISA significance rule: permutation p < 0.05 (decided 2026-10-25), with BH-FDR as a sensitivity column.
+Notebook: `04_spatial_lisa_simulation/LISA_scenario_simulation.ipynb`, first executed 2026-10-24, full run with boundaries 2026-10-28. Results: `04_spatial_lisa_simulation/LISA_FINDINGS.md`. All steps ran. LISA significance rule: permutation p < 0.05 (decided 2026-10-25), with BH-FDR as a sensitivity column.
 
 Steps:
-1. **BLOCKED.** Get province and HUC boundaries and a `PRV` code-to-name crosswalk (`[DATA MISSING]`). Resolve code 999 first (n = 589, rate 51.3%).
+1. Boundaries: OCHA COD-AB city/municipality polygons dissolved to PRV units through `prv_crosswalk.csv` (names from PSA value set `PRV_VS1`; all 118 codes matched). Code 999 (`BARMM63`, n = 589) stays out of the weights and targets.
 2. Aggregate predicted probabilities to province level with `RESP_RFACT_F2`, next to the observed weighted rate.
 3. Build spatial weights (queen contiguity plus a nearest-neighbour rule for islands), then global Moran's I and LISA with permutation inference.
 4. Scenario simulation: change selected inputs (for example internet use or digital skill) in high-risk provinces, re-score with the audited model, and report the change in predicted risk with uncertainty.
@@ -126,8 +129,8 @@ Steps:
 2. Run the remaining data-quality checks (Phase 1).
 3. Recompute the PCA overlap and update `01b_supervised_selection/` from the training-only list (Phase 1B).
 4. Tune and cross-validate the model, add calibration (Phase 2).
-5. Compute Friedman's H, 2D ALE, and re-run SHAP on the audited model (Phase 3).
-6. Build the spatial layer and simulation (Phase 4).
+5. ~~Compute Friedman's H, 2D ALE, and re-run SHAP on the audited model (Phase 3).~~ Done 2026-10-29, except the 2D ALE redraw.
+6. ~~Build the spatial layer and simulation (Phase 4).~~ Done 2026-10-28.
 7. Replace placeholder values in the manuscript with the numbers above.
 
 ## 5. Manuscript edits already supported by results
@@ -139,13 +142,16 @@ These can be written now with real numbers:
 - Chapter 4 validation: household-grouped split, training-only selection, proxy exclusion (`ALE_LEAKAGE_FINDINGS.md`).
 - Chapter 4 ALE: the contrast with ceteris paribus marginal effects can now cite actual curves.
 
-Wait on: H-statistic text, tuned performance figures, spatial results.
+- Spatial results: global Moran's I, LISA clusters, residual clusters and re-targeted simulation (`LISA_FINDINGS.md`).
+
+- Chapter 4 XAI: grouped SHAP, H-statistic with the support caveat (`ALE_LEAKAGE_FINDINGS.md`, section 6).
+
+Wait on: tuned performance figures.
 
 ## 6. Decisions for the adviser or Sarah
 
 1. Report selected features at dummy level or original-variable level.
 2. Keep or drop Form 3 variables with unverified skip logic if the questionnaire cannot be found.
 3. Whether moderate discrimination (AUC about 0.70) changes how strongly the manuscript describes the model as an early warning system.
-4. Source for province boundaries and the `PRV` name crosswalk.
 
-Decided 2026-10-25: PCA count from the EDA run (504), LISA rule p < 0.05, spatial folder renamed to `04_spatial_lisa_simulation/`.
+Decided 2026-10-25: PCA count from the EDA run (504), LISA rule p < 0.05, spatial folder renamed to `04_spatial_lisa_simulation/`. Resolved 2026-10-28: boundaries (OCHA COD-AB) and PRV crosswalk (PSA `PRV_VS1`).
