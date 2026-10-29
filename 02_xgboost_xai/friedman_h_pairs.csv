@@ -1,0 +1,9 @@
+Feature_A,Feature_B,H2,H,Interaction_SD,Feature_A_Desc,Feature_B_Desc
+NOWORK_REASON_ 1,AGE,0.38934367487034455,0.6239740979162072,0.09451375125097675,Reason for not being employed: Still studying/planning to continue studies,AGE
+TVOCTRAIN_5,HGC_LEVEL_2,0.25393816055010554,0.5039227724067504,0.07718345607690476,Attending Technical Vocational Training: No,Highest HGC_GRADE completed: Lower Secondary Education (Junior High School/Old Curriculum)
+TVOCTRAIN_5,HGC_LEVEL_1,0.1860262636844198,0.43130762071220097,0.09233694728024061,Attending Technical Vocational Training: No,Highest HGC_GRADE completed: Primary Education (Elementary)
+HGC_LEVEL_1,AGE,0.12207758507148404,0.34939602898642685,0.06422703650552901,Highest HGC_GRADE completed: Primary Education (Elementary),AGE
+SEX_2,AGE,0.0844248038296552,0.290559466942062,0.05684675638703881,Sex of Household Member: Female,AGE
+HGC_LEVEL_2,AGE,0.05890893673450549,0.24271163287841294,0.05767394546131307,Highest HGC_GRADE completed: Lower Secondary Education (Junior High School/Old Curriculum),AGE
+AGE,ATTEND_SCHOOL_1,0.04251405534305196,0.20618936767702634,0.03167112853380183,AGE,ATTEND_SCHOOL_1
+DSKILL_INFO2_1,INTERNET_1,0.0008601494501342608,0.029328304590178083,0.002709328939723621,Digital Skill: Information and data literacy: YES,Have you Used Internet in the past three (3) months?: YES  (Oo)

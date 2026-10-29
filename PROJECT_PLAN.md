@@ -16,7 +16,7 @@ Detailed findings live next to the work:
 |---|---|---|
 | 1. Descriptive spatial precursor (LISA on provinces and HUCs) | Phase 4 | DONE (LISA ran 2026-10-28; High-High clusters do not survive BH-FDR) |
 | 2. Predictive early warning system (weighted XGBoost) | Phases 1B and 2 | PARTIAL (grouped CV and calibration done; tuning not) |
-| 3. Driver quantification and scenario simulation | Phases 3 and 4 | PARTIAL (ALE and simulation done; H-statistic, 2D ALE and audited SHAP not) |
+| 3. Driver quantification and scenario simulation | Phases 3 and 4 | PARTIAL (ALE, audited SHAP, H-statistic and simulation done; 2D ALE needs redrawing for supported pairs) |
 
 ## 2. Phase map
 
@@ -103,11 +103,14 @@ Done (`ALE_LEAKAGE_FINDINGS.md`, section 4):
 - Age effect is low from 20 to 40 and rises after 40, reaching about +0.2 log-odds at 60.
 - Under the audited model, schooling dominates. The older SHAP exports showed digital skill dominating. This difference should be addressed explicitly in the discussion.
 
+Done 2026-10-29 (`ALE_LEAKAGE_FINDINGS.md`, section 6):
+
+- SHAP re-run on the audited model, with grouped SHAP. Schooling leads (0.228 mean |SHAP|), then the digital-skill block (0.177). The old digital-skill dominance was a pre-audit artifact.
+- Friedman's H for 8 pairs. The three largest (studying x age, TechVoc x two schooling levels) rest on combinations absent from the data and reflect extrapolation. Supported interactions are modest (H² 0.04 to 0.12). Digital skill x internet: H² 0.001.
+- `TVOCTRAIN_5` = "No" never co-occurs with elementary or lower secondary completion, which suggests an education-restricted question universe.
+
 Open:
-1. **Friedman's H is not computed.** Compute it for the top candidate pairs on a subsample. The old SHAP interaction file points to age with school attendance and digital skill with internet use.
-2. Two-dimensional ALE heatmaps for the pairs with the largest H, as the proposal promises.
-3. Re-run SHAP (importance, direction, interactions) on the audited model so SHAP and ALE describe the same model.
-4. Report the digital-skill block as a group (grouped SHAP), since the items are highly correlated.
+1. Re-run `ALE_leakage_audit.ipynb` so section 11 draws the 2D ALE heatmaps for the top pairs among supported combinations. The code is in place (2026-10-29); the run was killed for low memory. The committed heatmaps still show the three unsupported pairs.
 
 ### Phase 4: spatial layer and simulation (DONE)
 
@@ -126,7 +129,7 @@ Steps:
 2. Run the remaining data-quality checks (Phase 1).
 3. Recompute the PCA overlap and update `01b_supervised_selection/` from the training-only list (Phase 1B).
 4. Tune and cross-validate the model, add calibration (Phase 2).
-5. Compute Friedman's H, 2D ALE, and re-run SHAP on the audited model (Phase 3).
+5. ~~Compute Friedman's H, 2D ALE, and re-run SHAP on the audited model (Phase 3).~~ Done 2026-10-29, except the 2D ALE redraw.
 6. ~~Build the spatial layer and simulation (Phase 4).~~ Done 2026-10-28.
 7. Replace placeholder values in the manuscript with the numbers above.
 
@@ -141,7 +144,9 @@ These can be written now with real numbers:
 
 - Spatial results: global Moran's I, LISA clusters, residual clusters and re-targeted simulation (`LISA_FINDINGS.md`).
 
-Wait on: H-statistic text, tuned performance figures.
+- Chapter 4 XAI: grouped SHAP, H-statistic with the support caveat (`ALE_LEAKAGE_FINDINGS.md`, section 6).
+
+Wait on: tuned performance figures.
 
 ## 6. Decisions for the adviser or Sarah
 
