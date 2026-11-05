@@ -1,0 +1,15 @@
+cell,seconds,peak_rss_gb,first_line
+1,8.6,0.26,"import gc, os, warnings"
+3,4.8,1.27,"overlap_cols = ['REG', 'PRV', 'MUN', 'BGY', 'URBANITY', 'REG"
+5,14.6,2.01,sel = pd.read_csv(FEATURES_FILE)
+7,205.2,3.38,def make_model(yy):
+8,0.3,0.0,# calibration by weighted deciles of predicted risk
+10,0.2,2.18,"def ratio_se(vals, wts, clus):"
+12,47.3,3.01,import importlib.util
+14,30.7,9.16,def build_weights(g):
+16,1.1,2.63,"LISA_VARS = ['obs_rate', 'pred_rate', 'residual']"
+17,217.6,4.16,"LISA_COLORS = {'High-High': '#d7191c', 'High-Low': '#fdae61'"
+19,0.0,0.0,TARGET_RULE = None
+21,41.2,4.03,dskill_vars = [v for v in model_vars if v.startswith('DSKILL
+22,0.6,0.0,"fig, ax = plt.subplots(figsize=(8, 0.35 * sim['PRV'].nunique"
+23,0.0,0.0,out = prov.copy()

@@ -1,9 +1,9 @@
-Feature_A,Feature_B,H2,H,Interaction_SD,Feature_A_Desc,Feature_B_Desc
-NOWORK_REASON_ 1,AGE,0.38934367487034455,0.6239740979162072,0.09451375125097675,Reason for not being employed: Still studying/planning to continue studies,AGE
-TVOCTRAIN_5,HGC_LEVEL_2,0.25393816055010554,0.5039227724067504,0.07718345607690476,Attending Technical Vocational Training: No,Highest HGC_GRADE completed: Lower Secondary Education (Junior High School/Old Curriculum)
-TVOCTRAIN_5,HGC_LEVEL_1,0.1860262636844198,0.43130762071220097,0.09233694728024061,Attending Technical Vocational Training: No,Highest HGC_GRADE completed: Primary Education (Elementary)
-HGC_LEVEL_1,AGE,0.12207758507148404,0.34939602898642685,0.06422703650552901,Highest HGC_GRADE completed: Primary Education (Elementary),AGE
-SEX_2,AGE,0.0844248038296552,0.290559466942062,0.05684675638703881,Sex of Household Member: Female,AGE
-HGC_LEVEL_2,AGE,0.05890893673450549,0.24271163287841294,0.05767394546131307,Highest HGC_GRADE completed: Lower Secondary Education (Junior High School/Old Curriculum),AGE
-AGE,ATTEND_SCHOOL_1,0.04251405534305196,0.20618936767702634,0.03167112853380183,AGE,ATTEND_SCHOOL_1
-DSKILL_INFO2_1,INTERNET_1,0.0008601494501342608,0.029328304590178083,0.002709328939723621,Digital Skill: Information and data literacy: YES,Have you Used Internet in the past three (3) months?: YES  (Oo)
+Feature_A,Feature_B,H2,H,Interaction_SD,Feature_A_Desc,Feature_B_Desc,Min_cell_share,Supported
+HGC_LEVEL_1,INTERNET_1,0.054153256734889695,0.2327085231247229,0.04402454050447647,Highest HGC_GRADE completed: Primary Education (Elementary),Have you Used Internet in the past three (3) months?: YES  (Oo),0.1006519885651357,True
+HGC_LEVEL_1,TVOCTRAIN_5,0.05036457419280889,0.22442052979353044,0.05307605521559638,Highest HGC_GRADE completed: Primary Education (Elementary),Attending Technical Vocational Training: No,0.0,False
+HGC_LEVEL_2,TVOCTRAIN_5,0.04186020970994745,0.20459767767486378,0.024756210426601036,Highest HGC_GRADE completed: Lower Secondary Education (Junior High School/Old Curriculum),Attending Technical Vocational Training: No,0.0,False
+AGE,HGC_LEVEL_1,0.02854207895122562,0.16894401129139092,0.030077941996030776,AGE,Highest HGC_GRADE completed: Primary Education (Elementary),0.003726589956744009,True
+DSKILL_PROB6_1,TVOCTRAIN_5,0.014780272479130259,0.1215741439580401,0.016172124293291477,Digital Skill: Problem solving: YES,Attending Technical Vocational Training: No,0.10473477264235534,True
+DSKILL_CONT1_1,TVOCTRAIN_5,0.01371358703641755,0.11710502566678149,0.014082802666027008,Digital Skill: Digital content creation: YES,Attending Technical Vocational Training: No,0.12802973109578858,True
+AGE,ATTEND_SCHOOL_1,0.001709460141093751,0.041345618160740456,0.0028925755737224425,AGE,ATTEND_SCHOOL_1,0.0,False
+DSKILL_INFO2_1,INTERNET_1,0.001255160505402346,0.03542824445837454,0.002405338007184716,Digital Skill: Information and data literacy: YES,Have you Used Internet in the past three (3) months?: YES  (Oo),0.0,False

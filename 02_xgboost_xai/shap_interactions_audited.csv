@@ -1,21 +1,21 @@
 Feature_A,Feature_B,Interaction_Strength,Feature_A_Desc,Feature_B_Desc
-TVOCTRAIN_5,HGC_LEVEL_1,0.08823589182857189,Attending Technical Vocational Training: No,Highest HGC_GRADE completed: Primary Education (Elementary)
-TVOCTRAIN_5,HGC_LEVEL_2,0.04590232671997359,Attending Technical Vocational Training: No,Highest HGC_GRADE completed: Lower Secondary Education (Junior High School/Old Curriculum)
-HGC_LEVEL_2,AGE,0.03291317065844791,Highest HGC_GRADE completed: Lower Secondary Education (Junior High School/Old Curriculum),AGE
-NOWORK_REASON_ 1,AGE,0.030079865966952776,Reason for not being employed: Still studying/planning to continue studies,AGE
-HGC_LEVEL_1,AGE,0.02855111320809168,Highest HGC_GRADE completed: Primary Education (Elementary),AGE
-SEX_2,AGE,0.02599125400401376,Sex of Household Member: Female,AGE
-TVOCTRAIN_5,HGC_LEVEL_6,0.025895505889631076,Attending Technical Vocational Training: No,Highest HGC_GRADE completed: Bachelor Level Education of Equivalent
-DSKILL_SAFE2_1,AGE,0.02574514502252319,Digital Skill: Safety: YES,AGE
-HGC_LEVEL_1,INTERNET_1,0.025115360490772842,Highest HGC_GRADE completed: Primary Education (Elementary),Have you Used Internet in the past three (3) months?: YES  (Oo)
-HGC_LEVEL_3,AGE,0.02502102101276055,HGC_LEVEL_3,AGE
-FATHER_97,AGE,0.024340977877561155,Father Identifier: DECEASED,AGE
-ATTEND_SCHOOL_1,AGE,0.02415004337302382,ATTEND_SCHOOL_1,AGE
-TVOCGRAD_5,AGE,0.021887954905888234,Are you a graduate of TechVoc: No,AGE
-TVOCTRAIN_5,HH_WASHING_2,0.020576314530138945,Attending Technical Vocational Training: No,Q13c. Washing Machine: NO
-PATHWAY_COLLEGE_2,AGE,0.02037666234973677,Pathway Plan_Go to college/studies: NO,AGE
-TVOCTRAIN_5,DSKILL_CONT1_1,0.019894909082370578,Attending Technical Vocational Training: No,Digital Skill: Digital content creation: YES
-TVOCGRAD_5,HGC_LEVEL_2,0.019654193078768638,Are you a graduate of TechVoc: No,Highest HGC_GRADE completed: Lower Secondary Education (Junior High School/Old Curriculum)
-TVOCGRAD_5,DSKILL_SAFE2_1,0.019601843461526918,Are you a graduate of TechVoc: No,Digital Skill: Safety: YES
-HGC_LEVEL_1,DSKILL_INFO2_1,0.01888541097648299,Highest HGC_GRADE completed: Primary Education (Elementary),Digital Skill: Information and data literacy: YES
-HGC_LEVEL_1,INTERNET_2,0.017989450833386673,Highest HGC_GRADE completed: Primary Education (Elementary),INTERNET_2
+HGC_LEVEL_1,TVOCTRAIN_5,0.052050686675759385,Highest HGC_GRADE completed: Primary Education (Elementary),Attending Technical Vocational Training: No
+HGC_LEVEL_1,INTERNET_1,0.023946920958441236,Highest HGC_GRADE completed: Primary Education (Elementary),Have you Used Internet in the past three (3) months?: YES  (Oo)
+HGC_LEVEL_2,TVOCTRAIN_5,0.020452282883592392,Highest HGC_GRADE completed: Lower Secondary Education (Junior High School/Old Curriculum),Attending Technical Vocational Training: No
+AGE,HGC_LEVEL_1,0.01995538419278858,AGE,Highest HGC_GRADE completed: Primary Education (Elementary)
+DSKILL_CONT1_1,TVOCTRAIN_5,0.019816838921750034,Digital Skill: Digital content creation: YES,Attending Technical Vocational Training: No
+DSKILL_PROB6_1,TVOCTRAIN_5,0.018872457501753325,Digital Skill: Problem solving: YES,Attending Technical Vocational Training: No
+DSKILL_INFO2_1,TVOCTRAIN_5,0.018696160435062368,Digital Skill: Information and data literacy: YES,Attending Technical Vocational Training: No
+HGC_LEVEL_1,DSKILL_INFO2_1,0.01820011810207958,Highest HGC_GRADE completed: Primary Education (Elementary),Digital Skill: Information and data literacy: YES
+MM_WORK_1,DSKILL_INFO2_1,0.01597670422422365,Mass Media: Research Work or E-mail: Not at all (Hindi kahit kailan),Digital Skill: Information and data literacy: YES
+HH_WASHING_2,TVOCTRAIN_5,0.015574037666829047,Q13c. Washing Machine: NO,Attending Technical Vocational Training: No
+HGC_LEVEL_1,MM_WORK_1,0.014608058506495707,Highest HGC_GRADE completed: Primary Education (Elementary),Mass Media: Research Work or E-mail: Not at all (Hindi kahit kailan)
+HGC_LEVEL_2,INTERNET_1,0.01385236874903205,Highest HGC_GRADE completed: Lower Secondary Education (Junior High School/Old Curriculum),Have you Used Internet in the past three (3) months?: YES  (Oo)
+HGC_LEVEL_6,DSKILL_PROB6_1,0.013058196480742154,Highest HGC_GRADE completed: Bachelor Level Education of Equivalent,Digital Skill: Problem solving: YES
+HGC_LEVEL_2,DSKILL_INFO2_1,0.012855554608530842,Highest HGC_GRADE completed: Lower Secondary Education (Junior High School/Old Curriculum),Digital Skill: Information and data literacy: YES
+SEX_2,HGC_LEVEL_1,0.012736881063776377,Sex of Household Member: Female,Highest HGC_GRADE completed: Primary Education (Elementary)
+DSKILL_INFO2_1,TVOCGRAD_5,0.011154122967991424,Digital Skill: Information and data literacy: YES,Are you a graduate of TechVoc: No
+HH_PC_2,MM_WORK_1,0.010808212742553718,Q13m. Personal Computer: NO,Mass Media: Research Work or E-mail: Not at all (Hindi kahit kailan)
+HH_PC_2,TVOCTRAIN_5,0.010723218608796076,Q13m. Personal Computer: NO,Attending Technical Vocational Training: No
+HGC_LEVEL_1,DSKILL_PROB6_1,0.010605724214188572,Highest HGC_GRADE completed: Primary Education (Elementary),Digital Skill: Problem solving: YES
+AGE,SEX_2,0.010537162236682801,AGE,Sex of Household Member: Female

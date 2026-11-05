@@ -1,0 +1,2 @@
+roc_auc_weighted_oof,pr_auc_weighted_oof,roc_auc_unweighted_oof,observed_prevalence_w,mean_pred_after_prior_correction_w,intercept_shift_applied,mean_pred_final_w
+0.7008546440198536,0.5072522487924549,0.7087480540456268,0.292132663132301,0.29016666432405325,0.0,0.29016666432405325
