@@ -1,0 +1,46 @@
+Feature_Name,Train_Gain,Forced_In,Descriptive_Name,In_Original_Phase1B
+TVOCTRAIN_5,0.09618981182575226,False,Attending Technical Vocational Training: No,True
+HGC_LEVEL_1,0.07232166081666946,False,Highest HGC_GRADE completed: Primary Education (Elementary),True
+DSKILL_PROB6_1,0.03276386484503746,False,Digital Skill: Problem solving: YES,True
+DSKILL_INFO2_1,0.02698792703449726,False,Digital Skill: Information and data literacy: YES,True
+INTERNET_1,0.02070046216249466,False,Have you Used Internet in the past three (3) months?: YES  (Oo),True
+TVOCGRAD_5,0.016066404059529305,False,Are you a graduate of TechVoc: No,True
+HGC_LEVEL_6,0.012969567440450191,False,Highest HGC_GRADE completed: Bachelor Level Education of Equivalent,True
+MM_WORK_1,0.012462732382118702,False,Mass Media: Research Work or E-mail: Not at all (Hindi kahit kailan),True
+DSKILL_CONT1_1,0.012450329959392548,False,Digital Skill: Digital content creation: YES,True
+DSKILL_SAFE2_1,0.01189421582967043,False,Digital Skill: Safety: YES,True
+NOWORK_REASON_ 1,0.011705871671438217,False,Reason for not being employed: Still studying/planning to continue studies,True
+HGC_LEVEL_2,0.011566243134438992,False,Highest HGC_GRADE completed: Lower Secondary Education (Junior High School/Old Curriculum),True
+DSKILL_CONT3_1,0.010337939485907555,False,Digital Skill: Digital content creation: YES,True
+HH_REF_2,0.005896012298762798,False,Q13a. Refrigerator/ Freezer: NO,True
+HGC_LEVEL_3,0.005838725715875626,False,HGC_LEVEL_3,False
+HH_WASHING_2,0.005597338546067476,False,Q13c. Washing Machine: NO,True
+HH_PC_2,0.005465520545840263,False,Q13m. Personal Computer: NO,True
+KINDER_2,0.0052626230753958225,False,KINDER_2,False
+TVOCAT_1,0.004857957363128662,False,TVOCAT_1,False
+MM_OLNPAPER_1,0.004676909651607275,False,Mass Media: Digital/Online Newspaper: Not at all (Hindi kahit kailan),True
+DSKILL_CONT2_1,0.004661095794290304,False,Digital Skill: Digital content creation: YES,True
+NOWORK_REASON_ 6,0.004556421656161547,False,NOWORK_REASON_ 6,False
+DSKILL_INFO1_1,0.004452277906239033,False,Digital Skill: Information and data literacy: YES,True
+FATHER_97,0.0038105244748294353,False,Father Identifier: DECEASED,True
+KINDER_4,0.0036506771575659513,False,KINDER_4,False
+MM_REPORTS_1,0.003577498020604253,False,Mass Media: Writing Report: Not at all (Hindi kahit kailan),True
+MM_REPORTS_2,0.0034868197981268167,False,Mass Media: Writing Report: Seldom (Bihira),True
+SEX_2,0.003334806067869067,False,Sex of Household Member: Female,True
+ATTEND_GRADE_10016,0.003313554683700204,False,Level 0: 10016  Grade 6,True
+ATTEND_GRADE_24011,0.0032802799250930548,False,Level 0: 24011  Grade 7 / 1st Year HS,True
+INTERNET_2,0.00314757926389575,False,INTERNET_2,False
+TOILET_LOC_1,0.00305836065672338,False,Q18. Toilet Location: IN OWN DWELLING,True
+ATTEND_SCHOOL_1,0.0029292067047208548,False,ATTEND_SCHOOL_1,False
+MM_PNPAPER_2,0.0028955263551324606,False,Mass Media:  Printed Newspaper: Seldom (Bihira),True
+PATHWAY_COLLEGE_2,0.0027452996000647545,False,Pathway Plan_Go to college/studies: NO,True
+WORK_TYPE_MAJOR_23,0.0026990235783159733,False,Type of Job/Business (Major): Professionals,True
+MM_WORK_0,0.002685184357687831,False,MM_WORK_0,False
+PATHWAY_WORKABROAD_2,0.0025064970832318068,False,PATHWAY_WORKABROAD_2,False
+TENURE_3,0.0024965908378362656,False,TENURE_3,False
+HH_AIRCON_2,0.002483667805790901,False,HH_AIRCON_2,False
+WALL_5,0.0024610271211713552,False,WALL_5,False
+BENEFICIARY_4PS_2,0.0024410507176071405,False,BENEFICIARY_4PS_2,False
+TOILET_12,0.0024327528662979603,False,TOILET_12,False
+TOILET_51,0.0024288527201861143,False,TOILET_51,False
+AGE,,True,AGE,False

@@ -1,0 +1,2 @@
+{'notebook': 'ALE_leakage_audit', 'returncode': 0, 'wall_seconds': 269, 'sum_cell_seconds': 266, 'peak_rss_gb': 3.24, 'machine_total_gb': 17.1, 'machine_available_at_start_gb': 9.0, 'cpu_count': 6, 'started': '2026-11-01T22:04:27'}
+{'notebook': 'LISA_scenario_simulation', 'returncode': 0, 'wall_seconds': 578, 'sum_cell_seconds': 572, 'peak_rss_gb': 9.16, 'machine_total_gb': 17.1, 'machine_available_at_start_gb': 10.2, 'cpu_count': 6, 'started': '2026-11-01T22:08:56'}
