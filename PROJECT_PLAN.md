@@ -1,6 +1,6 @@
 # Project Plan and Status
 
-Plan for working through the analysis phases in the post-defense proposal (`reference/proposal-manuscript/04_methodology_model_revised.md`, `01_introduction_revised.md`). Status as of 2026-10-29.
+Plan for working through the analysis phases in the post-defense proposal (`reference/proposal-manuscript/04_methodology_model_revised.md`, `01_introduction_revised.md`). Status as of 2026-11-05. The primary model is now the 75-variable model (551 dummies, chosen by the feature-count sweep on 2026-11-01); the 45-feature results are in `archive_45feature/` folders.
 
 Status key: DONE, PARTIAL (runs, but a proposal commitment is missing), TODO, BLOCKED.
 
@@ -16,7 +16,7 @@ Detailed findings live next to the work:
 |---|---|---|
 | 1. Descriptive spatial precursor (LISA on provinces and HUCs) | Phase 4 | DONE (LISA ran 2026-10-28; High-High clusters do not survive BH-FDR) |
 | 2. Predictive early warning system (weighted XGBoost) | Phases 1B and 2 | PARTIAL (grouped CV and calibration done; tuning not) |
-| 3. Driver quantification and scenario simulation | Phases 3 and 4 | PARTIAL (ALE, audited SHAP, H-statistic and simulation done; 2D ALE needs redrawing for supported pairs) |
+| 3. Driver quantification and scenario simulation | Phases 3 and 4 | PARTIAL (ALE, audited SHAP, H-statistic, 2D ALE and simulation done; 2D heatmaps not yet interpreted) |
 
 ## 2. Phase map
 
@@ -63,9 +63,10 @@ Done, with the audit in `02_xgboost_xai/ALE_LEAKAGE_FINDINGS.md`:
 - The PCA-component benchmark gap (-0.011 AUC) was measured on the older split. It is consistent with the grouped-split result (about 0.70 for 44 features).
 
 Open:
-1. PCA overlap recomputed against `02_xgboost_xai/selected_features_train_only.csv` (2026-10-25): 9 of the 44 training-only features (20%) are in the 43-feature PCA list. The manuscript quotes this figure, not the older 8 of 44.
-2. Decide whether the manuscript reports the 44 features by gain (dummy level) or by original variable. Several dummies of the same variable occupy slots (`HGC_LEVEL_1`, `_2`, `_3`, `_6`).
-3. Write the training-only selection back into `01b_supervised_selection/` so Phase 1B has one source of truth. Today `phase1b_selected_features.csv` still holds the all-rows list.
+1. The 44-feature overlap with the PCA list (9 of 44, 20%, computed 2026-10-25) describes the superseded 45-feature selection. Recompute it against the 75-variable list (`sweep_selected_variables.csv`) before quoting any overlap.
+2. Decide the reporting level. Proposal: report the 75 selected variables, and dummy levels only in the ALE and SHAP tables (several variables are multi-level, for example `WORK_TYPE_MAJOR` with 44 dummies).
+3. Write the 75-variable selection back into `01b_supervised_selection/` so Phase 1B has one source of truth. Today `phase1b_selected_features.csv` still holds the all-rows list.
+4. Document the k = 75 choice. The strict one-SE rule gives k = 100; k = 75 was chosen as the elbow with the most stable selection (`ALE_LEAKAGE_FINDINGS.md`, section 4).
 
 ### Leakage audit (DONE, new)
 
@@ -77,44 +78,41 @@ Open:
 
 ### Phase 2: predictive model (PARTIAL)
 
-Primary model (45 features: 44 by training gain without `READ_IND_F3`, plus `AGE`), household-grouped test set, weighted:
+Primary model (75 original variables, 551 dummies, `READ_IND_F3` excluded, `AGE` forced in), household-grouped test set, weighted:
 
-| Metric | Value |
+| Metric | Value (45-feature model) |
 |---|---|
-| ROC-AUC | 0.702 |
-| PR-AUC | 0.505 |
-| Recall, illiterate class (threshold 0.5) | 0.59 |
-| Precision, illiterate class | 0.44 |
+| ROC-AUC | 0.711 (0.702) |
+| PR-AUC | 0.516 (0.505) |
+| Recall, illiterate class (threshold 0.5) | not recomputed (0.59) |
+| Precision, illiterate class | not recomputed (0.44) |
 
-Discrimination is moderate. A model that gets 0.70 AUC on this feature set will rank people only somewhat better than chance, which matters for how the manuscript words "early warning".
+Discrimination is moderate. A model that gets 0.71 AUC will rank people only somewhat better than chance, which matters for how the manuscript words "early warning".
 
 Open:
-1. Add hyperparameter tuning. The 300-tree, depth-6 settings have not been tuned. Grouped 5-fold cross-validation of the untuned model is done in the Phase 4 notebook: weighted out-of-fold ROC-AUC 0.701, PR-AUC 0.507.
-2. Calibration: done in the Phase 4 notebook. After the prior correction (subtract log `scale_pos_weight` from the margin) the weighted mean prediction is 0.290 against 0.292 observed, and every decile is within 0.8 points of its observed rate.
+1. Add hyperparameter tuning. The 300-tree, depth-6 settings have not been tuned. Grouped 5-fold cross-validation of the untuned model is in the Phase 4 notebook: weighted out-of-fold ROC-AUC 0.709, PR-AUC 0.517.
+2. Calibration: done in the Phase 4 notebook. After the prior correction the weighted mean prediction is 0.288 against 0.292 observed. Deciles 1 to 9 are within 0.9 points; decile 10 is 2.7 points low.
 3. Make `notebooks/PCA_FLEMMS_streamlined.ipynb` Phase 2 standalone or retire it in favour of the ALE notebook (`reference/Notebook_Verification_TODO.md` item 6). The ALE notebook is already standalone.
 4. The three `xgboost_*.csv` files predate the audit. Treat them as superseded until regenerated from the audited model.
 
 ### Phase 3: XAI stack (PARTIAL)
 
-Done (`ALE_LEAKAGE_FINDINGS.md`, section 4):
+Done, re-run on the 75-variable model 2026-11-01 (`ALE_LEAKAGE_FINDINGS.md`, sections 5 to 7):
 
-- Weighted ALE on the log-odds scale for the 12 highest-gain features plus age. Half-sample differences are at most 0.011.
-- Completing elementary or lower secondary roughly halves the odds of functional illiteracy (odds ratios 0.52 and 0.50). Digital skill and internet use lower the odds by about 8 to 10% each. Never using media for work or e-mail raises them by about 17%.
-- Age effect is low from 20 to 40 and rises after 40, reaching about +0.2 log-odds at 60.
-- Under the audited model, schooling dominates. The older SHAP exports showed digital skill dominating. This difference should be addressed explicitly in the discussion.
-
-Done 2026-10-29 (`ALE_LEAKAGE_FINDINGS.md`, section 6):
-
-- SHAP re-run on the audited model, with grouped SHAP. Schooling leads (0.228 mean |SHAP|), then the digital-skill block (0.177). The old digital-skill dominance was a pre-audit artifact.
-- Friedman's H for 8 pairs. The three largest (studying x age, TechVoc x two schooling levels) rest on combinations absent from the data and reflect extrapolation. Supported interactions are modest (H² 0.04 to 0.12). Digital skill x internet: H² 0.001.
+- Weighted ALE for the 12 highest-gain dummies plus age. Half-sample differences are at most 0.004.
+- Schooling effects per dummy shrank (elementary odds ratio 0.91, lower secondary 0.70, against 0.52 and 0.50 before). The old "halves the odds" statement must not be reused. The cause is probably that schooling is now spread over many dummies; this is not verified.
+- Digital-skill items lower the odds by about 6 to 9% each. Never using media for work or e-mail raises them by about 11%. Age is low through the 30s and rises after 40, reaching about +0.2 log-odds at 60.
+- Grouped SHAP: schooling leads (0.224 mean |SHAP|), then the digital-skill block (0.174). The old digital-skill dominance was a pre-audit artifact.
+- Friedman's H for 8 pairs, 4 supported. Supported interactions are small (H² at most 0.054). Digital skill x internet: H² 0.001.
 - `TVOCTRAIN_5` = "No" never co-occurs with elementary or lower secondary completion, which suggests an education-restricted question universe.
+- 2D ALE drawn for the three supported pairs with the largest H².
 
 Open:
-1. Re-run `ALE_leakage_audit.ipynb` so section 11 draws the 2D ALE heatmaps for the top pairs among supported combinations. The code is in place (2026-10-29); the run was killed for low memory. The committed heatmaps still show the three unsupported pairs.
+1. Interpret the 2D ALE heatmaps (`ale_figures/ale_2d_top_pairs.png`) and write them up.
 
 ### Phase 4: spatial layer and simulation (DONE)
 
-Notebook: `04_spatial_lisa_simulation/LISA_scenario_simulation.ipynb`, first executed 2026-10-24, full run with boundaries 2026-10-28. Results: `04_spatial_lisa_simulation/LISA_FINDINGS.md`. All steps ran. LISA significance rule: permutation p < 0.05 (decided 2026-10-25), with BH-FDR as a sensitivity column.
+Notebook: `04_spatial_lisa_simulation/LISA_scenario_simulation.ipynb`, first executed 2026-10-24, full run with boundaries 2026-10-28, re-run on the 75-variable model 2026-11-01 (out-of-fold AUC 0.709; the observed High-High set is unchanged at 11 units and still fails BH-FDR; simulation effects -0.31, -0.89 and -1.04 pp). Results: `04_spatial_lisa_simulation/LISA_FINDINGS.md`. All steps ran. LISA significance rule: permutation p < 0.05 (decided 2026-10-25), with BH-FDR as a sensitivity column.
 
 Steps:
 1. Boundaries: OCHA COD-AB city/municipality polygons dissolved to PRV units through `prv_crosswalk.csv` (names from PSA value set `PRV_VS1`; all 118 codes matched). Code 999 (`BARMM63`, n = 589) stays out of the weights and targets.
@@ -129,7 +127,7 @@ Steps:
 2. Run the remaining data-quality checks (Phase 1).
 3. Recompute the PCA overlap and update `01b_supervised_selection/` from the training-only list (Phase 1B).
 4. Tune and cross-validate the model, add calibration (Phase 2).
-5. ~~Compute Friedman's H, 2D ALE, and re-run SHAP on the audited model (Phase 3).~~ Done 2026-10-29, except the 2D ALE redraw.
+5. ~~Compute Friedman's H, 2D ALE, and re-run SHAP on the audited model (Phase 3).~~ Done 2026-10-29 and re-run 2026-11-01 on the 75-variable model, including the 2D ALE redraw (interpretation pending).
 6. ~~Build the spatial layer and simulation (Phase 4).~~ Done 2026-10-28.
 7. Replace placeholder values in the manuscript with the numbers above.
 
